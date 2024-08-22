@@ -1,69 +1,72 @@
-# Org.OpenAPITools.Api.ProductionApi
+# CIN7.DearInventory.Api.ProductionApi
 
 All URIs are relative to *https://inventory.dearsystems.com/ExternalApi/v2*
 
-| Method | HTTP request | Description |
-|--------|--------------|-------------|
-| [**Authorize**](ProductionApi.md#authorize) | **POST** /production/order/authorize | Authorize |
-| [**CallVoid**](ProductionApi.md#callvoid) | **POST** /production/order/void | Void |
-| [**CompleteRun**](ProductionApi.md#completerun) | **PUT** /production/order/run/complete | Complete Run |
-| [**CompleteRunOperation**](ProductionApi.md#completerunoperation) | **PUT** /production/order/run/operation/complete | Complete Run Operation |
-| [**DeleteAttachment**](ProductionApi.md#deleteattachment) | **DELETE** /production/order/attachment?ProductionOrderAttachmentID&#x3D;{ProductionOrderAttachmentID} | Delete Attachment |
-| [**GetProductionOrderAttachments**](ProductionApi.md#getproductionorderattachments) | **GET** /production/order/attachment?ProductionOrderID&#x3D;{ProductionOrderID}&amp;ReturnAttachmentsContent&#x3D;{ReturnAttachmentsContent} | Get Production Order Attachments |
-| [**GetProductionOrderReferenceData**](ProductionApi.md#getproductionorderreferencedata) | **GET** /production/order/referenceData | Get Production Order Reference Data |
-| [**OrderlistPgLmtStsSrchEtc**](ProductionApi.md#orderlistpglmtstssrchetc) | **GET** /production/orderList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Status&#x3D;{Status}&amp;Search&#x3D;{Search}&amp;LocationID&#x3D;{LocationID}&amp;RequiredByDateFrom&#x3D;{RequiredByDateFrom}&amp;RequiredByDateTo&#x3D;{RequiredByDateTo}&amp;CompletionDateFrom&#x3D;{CompletionDateFrom}&amp;CompletionDateTo&#x3D;{CompletionDateTo}&amp;SourceTaskID&#x3D;{SourceTaskID} | GET |
-| [**PostAttachment**](ProductionApi.md#postattachment) | **POST** /production/order/attachment?ProductionOrderID&#x3D;{ProductionOrderID} | Post Attachment |
-| [**ProductionFactorycalendarPost**](ProductionApi.md#productionfactorycalendarpost) | **POST** /production/factoryCalendar | POST |
-| [**ProductionFactorycalendarPut**](ProductionApi.md#productionfactorycalendarput) | **PUT** /production/factoryCalendar | PUT |
-| [**ProductionFactorycalendarYearGet**](ProductionApi.md#productionfactorycalendaryearget) | **GET** /production/factoryCalendar?Year&#x3D;{Year} | GET |
-| [**ProductionOrderAllowrecalculatedatesAllowrecalculatecyclesandquantitiesPut**](ProductionApi.md#productionorderallowrecalculatedatesallowrecalculatecyclesandquantitiesput) | **PUT** /production/order?AllowRecalculateDates&#x3D;{AllowRecalculateDates}&amp;AllowRecalculateCyclesAndQuantities&#x3D;{AllowRecalculateCyclesAndQuantities} | PUT |
-| [**ProductionOrderProductionorderidReturnattachmentscontentGet**](ProductionApi.md#productionorderproductionorderidreturnattachmentscontentget) | **GET** /production/order?ProductionOrderID&#x3D;{ProductionOrderID}&amp;returnAttachmentsContent&#x3D;{ReturnAttachmentsContent} | GET |
-| [**ProductionOrderRecalculatedatesPost**](ProductionApi.md#productionorderrecalculatedatespost) | **POST** /production/order?RecalculateDates&#x3D;{RecalculateDates} | POST |
-| [**ProductionOrderRunPost**](ProductionApi.md#productionorderrunpost) | **POST** /production/order/run | POST |
-| [**ProductionOrderRunProductionorderidIncludeattachmentcontentGet**](ProductionApi.md#productionorderrunproductionorderidincludeattachmentcontentget) | **GET** /production/order/run?ProductionOrderID&#x3D;{ProductionOrderID}&amp;IncludeAttachmentContent&#x3D;{IncludeAttachmentContent} | GET |
-| [**ProductionOrderRunProductionorderidIncreaseorderquantityPut**](ProductionApi.md#productionorderrunproductionorderidincreaseorderquantityput) | **PUT** /production/order/run?ProductionOrderID&#x3D;{ProductionOrderID}&amp;IncreaseOrderQuantity&#x3D;{IncreaseOrderQuantity} | PUT |
-| [**ProductionProductionbomPost**](ProductionApi.md#productionproductionbompost) | **POST** /production/productionBOM | POST |
-| [**ProductionProductionbomProductfamilyidBomidDelete**](ProductionApi.md#productionproductionbomproductfamilyidbomiddelete) | **DELETE** /production/productionBOM?ProductFamilyID&#x3D;{ProductFamilyID}&amp;BOMID&#x3D;{BOMID} | DELETE |
-| [**ProductionProductionbomProductfamilyidReturnattachmentscontentGet**](ProductionApi.md#productionproductionbomproductfamilyidreturnattachmentscontentget) | **GET** /production/productionBOM?ProductFamilyID&#x3D;{ProductFamilyID}&amp;ReturnAttachmentsContent&#x3D;{ReturnAttachmentsContent} | GET |
-| [**ProductionProductionbomProductidBomidDelete**](ProductionApi.md#productionproductionbomproductidbomiddelete) | **DELETE** /production/productionBOM?ProductID&#x3D;{ProductID}&amp;BOMID&#x3D;{BOMID} | DELETE |
-| [**ProductionProductionbomProductidReturnattachmentscontentGet**](ProductionApi.md#productionproductionbomproductidreturnattachmentscontentget) | **GET** /production/productionBOM?ProductID&#x3D;{ProductID}&amp;ReturnAttachmentsContent&#x3D;{ReturnAttachmentsContent} | GET |
-| [**ProductionProductionbomPut**](ProductionApi.md#productionproductionbomput) | **PUT** /production/productionBOM | PUT |
-| [**ProductionResourcePost**](ProductionApi.md#productionresourcepost) | **POST** /production/resource | POST |
-| [**ProductionResourcePut**](ProductionApi.md#productionresourceput) | **PUT** /production/resource | PUT |
-| [**ProductionResourceResourceidDelete**](ProductionApi.md#productionresourceresourceiddelete) | **DELETE** /production/resource?ResourceID&#x3D;{ResourceID} | DELETE |
-| [**ProductionResourceResourceidIncludeattachmentsGet**](ProductionApi.md#productionresourceresourceidincludeattachmentsget) | **GET** /production/resource?ResourceID&#x3D;{ResourceID}&amp;IncludeAttachments&#x3D;{IncludeAttachments} | GET |
-| [**ProductionResourcelistPgLmtNameOnlyactiveGet**](ProductionApi.md#productionresourcelistpglmtnameonlyactiveget) | **GET** /production/resourceList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Name&#x3D;{Name}&amp;OnlyActive&#x3D;{OnlyActive} | GET |
-| [**ProductionSuspendreasonPgLmtWorkcenteridGet**](ProductionApi.md#productionsuspendreasonpglmtworkcenteridget) | **GET** /production/suspendReason?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;WorkcenterID&#x3D;{WorkcenterID} | GET |
-| [**ProductionSuspendreasonPut**](ProductionApi.md#productionsuspendreasonput) | **PUT** /production/suspendReason | PUT |
-| [**ProductionWorkcentersPgLmtNameGet**](ProductionApi.md#productionworkcenterspglmtnameget) | **GET** /production/workcenters?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Name&#x3D;{Name} | GET |
-| [**ProductionWorkcentersPost**](ProductionApi.md#productionworkcenterspost) | **POST** /production/workcenters | POST |
-| [**ProductionWorkcentersPut**](ProductionApi.md#productionworkcentersput) | **PUT** /production/workcenters | PUT |
-| [**ProductionWorkcentersWorkcenteridDelete**](ProductionApi.md#productionworkcentersworkcenteriddelete) | **DELETE** /production/workcenters?WorkCenterId&#x3D;{WorkCenterId} | DELETE |
-| [**PutAttachment**](ProductionApi.md#putattachment) | **PUT** /production/order/attachment | Put Attachment |
-| [**Release**](ProductionApi.md#release) | **POST** /production/order/release | Release |
-| [**ResumeRunOperation**](ProductionApi.md#resumerunoperation) | **PUT** /production/order/run/operation/resume | Resume Run Operation |
-| [**StartRunOperation**](ProductionApi.md#startrunoperation) | **PUT** /production/order/run/operation/start | Start Run Operation |
-| [**SuspendRunOperation**](ProductionApi.md#suspendrunoperation) | **PUT** /production/order/run/operation/suspend | Suspend Run Operation |
-| [**Undo**](ProductionApi.md#undo) | **POST** /production/order/undo | Undo |
-| [**UndoRun**](ProductionApi.md#undorun) | **PUT** /production/order/run/undo | Undo Run |
-| [**UpdateManualJournals**](ProductionApi.md#updatemanualjournals) | **PUT** /production/order/run/manualJournal?ProductionOrderID&#x3D;{ProductionOrderID} | Update Manual Journals |
-| [**VoidRun**](ProductionApi.md#voidrun) | **PUT** /production/order/run/void | Void Run |
+| Method                                                                                                                                                                        | HTTP request                                                                                                                                                                                                                                                                                                                                                                              | Description                         |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| [**Authorize**](ProductionApi.md#authorize)                                                                                                                                   | **POST** /production/order/authorize                                                                                                                                                                                                                                                                                                                                                      | Authorize                           |
+| [**CallVoid**](ProductionApi.md#callvoid)                                                                                                                                     | **POST** /production/order/void                                                                                                                                                                                                                                                                                                                                                           | Void                                |
+| [**CompleteRun**](ProductionApi.md#completerun)                                                                                                                               | **PUT** /production/order/run/complete                                                                                                                                                                                                                                                                                                                                                    | Complete Run                        |
+| [**CompleteRunOperation**](ProductionApi.md#completerunoperation)                                                                                                             | **PUT** /production/order/run/operation/complete                                                                                                                                                                                                                                                                                                                                          | Complete Run Operation              |
+| [**DeleteAttachment**](ProductionApi.md#deleteattachment)                                                                                                                     | **DELETE** /production/order/attachment?ProductionOrderAttachmentID&#x3D;{ProductionOrderAttachmentID}                                                                                                                                                                                                                                                                                    | Delete Attachment                   |
+| [**GetProductionOrderAttachments**](ProductionApi.md#getproductionorderattachments)                                                                                           | **GET** /production/order/attachment?ProductionOrderID&#x3D;{ProductionOrderID}&amp;ReturnAttachmentsContent&#x3D;{ReturnAttachmentsContent}                                                                                                                                                                                                                                              | Get Production Order Attachments    |
+| [**GetProductionOrderReferenceData**](ProductionApi.md#getproductionorderreferencedata)                                                                                       | **GET** /production/order/referenceData                                                                                                                                                                                                                                                                                                                                                   | Get Production Order Reference Data |
+| [**OrderlistPgLmtStsSrchEtc**](ProductionApi.md#orderlistpglmtstssrchetc)                                                                                                     | **GET** /production/orderList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Status&#x3D;{Status}&amp;Search&#x3D;{Search}&amp;LocationID&#x3D;{LocationID}&amp;RequiredByDateFrom&#x3D;{RequiredByDateFrom}&amp;RequiredByDateTo&#x3D;{RequiredByDateTo}&amp;CompletionDateFrom&#x3D;{CompletionDateFrom}&amp;CompletionDateTo&#x3D;{CompletionDateTo}&amp;SourceTaskID&#x3D;{SourceTaskID} | GET                                 |
+| [**PostAttachment**](ProductionApi.md#postattachment)                                                                                                                         | **POST** /production/order/attachment?ProductionOrderID&#x3D;{ProductionOrderID}                                                                                                                                                                                                                                                                                                          | Post Attachment                     |
+| [**ProductionFactorycalendarPost**](ProductionApi.md#productionfactorycalendarpost)                                                                                           | **POST** /production/factoryCalendar                                                                                                                                                                                                                                                                                                                                                      | POST                                |
+| [**ProductionFactorycalendarPut**](ProductionApi.md#productionfactorycalendarput)                                                                                             | **PUT** /production/factoryCalendar                                                                                                                                                                                                                                                                                                                                                       | PUT                                 |
+| [**ProductionFactorycalendarYearGet**](ProductionApi.md#productionfactorycalendaryearget)                                                                                     | **GET** /production/factoryCalendar?Year&#x3D;{Year}                                                                                                                                                                                                                                                                                                                                      | GET                                 |
+| [**ProductionOrderAllowrecalculatedatesAllowrecalculatecyclesandquantitiesPut**](ProductionApi.md#productionorderallowrecalculatedatesallowrecalculatecyclesandquantitiesput) | **PUT** /production/order?AllowRecalculateDates&#x3D;{AllowRecalculateDates}&amp;AllowRecalculateCyclesAndQuantities&#x3D;{AllowRecalculateCyclesAndQuantities}                                                                                                                                                                                                                           | PUT                                 |
+| [**ProductionOrderProductionorderidReturnattachmentscontentGet**](ProductionApi.md#productionorderproductionorderidreturnattachmentscontentget)                               | **GET** /production/order?ProductionOrderID&#x3D;{ProductionOrderID}&amp;returnAttachmentsContent&#x3D;{ReturnAttachmentsContent}                                                                                                                                                                                                                                                         | GET                                 |
+| [**ProductionOrderRecalculatedatesPost**](ProductionApi.md#productionorderrecalculatedatespost)                                                                               | **POST** /production/order?RecalculateDates&#x3D;{RecalculateDates}                                                                                                                                                                                                                                                                                                                       | POST                                |
+| [**ProductionOrderRunPost**](ProductionApi.md#productionorderrunpost)                                                                                                         | **POST** /production/order/run                                                                                                                                                                                                                                                                                                                                                            | POST                                |
+| [**ProductionOrderRunProductionorderidIncludeattachmentcontentGet**](ProductionApi.md#productionorderrunproductionorderidincludeattachmentcontentget)                         | **GET** /production/order/run?ProductionOrderID&#x3D;{ProductionOrderID}&amp;IncludeAttachmentContent&#x3D;{IncludeAttachmentContent}                                                                                                                                                                                                                                                     | GET                                 |
+| [**ProductionOrderRunProductionorderidIncreaseorderquantityPut**](ProductionApi.md#productionorderrunproductionorderidincreaseorderquantityput)                               | **PUT** /production/order/run?ProductionOrderID&#x3D;{ProductionOrderID}&amp;IncreaseOrderQuantity&#x3D;{IncreaseOrderQuantity}                                                                                                                                                                                                                                                           | PUT                                 |
+| [**ProductionProductionbomPost**](ProductionApi.md#productionproductionbompost)                                                                                               | **POST** /production/productionBOM                                                                                                                                                                                                                                                                                                                                                        | POST                                |
+| [**ProductionProductionbomProductfamilyidBomidDelete**](ProductionApi.md#productionproductionbomproductfamilyidbomiddelete)                                                   | **DELETE** /production/productionBOM?ProductFamilyID&#x3D;{ProductFamilyID}&amp;BOMID&#x3D;{BOMID}                                                                                                                                                                                                                                                                                        | DELETE                              |
+| [**ProductionProductionbomProductfamilyidReturnattachmentscontentGet**](ProductionApi.md#productionproductionbomproductfamilyidreturnattachmentscontentget)                   | **GET** /production/productionBOM?ProductFamilyID&#x3D;{ProductFamilyID}&amp;ReturnAttachmentsContent&#x3D;{ReturnAttachmentsContent}                                                                                                                                                                                                                                                     | GET                                 |
+| [**ProductionProductionbomProductidBomidDelete**](ProductionApi.md#productionproductionbomproductidbomiddelete)                                                               | **DELETE** /production/productionBOM?ProductID&#x3D;{ProductID}&amp;BOMID&#x3D;{BOMID}                                                                                                                                                                                                                                                                                                    | DELETE                              |
+| [**ProductionProductionbomProductidReturnattachmentscontentGet**](ProductionApi.md#productionproductionbomproductidreturnattachmentscontentget)                               | **GET** /production/productionBOM?ProductID&#x3D;{ProductID}&amp;ReturnAttachmentsContent&#x3D;{ReturnAttachmentsContent}                                                                                                                                                                                                                                                                 | GET                                 |
+| [**ProductionProductionbomPut**](ProductionApi.md#productionproductionbomput)                                                                                                 | **PUT** /production/productionBOM                                                                                                                                                                                                                                                                                                                                                         | PUT                                 |
+| [**ProductionResourcePost**](ProductionApi.md#productionresourcepost)                                                                                                         | **POST** /production/resource                                                                                                                                                                                                                                                                                                                                                             | POST                                |
+| [**ProductionResourcePut**](ProductionApi.md#productionresourceput)                                                                                                           | **PUT** /production/resource                                                                                                                                                                                                                                                                                                                                                              | PUT                                 |
+| [**ProductionResourceResourceidDelete**](ProductionApi.md#productionresourceresourceiddelete)                                                                                 | **DELETE** /production/resource?ResourceID&#x3D;{ResourceID}                                                                                                                                                                                                                                                                                                                              | DELETE                              |
+| [**ProductionResourceResourceidIncludeattachmentsGet**](ProductionApi.md#productionresourceresourceidincludeattachmentsget)                                                   | **GET** /production/resource?ResourceID&#x3D;{ResourceID}&amp;IncludeAttachments&#x3D;{IncludeAttachments}                                                                                                                                                                                                                                                                                | GET                                 |
+| [**ProductionResourcelistPgLmtNameOnlyactiveGet**](ProductionApi.md#productionresourcelistpglmtnameonlyactiveget)                                                             | **GET** /production/resourceList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Name&#x3D;{Name}&amp;OnlyActive&#x3D;{OnlyActive}                                                                                                                                                                                                                                                            | GET                                 |
+| [**ProductionSuspendreasonPgLmtWorkcenteridGet**](ProductionApi.md#productionsuspendreasonpglmtworkcenteridget)                                                               | **GET** /production/suspendReason?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;WorkcenterID&#x3D;{WorkcenterID}                                                                                                                                                                                                                                                                            | GET                                 |
+| [**ProductionSuspendreasonPut**](ProductionApi.md#productionsuspendreasonput)                                                                                                 | **PUT** /production/suspendReason                                                                                                                                                                                                                                                                                                                                                         | PUT                                 |
+| [**ProductionWorkcentersPgLmtNameGet**](ProductionApi.md#productionworkcenterspglmtnameget)                                                                                   | **GET** /production/workcenters?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Name&#x3D;{Name}                                                                                                                                                                                                                                                                                              | GET                                 |
+| [**ProductionWorkcentersPost**](ProductionApi.md#productionworkcenterspost)                                                                                                   | **POST** /production/workcenters                                                                                                                                                                                                                                                                                                                                                          | POST                                |
+| [**ProductionWorkcentersPut**](ProductionApi.md#productionworkcentersput)                                                                                                     | **PUT** /production/workcenters                                                                                                                                                                                                                                                                                                                                                           | PUT                                 |
+| [**ProductionWorkcentersWorkcenteridDelete**](ProductionApi.md#productionworkcentersworkcenteriddelete)                                                                       | **DELETE** /production/workcenters?WorkCenterId&#x3D;{WorkCenterId}                                                                                                                                                                                                                                                                                                                       | DELETE                              |
+| [**PutAttachment**](ProductionApi.md#putattachment)                                                                                                                           | **PUT** /production/order/attachment                                                                                                                                                                                                                                                                                                                                                      | Put Attachment                      |
+| [**Release**](ProductionApi.md#release)                                                                                                                                       | **POST** /production/order/release                                                                                                                                                                                                                                                                                                                                                        | Release                             |
+| [**ResumeRunOperation**](ProductionApi.md#resumerunoperation)                                                                                                                 | **PUT** /production/order/run/operation/resume                                                                                                                                                                                                                                                                                                                                            | Resume Run Operation                |
+| [**StartRunOperation**](ProductionApi.md#startrunoperation)                                                                                                                   | **PUT** /production/order/run/operation/start                                                                                                                                                                                                                                                                                                                                             | Start Run Operation                 |
+| [**SuspendRunOperation**](ProductionApi.md#suspendrunoperation)                                                                                                               | **PUT** /production/order/run/operation/suspend                                                                                                                                                                                                                                                                                                                                           | Suspend Run Operation               |
+| [**Undo**](ProductionApi.md#undo)                                                                                                                                             | **POST** /production/order/undo                                                                                                                                                                                                                                                                                                                                                           | Undo                                |
+| [**UndoRun**](ProductionApi.md#undorun)                                                                                                                                       | **PUT** /production/order/run/undo                                                                                                                                                                                                                                                                                                                                                        | Undo Run                            |
+| [**UpdateManualJournals**](ProductionApi.md#updatemanualjournals)                                                                                                             | **PUT** /production/order/run/manualJournal?ProductionOrderID&#x3D;{ProductionOrderID}                                                                                                                                                                                                                                                                                                    | Update Manual Journals              |
+| [**VoidRun**](ProductionApi.md#voidrun)                                                                                                                                       | **PUT** /production/order/run/void                                                                                                                                                                                                                                                                                                                                                        | Void Run                            |
 
 <a id="authorize"></a>
+
 # **Authorize**
+
 > Authorize200Response Authorize (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, AuthorizeRequest? authorizeRequest = null)
 
 Authorize
 
-+ Method will authorize Production Order. Recalculates capacity.
+-   Method will authorize Production Order. Recalculates capacity.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -74,9 +77,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var authorizeRequest = new AuthorizeRequest?(); // AuthorizeRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var authorizeRequest = new AuthorizeRequest?(); // AuthorizeRequest? |  (optional)
 
             try
             {
@@ -96,6 +99,7 @@ namespace Example
 ```
 
 #### Using the AuthorizeWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -117,11 +121,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **authorizeRequest** | [**AuthorizeRequest?**](AuthorizeRequest?.md) |  | [optional]  |
+| Name                      | Type                                          | Description                               | Notes      |
+| ------------------------- | --------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?**                                   | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?**                                   | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **authorizeRequest**      | [**AuthorizeRequest?**](AuthorizeRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -133,32 +137,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="callvoid"></a>
+
 # **CallVoid**
+
 > Undo200Response CallVoid (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, UndoRequest? undoRequest = null)
 
 Void
 
-+ Method will void Production Order.
+-   Method will void Production Order.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -169,9 +176,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var undoRequest = new UndoRequest?(); // UndoRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var undoRequest = new UndoRequest?(); // UndoRequest? |  (optional)
 
             try
             {
@@ -191,6 +198,7 @@ namespace Example
 ```
 
 #### Using the CallVoidWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -212,11 +220,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **undoRequest** | [**UndoRequest?**](UndoRequest?.md) |  | [optional]  |
+| Name                      | Type                                | Description                               | Notes      |
+| ------------------------- | ----------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?**                         | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?**                         | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **undoRequest**           | [**UndoRequest?**](UndoRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -228,32 +236,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="completerun"></a>
+
 # **CompleteRun**
+
 > CompleteRun200Response CompleteRun (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, CompleteRunRequest? completeRunRequest = null)
 
 Complete Run
 
-+ Method will complete Run.
+-   Method will complete Run.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -264,9 +275,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var completeRunRequest = new CompleteRunRequest?(); // CompleteRunRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var completeRunRequest = new CompleteRunRequest?(); // CompleteRunRequest? |  (optional)
 
             try
             {
@@ -286,6 +297,7 @@ namespace Example
 ```
 
 #### Using the CompleteRunWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -307,11 +319,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **completeRunRequest** | [**CompleteRunRequest?**](CompleteRunRequest?.md) |  | [optional]  |
+| Name                      | Type                                              | Description                               | Notes      |
+| ------------------------- | ------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?**                                       | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?**                                       | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **completeRunRequest**    | [**CompleteRunRequest?**](CompleteRunRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -323,32 +335,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="completerunoperation"></a>
+
 # **CompleteRunOperation**
+
 > CompleteRunOperation200Response CompleteRunOperation (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 Complete Run Operation
 
-+ Method will complete operation.
+-   Method will complete operation.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -359,8 +374,8 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -380,6 +395,7 @@ namespace Example
 ```
 
 #### Using the CompleteRunOperationWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -401,10 +417,10 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -416,32 +432,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="deleteattachment"></a>
+
 # **DeleteAttachment**
+
 > void DeleteAttachment (string productionOrderAttachmentID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 Delete Attachment
 
-+ Method will delete Production Order attachment.
+-   Method will delete Production Order attachment.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -453,8 +472,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
             var productionOrderAttachmentID = "productionOrderAttachmentID_example";  // string | Identifier of a Production Order Attachment
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -473,6 +492,7 @@ namespace Example
 ```
 
 #### Using the DeleteAttachmentWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -491,11 +511,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **productionOrderAttachmentID** | **string** | Identifier of a Production Order Attachment |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                            | Type        | Description                                 | Notes      |
+| ------------------------------- | ----------- | ------------------------------------------- | ---------- |
+| **productionOrderAttachmentID** | **string**  | Identifier of a Production Order Attachment |            |
+| **apiAuthAccountid**            | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b   | [optional] |
+| **apiAuthApplicationkey**       | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033   | [optional] |
 
 ### Return type
 
@@ -507,32 +527,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
+-   **Content-Type**: Not defined
+-   **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="getproductionorderattachments"></a>
+
 # **GetProductionOrderAttachments**
+
 > GetProductionOrderAttachments200Response GetProductionOrderAttachments (string productionOrderID, bool returnAttachmentsContent, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 Get Production Order Attachments
 
-+ Method will return all Production Order attachments: Production Order attachments, Production Operation attachments, Production Resource attachments.
+-   Method will return all Production Order attachments: Production Order attachments, Production Operation attachments, Production Resource attachments.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -545,8 +568,8 @@ namespace Example
             var apiInstance = new ProductionApi(config);
             var productionOrderID = "productionOrderID_example";  // string | Identifier of a Production Order Attachment
             var returnAttachmentsContent = false;  // bool |  (default to false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -566,6 +589,7 @@ namespace Example
 ```
 
 #### Using the GetProductionOrderAttachmentsWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -587,12 +611,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **productionOrderID** | **string** | Identifier of a Production Order Attachment |  |
-| **returnAttachmentsContent** | **bool** |  | [default to false] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                         | Type        | Description                                 | Notes              |
+| ---------------------------- | ----------- | ------------------------------------------- | ------------------ |
+| **productionOrderID**        | **string**  | Identifier of a Production Order Attachment |                    |
+| **returnAttachmentsContent** | **bool**    |                                             | [default to false] |
+| **apiAuthAccountid**         | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b   | [optional]         |
+| **apiAuthApplicationkey**    | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033   | [optional]         |
 
 ### Return type
 
@@ -604,32 +628,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="getproductionorderreferencedata"></a>
+
 # **GetProductionOrderReferenceData**
+
 > GetProductionOrderReferenceData200Response GetProductionOrderReferenceData (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 Get Production Order Reference Data
 
-+ Method will return accumulated reference data useful for creating and updating production orders.
+-   Method will return accumulated reference data useful for creating and updating production orders.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -640,8 +667,8 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -661,6 +688,7 @@ namespace Example
 ```
 
 #### Using the GetProductionOrderReferenceDataWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -682,10 +710,10 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -697,32 +725,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="orderlistpglmtstssrchetc"></a>
+
 # **OrderlistPgLmtStsSrchEtc**
+
 > void OrderlistPgLmtStsSrchEtc (decimal page, decimal limit, string status, string search, string locationID, string requiredByDateFrom, string requiredByDateTo, string completionDateFrom, string completionDateTo, string sourceTaskID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
-+ Returns Production Orders and Production Runs according to provided filters.
+-   Returns Production Orders and Production Runs according to provided filters.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -743,8 +774,8 @@ namespace Example
             var completionDateFrom = "completionDateFrom_example";  // string | Only return Production Orders that have CompletionDate field greater than the provided value (Default: not set)
             var completionDateTo = "completionDateTo_example";  // string | Only return Production Orders that have CompletionDate field less than the provided value (Default: not set)
             var sourceTaskID = "sourceTaskID_example";  // string | Only return Production Orders that are created as a result of execution a Sale Task with ID = SourceTaskID Default: not set)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -763,6 +794,7 @@ namespace Example
 ```
 
 #### Using the OrderlistPgLmtStsSrchEtcWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -781,20 +813,20 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **page** | **decimal** | Page (Default: 1) |  |
-| **limit** | **decimal** | Specifies the page size for pagination. Default page size is 100 (Default: 100) |  |
-| **status** | **string** | Filter by status, value on of the list: AllButVoided, Draft, Planned, Released, InProgress, Completed (Default: not set) |  |
-| **search** | **string** | Only return Production Orders that have the provided text in Product Code or Product Name, Production Order Number, Tags, Comments, in Location name (Default: not set) |  |
-| **locationID** | **string** | Only return Production Orders that have LocationID equal to provided value (Default: not set) |  |
-| **requiredByDateFrom** | **string** | Only return Production Orders that have RequiredByDate field greater than the provided value Default: not set) |  |
-| **requiredByDateTo** | **string** | Only return Production Orders that have RequiredByDate field less than the provided value (Default: not set) |  |
-| **completionDateFrom** | **string** | Only return Production Orders that have CompletionDate field greater than the provided value (Default: not set) |  |
-| **completionDateTo** | **string** | Only return Production Orders that have CompletionDate field less than the provided value (Default: not set) |  |
-| **sourceTaskID** | **string** | Only return Production Orders that are created as a result of execution a Sale Task with ID &#x3D; SourceTaskID Default: not set) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                                                                                                                             | Notes      |
+| ------------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| **page**                  | **decimal** | Page (Default: 1)                                                                                                                                                       |            |
+| **limit**                 | **decimal** | Specifies the page size for pagination. Default page size is 100 (Default: 100)                                                                                         |            |
+| **status**                | **string**  | Filter by status, value on of the list: AllButVoided, Draft, Planned, Released, InProgress, Completed (Default: not set)                                                |            |
+| **search**                | **string**  | Only return Production Orders that have the provided text in Product Code or Product Name, Production Order Number, Tags, Comments, in Location name (Default: not set) |            |
+| **locationID**            | **string**  | Only return Production Orders that have LocationID equal to provided value (Default: not set)                                                                           |            |
+| **requiredByDateFrom**    | **string**  | Only return Production Orders that have RequiredByDate field greater than the provided value Default: not set)                                                          |            |
+| **requiredByDateTo**      | **string**  | Only return Production Orders that have RequiredByDate field less than the provided value (Default: not set)                                                            |            |
+| **completionDateFrom**    | **string**  | Only return Production Orders that have CompletionDate field greater than the provided value (Default: not set)                                                         |            |
+| **completionDateTo**      | **string**  | Only return Production Orders that have CompletionDate field less than the provided value (Default: not set)                                                            |            |
+| **sourceTaskID**          | **string**  | Only return Production Orders that are created as a result of execution a Sale Task with ID &#x3D; SourceTaskID Default: not set)                                       |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                                                                                                                               | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                                                                                                                               | [optional] |
 
 ### Return type
 
@@ -806,32 +838,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
+-   **Content-Type**: Not defined
+-   **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="postattachment"></a>
+
 # **PostAttachment**
+
 > PutAttachment200Response PostAttachment (string productionOrderID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, PostAttachmentRequest? postAttachmentRequest = null)
 
 Post Attachment
 
-+ Method will add a Production Order attachment.
+-   Method will add a Production Order attachment.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -843,9 +878,9 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
             var productionOrderID = "productionOrderID_example";  // string | Identifier of a Production Order
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var postAttachmentRequest = new PostAttachmentRequest?(); // PostAttachmentRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var postAttachmentRequest = new PostAttachmentRequest?(); // PostAttachmentRequest? |  (optional)
 
             try
             {
@@ -865,6 +900,7 @@ namespace Example
 ```
 
 #### Using the PostAttachmentWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -886,12 +922,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **productionOrderID** | **string** | Identifier of a Production Order |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **postAttachmentRequest** | [**PostAttachmentRequest?**](PostAttachmentRequest?.md) |  | [optional]  |
+| Name                      | Type                                                    | Description                               | Notes      |
+| ------------------------- | ------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **productionOrderID**     | **string**                                              | Identifier of a Production Order          |            |
+| **apiAuthAccountid**      | **string?**                                             | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?**                                             | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **postAttachmentRequest** | [**PostAttachmentRequest?**](PostAttachmentRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -903,32 +939,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionfactorycalendarpost"></a>
+
 # **ProductionFactorycalendarPost**
+
 > ProductionFactorycalendarPutRequest ProductionFactorycalendarPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, ProductionFactorycalendarPutRequest? productionFactorycalendarPutRequest = null)
 
 POST
 
-+ FactoryCalendarDays, FactoryCalendarSpecialDays do not support modifying. Only creation and deletion are supported.
+-   FactoryCalendarDays, FactoryCalendarSpecialDays do not support modifying. Only creation and deletion are supported.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -939,9 +978,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var productionFactorycalendarPutRequest = new ProductionFactorycalendarPutRequest?(); // ProductionFactorycalendarPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var productionFactorycalendarPutRequest = new ProductionFactorycalendarPutRequest?(); // ProductionFactorycalendarPutRequest? |  (optional)
 
             try
             {
@@ -961,6 +1000,7 @@ namespace Example
 ```
 
 #### Using the ProductionFactorycalendarPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -982,11 +1022,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **productionFactorycalendarPutRequest** | [**ProductionFactorycalendarPutRequest?**](ProductionFactorycalendarPutRequest?.md) |  | [optional]  |
+| Name                                    | Type                                                                                | Description                               | Notes      |
+| --------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**                    | **string?**                                                                         | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**               | **string?**                                                                         | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **productionFactorycalendarPutRequest** | [**ProductionFactorycalendarPutRequest?**](ProductionFactorycalendarPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -998,32 +1038,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionfactorycalendarput"></a>
+
 # **ProductionFactorycalendarPut**
+
 > ProductionFactorycalendarPutRequest ProductionFactorycalendarPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, ProductionFactorycalendarPutRequest? productionFactorycalendarPutRequest = null)
 
 PUT
 
-+ FactoryCalendarDays, FactoryCalendarSpecialDays do not support modifying. Only creation and deletion are supported.  + FactoryCalendarDays will only be overwritten when collection is not empty.  + FactoryCalendarSpecialDays will be overwritten even when collection is empty.
+-   FactoryCalendarDays, FactoryCalendarSpecialDays do not support modifying. Only creation and deletion are supported. + FactoryCalendarDays will only be overwritten when collection is not empty. + FactoryCalendarSpecialDays will be overwritten even when collection is empty.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1034,9 +1077,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var productionFactorycalendarPutRequest = new ProductionFactorycalendarPutRequest?(); // ProductionFactorycalendarPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var productionFactorycalendarPutRequest = new ProductionFactorycalendarPutRequest?(); // ProductionFactorycalendarPutRequest? |  (optional)
 
             try
             {
@@ -1056,6 +1099,7 @@ namespace Example
 ```
 
 #### Using the ProductionFactorycalendarPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1077,11 +1121,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **productionFactorycalendarPutRequest** | [**ProductionFactorycalendarPutRequest?**](ProductionFactorycalendarPutRequest?.md) |  | [optional]  |
+| Name                                    | Type                                                                                | Description                               | Notes      |
+| --------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**                    | **string?**                                                                         | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**               | **string?**                                                                         | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **productionFactorycalendarPutRequest** | [**ProductionFactorycalendarPutRequest?**](ProductionFactorycalendarPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1093,30 +1137,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionfactorycalendaryearget"></a>
+
 # **ProductionFactorycalendarYearGet**
+
 > ProductionFactorycalendarPutRequest ProductionFactorycalendarYearGet (string year, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1128,8 +1175,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
             var year = "year_example";  // string | The year of the Factory Calendar
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1149,6 +1196,7 @@ namespace Example
 ```
 
 #### Using the ProductionFactorycalendarYearGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1170,11 +1218,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **year** | **string** | The year of the Factory Calendar |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **year**                  | **string**  | The year of the Factory Calendar          |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -1186,32 +1234,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionorderallowrecalculatedatesallowrecalculatecyclesandquantitiesput"></a>
+
 # **ProductionOrderAllowrecalculatedatesAllowrecalculatecyclesandquantitiesPut**
+
 > ProductionOrderAllowrecalculatedatesAllowrecalculatecyclesandquantitiesPut200Response ProductionOrderAllowrecalculatedatesAllowrecalculatecyclesandquantitiesPut (bool allowRecalculateDates, bool allowRecalculateCyclesAndQuantities, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, ProductionOrderAllowrecalculatedatesAllowrecalculatecyclesandquantitiesPutRequest? productionOrderAllowrecalculatedatesAllowrecalculatecyclesandquantitiesPutRequest = null)
 
 PUT
 
-+ Method will update Production Order. Note: Few fields can be updated and only while Production Order is in Draft or Planned status.
+-   Method will update Production Order. Note: Few fields can be updated and only while Production Order is in Draft or Planned status.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1224,9 +1275,9 @@ namespace Example
             var apiInstance = new ProductionApi(config);
             var allowRecalculateDates = false;  // bool |  (default to false)
             var allowRecalculateCyclesAndQuantities = false;  // bool |  (default to false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var productionOrderAllowrecalculatedatesAllowrecalculatecyclesandquantitiesPutRequest = new ProductionOrderAllowrecalculatedatesAllowrecalculatecyclesandquantitiesPutRequest?(); // ProductionOrderAllowrecalculatedatesAllowrecalculatecyclesandquantitiesPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var productionOrderAllowrecalculatedatesAllowrecalculatecyclesandquantitiesPutRequest = new ProductionOrderAllowrecalculatedatesAllowrecalculatecyclesandquantitiesPutRequest?(); // ProductionOrderAllowrecalculatedatesAllowrecalculatecyclesandquantitiesPutRequest? |  (optional)
 
             try
             {
@@ -1246,6 +1297,7 @@ namespace Example
 ```
 
 #### Using the ProductionOrderAllowrecalculatedatesAllowrecalculatecyclesandquantitiesPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1267,13 +1319,13 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **allowRecalculateDates** | **bool** |  | [default to false] |
-| **allowRecalculateCyclesAndQuantities** | **bool** |  | [default to false] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **productionOrderAllowrecalculatedatesAllowrecalculatecyclesandquantitiesPutRequest** | [**ProductionOrderAllowrecalculatedatesAllowrecalculatecyclesandquantitiesPutRequest?**](ProductionOrderAllowrecalculatedatesAllowrecalculatecyclesandquantitiesPutRequest?.md) |  | [optional]  |
+| Name                                                                                  | Type                                                                                                                                                                            | Description                               | Notes              |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ------------------ |
+| **allowRecalculateDates**                                                             | **bool**                                                                                                                                                                        |                                           | [default to false] |
+| **allowRecalculateCyclesAndQuantities**                                               | **bool**                                                                                                                                                                        |                                           | [default to false] |
+| **apiAuthAccountid**                                                                  | **string?**                                                                                                                                                                     | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]         |
+| **apiAuthApplicationkey**                                                             | **string?**                                                                                                                                                                     | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]         |
+| **productionOrderAllowrecalculatedatesAllowrecalculatecyclesandquantitiesPutRequest** | [**ProductionOrderAllowrecalculatedatesAllowrecalculatecyclesandquantitiesPutRequest?**](ProductionOrderAllowrecalculatedatesAllowrecalculatecyclesandquantitiesPutRequest?.md) |                                           | [optional]         |
 
 ### Return type
 
@@ -1285,32 +1337,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionorderproductionorderidreturnattachmentscontentget"></a>
+
 # **ProductionOrderProductionorderidReturnattachmentscontentGet**
+
 > ProductionOrderProductionorderidReturnattachmentscontentGet200Response ProductionOrderProductionorderidReturnattachmentscontentGet (string productionOrderID, bool returnAttachmentsContent, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
-+ Returns Production Order and its nested items.
+-   Returns Production Order and its nested items.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1323,8 +1378,8 @@ namespace Example
             var apiInstance = new ProductionApi(config);
             var productionOrderID = "productionOrderID_example";  // string | Identifier of a Production Order
             var returnAttachmentsContent = false;  // bool |  (default to false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1344,6 +1399,7 @@ namespace Example
 ```
 
 #### Using the ProductionOrderProductionorderidReturnattachmentscontentGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1365,12 +1421,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **productionOrderID** | **string** | Identifier of a Production Order |  |
-| **returnAttachmentsContent** | **bool** |  | [default to false] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                         | Type        | Description                               | Notes              |
+| ---------------------------- | ----------- | ----------------------------------------- | ------------------ |
+| **productionOrderID**        | **string**  | Identifier of a Production Order          |                    |
+| **returnAttachmentsContent** | **bool**    |                                           | [default to false] |
+| **apiAuthAccountid**         | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]         |
+| **apiAuthApplicationkey**    | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]         |
 
 ### Return type
 
@@ -1382,32 +1438,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionorderrecalculatedatespost"></a>
+
 # **ProductionOrderRecalculatedatesPost**
+
 > ProductionOrderRecalculatedatesPost200Response ProductionOrderRecalculatedatesPost (bool recalculateDates, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, ProductionOrderRecalculatedatesPostRequest? productionOrderRecalculatedatesPostRequest = null)
 
 POST
 
-+ Method will create new Production Order.
+-   Method will create new Production Order.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1419,9 +1478,9 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
             var recalculateDates = false;  // bool |  (default to false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var productionOrderRecalculatedatesPostRequest = new ProductionOrderRecalculatedatesPostRequest?(); // ProductionOrderRecalculatedatesPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var productionOrderRecalculatedatesPostRequest = new ProductionOrderRecalculatedatesPostRequest?(); // ProductionOrderRecalculatedatesPostRequest? |  (optional)
 
             try
             {
@@ -1441,6 +1500,7 @@ namespace Example
 ```
 
 #### Using the ProductionOrderRecalculatedatesPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1462,12 +1522,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **recalculateDates** | **bool** |  | [default to false] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **productionOrderRecalculatedatesPostRequest** | [**ProductionOrderRecalculatedatesPostRequest?**](ProductionOrderRecalculatedatesPostRequest?.md) |  | [optional]  |
+| Name                                           | Type                                                                                              | Description                               | Notes              |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------- | ----------------------------------------- | ------------------ |
+| **recalculateDates**                           | **bool**                                                                                          |                                           | [default to false] |
+| **apiAuthAccountid**                           | **string?**                                                                                       | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]         |
+| **apiAuthApplicationkey**                      | **string?**                                                                                       | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]         |
+| **productionOrderRecalculatedatesPostRequest** | [**ProductionOrderRecalculatedatesPostRequest?**](ProductionOrderRecalculatedatesPostRequest?.md) |                                           | [optional]         |
 
 ### Return type
 
@@ -1479,32 +1539,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionorderrunpost"></a>
+
 # **ProductionOrderRunPost**
+
 > void ProductionOrderRunPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, ProductionOrderRunPostRequest? productionOrderRunPostRequest = null)
 
 POST
 
-+ Method will create new Runs.
+-   Method will create new Runs.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1515,9 +1578,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var productionOrderRunPostRequest = new ProductionOrderRunPostRequest?(); // ProductionOrderRunPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var productionOrderRunPostRequest = new ProductionOrderRunPostRequest?(); // ProductionOrderRunPostRequest? |  (optional)
 
             try
             {
@@ -1536,6 +1599,7 @@ namespace Example
 ```
 
 #### Using the ProductionOrderRunPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1554,11 +1618,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **productionOrderRunPostRequest** | [**ProductionOrderRunPostRequest?**](ProductionOrderRunPostRequest?.md) |  | [optional]  |
+| Name                              | Type                                                                    | Description                               | Notes      |
+| --------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**              | **string?**                                                             | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**         | **string?**                                                             | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **productionOrderRunPostRequest** | [**ProductionOrderRunPostRequest?**](ProductionOrderRunPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1570,32 +1634,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
+-   **Content-Type**: application/json
+-   **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionorderrunproductionorderidincludeattachmentcontentget"></a>
+
 # **ProductionOrderRunProductionorderidIncludeattachmentcontentGet**
+
 > void ProductionOrderRunProductionorderidIncludeattachmentcontentGet (string productionOrderID, bool includeAttachmentContent, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
-+ Method will return all Runs.
+-   Method will return all Runs.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1608,8 +1675,8 @@ namespace Example
             var apiInstance = new ProductionApi(config);
             var productionOrderID = "productionOrderID_example";  // string | Production Order identifier
             var includeAttachmentContent = false;  // bool |  (default to false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1628,6 +1695,7 @@ namespace Example
 ```
 
 #### Using the ProductionOrderRunProductionorderidIncludeattachmentcontentGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1646,12 +1714,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **productionOrderID** | **string** | Production Order identifier |  |
-| **includeAttachmentContent** | **bool** |  | [default to false] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                         | Type        | Description                               | Notes              |
+| ---------------------------- | ----------- | ----------------------------------------- | ------------------ |
+| **productionOrderID**        | **string**  | Production Order identifier               |                    |
+| **includeAttachmentContent** | **bool**    |                                           | [default to false] |
+| **apiAuthAccountid**         | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]         |
+| **apiAuthApplicationkey**    | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]         |
 
 ### Return type
 
@@ -1663,32 +1731,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
+-   **Content-Type**: Not defined
+-   **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionorderrunproductionorderidincreaseorderquantityput"></a>
+
 # **ProductionOrderRunProductionorderidIncreaseorderquantityPut**
+
 > void ProductionOrderRunProductionorderidIncreaseorderquantityPut (string productionOrderID, bool increaseOrderQuantity, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 PUT
 
-+ Method will update Run.
+-   Method will update Run.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1701,8 +1772,8 @@ namespace Example
             var apiInstance = new ProductionApi(config);
             var productionOrderID = "productionOrderID_example";  // string | Production Order identifier
             var increaseOrderQuantity = true;  // bool | Will increase order quantity if sum all run's quantity more then order quantity.
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1721,6 +1792,7 @@ namespace Example
 ```
 
 #### Using the ProductionOrderRunProductionorderidIncreaseorderquantityPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1739,12 +1811,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **productionOrderID** | **string** | Production Order identifier |  |
-| **increaseOrderQuantity** | **bool** | Will increase order quantity if sum all run&#39;s quantity more then order quantity. |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                                          | Notes      |
+| ------------------------- | ----------- | ------------------------------------------------------------------------------------ | ---------- |
+| **productionOrderID**     | **string**  | Production Order identifier                                                          |            |
+| **increaseOrderQuantity** | **bool**    | Will increase order quantity if sum all run&#39;s quantity more then order quantity. |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                                            | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                                            | [optional] |
 
 ### Return type
 
@@ -1756,32 +1828,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
+-   **Content-Type**: Not defined
+-   **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionproductionbompost"></a>
+
 # **ProductionProductionbomPost**
+
 > ProductionProductionbomPost200Response ProductionProductionbomPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, ProductionProductionbomPostRequest? productionProductionbomPostRequest = null)
 
 POST
 
-+ Method will create new Production BOM(s) for specified product family. Please set the 'OverwriteExistingProductionBOM' flag to true if the existing Production BOM needs to be replaced.
+-   Method will create new Production BOM(s) for specified product family. Please set the 'OverwriteExistingProductionBOM' flag to true if the existing Production BOM needs to be replaced.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1792,9 +1867,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var productionProductionbomPostRequest = new ProductionProductionbomPostRequest?(); // ProductionProductionbomPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var productionProductionbomPostRequest = new ProductionProductionbomPostRequest?(); // ProductionProductionbomPostRequest? |  (optional)
 
             try
             {
@@ -1814,6 +1889,7 @@ namespace Example
 ```
 
 #### Using the ProductionProductionbomPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1835,11 +1911,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **productionProductionbomPostRequest** | [**ProductionProductionbomPostRequest?**](ProductionProductionbomPostRequest?.md) |  | [optional]  |
+| Name                                   | Type                                                                              | Description                               | Notes      |
+| -------------------------------------- | --------------------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**                   | **string?**                                                                       | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**              | **string?**                                                                       | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **productionProductionbomPostRequest** | [**ProductionProductionbomPostRequest?**](ProductionProductionbomPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1851,32 +1927,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionproductionbomproductfamilyidbomiddelete"></a>
+
 # **ProductionProductionbomProductfamilyidBomidDelete**
+
 > void ProductionProductionbomProductfamilyidBomidDelete (string productFamilyID, string BOMID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
-+ Method will delete specified Production BOM of specified product family.
+-   Method will delete specified Production BOM of specified product family.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1889,8 +1968,8 @@ namespace Example
             var apiInstance = new ProductionApi(config);
             var productFamilyID = "productFamilyID_example";  // string | Identifier of a Product Family whose Production BOMs are to be deleted
             var BOMID = "BOMID_example";  // string | Identifier of a Production BOM to be deleted
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1909,6 +1988,7 @@ namespace Example
 ```
 
 #### Using the ProductionProductionbomProductfamilyidBomidDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1927,12 +2007,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **productFamilyID** | **string** | Identifier of a Product Family whose Production BOMs are to be deleted |  |
-| **BOMID** | **string** | Identifier of a Production BOM to be deleted |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                            | Notes      |
+| ------------------------- | ----------- | ---------------------------------------------------------------------- | ---------- |
+| **productFamilyID**       | **string**  | Identifier of a Product Family whose Production BOMs are to be deleted |            |
+| **BOMID**                 | **string**  | Identifier of a Production BOM to be deleted                           |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                              | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                              | [optional] |
 
 ### Return type
 
@@ -1944,32 +2024,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
+-   **Content-Type**: Not defined
+-   **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionproductionbomproductfamilyidreturnattachmentscontentget"></a>
+
 # **ProductionProductionbomProductfamilyidReturnattachmentscontentGet**
+
 > ProductionProductionbomProductfamilyidReturnattachmentscontentGet200Response ProductionProductionbomProductfamilyidReturnattachmentscontentGet (string productFamilyID, bool returnAttachmentsContent, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
-+ Method will return all Production BOMs of specified product family.
+-   Method will return all Production BOMs of specified product family.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1982,8 +2065,8 @@ namespace Example
             var apiInstance = new ProductionApi(config);
             var productFamilyID = "productFamilyID_example";  // string | Identifier of the Product Family to return Production BOMs for
             var returnAttachmentsContent = false;  // bool |  (default to false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2003,6 +2086,7 @@ namespace Example
 ```
 
 #### Using the ProductionProductionbomProductfamilyidReturnattachmentscontentGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2024,12 +2108,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **productFamilyID** | **string** | Identifier of the Product Family to return Production BOMs for |  |
-| **returnAttachmentsContent** | **bool** |  | [default to false] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                         | Type        | Description                                                    | Notes              |
+| ---------------------------- | ----------- | -------------------------------------------------------------- | ------------------ |
+| **productFamilyID**          | **string**  | Identifier of the Product Family to return Production BOMs for |                    |
+| **returnAttachmentsContent** | **bool**    |                                                                | [default to false] |
+| **apiAuthAccountid**         | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                      | [optional]         |
+| **apiAuthApplicationkey**    | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                      | [optional]         |
 
 ### Return type
 
@@ -2041,32 +2125,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionproductionbomproductidbomiddelete"></a>
+
 # **ProductionProductionbomProductidBomidDelete**
+
 > void ProductionProductionbomProductidBomidDelete (string productID, string BOMID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
-+ Method will delete specified Production BOM of specified product.
+-   Method will delete specified Production BOM of specified product.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2079,8 +2166,8 @@ namespace Example
             var apiInstance = new ProductionApi(config);
             var productID = "productID_example";  // string | Identifier of the Product whose Production BOMs will be deleted
             var BOMID = "BOMID_example";  // string | Identifier of a Product BOM to be deleted
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2099,6 +2186,7 @@ namespace Example
 ```
 
 #### Using the ProductionProductionbomProductidBomidDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2117,12 +2205,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **productID** | **string** | Identifier of the Product whose Production BOMs will be deleted |  |
-| **BOMID** | **string** | Identifier of a Product BOM to be deleted |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                     | Notes      |
+| ------------------------- | ----------- | --------------------------------------------------------------- | ---------- |
+| **productID**             | **string**  | Identifier of the Product whose Production BOMs will be deleted |            |
+| **BOMID**                 | **string**  | Identifier of a Product BOM to be deleted                       |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                       | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                       | [optional] |
 
 ### Return type
 
@@ -2134,32 +2222,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
+-   **Content-Type**: Not defined
+-   **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **204** | No Content |  -  |
+| ----------- | ----------- | ---------------- |
+| **204**     | No Content  | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionproductionbomproductidreturnattachmentscontentget"></a>
+
 # **ProductionProductionbomProductidReturnattachmentscontentGet**
+
 > ProductionProductionbomProductidReturnattachmentscontentGet200Response ProductionProductionbomProductidReturnattachmentscontentGet (string productID, bool returnAttachmentsContent, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
-+ Method will return all Production BOMs of specified product.
+-   Method will return all Production BOMs of specified product.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2172,8 +2263,8 @@ namespace Example
             var apiInstance = new ProductionApi(config);
             var productID = "productID_example";  // string | Identifier of the Product to return Production BOMs for
             var returnAttachmentsContent = false;  // bool |  (default to false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2193,6 +2284,7 @@ namespace Example
 ```
 
 #### Using the ProductionProductionbomProductidReturnattachmentscontentGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2214,12 +2306,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **productID** | **string** | Identifier of the Product to return Production BOMs for |  |
-| **returnAttachmentsContent** | **bool** |  | [default to false] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                         | Type        | Description                                             | Notes              |
+| ---------------------------- | ----------- | ------------------------------------------------------- | ------------------ |
+| **productID**                | **string**  | Identifier of the Product to return Production BOMs for |                    |
+| **returnAttachmentsContent** | **bool**    |                                                         | [default to false] |
+| **apiAuthAccountid**         | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b               | [optional]         |
+| **apiAuthApplicationkey**    | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033               | [optional]         |
 
 ### Return type
 
@@ -2231,32 +2323,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionproductionbomput"></a>
+
 # **ProductionProductionbomPut**
+
 > ProductionProductionbomPut200Response ProductionProductionbomPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, ProductionProductionbomPutRequest? productionProductionbomPutRequest = null)
 
 PUT
 
-+ Method will update Production BOM for specified product family.
+-   Method will update Production BOM for specified product family.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2267,9 +2362,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var productionProductionbomPutRequest = new ProductionProductionbomPutRequest?(); // ProductionProductionbomPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var productionProductionbomPutRequest = new ProductionProductionbomPutRequest?(); // ProductionProductionbomPutRequest? |  (optional)
 
             try
             {
@@ -2289,6 +2384,7 @@ namespace Example
 ```
 
 #### Using the ProductionProductionbomPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2310,11 +2406,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **productionProductionbomPutRequest** | [**ProductionProductionbomPutRequest?**](ProductionProductionbomPutRequest?.md) |  | [optional]  |
+| Name                                  | Type                                                                            | Description                               | Notes      |
+| ------------------------------------- | ------------------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**                  | **string?**                                                                     | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**             | **string?**                                                                     | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **productionProductionbomPutRequest** | [**ProductionProductionbomPutRequest?**](ProductionProductionbomPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -2326,32 +2422,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionresourcepost"></a>
+
 # **ProductionResourcePost**
+
 > void ProductionResourcePost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 POST
 
-+ ResourceCapacities, ResourceCosts, ResourceRemarks, ResourceAttachments do not support modifying. Only creation and deletion.
+-   ResourceCapacities, ResourceCosts, ResourceRemarks, ResourceAttachments do not support modifying. Only creation and deletion.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2362,8 +2461,8 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2382,6 +2481,7 @@ namespace Example
 ```
 
 #### Using the ProductionResourcePostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2400,10 +2500,10 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -2415,32 +2515,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
+-   **Content-Type**: Not defined
+-   **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionresourceput"></a>
+
 # **ProductionResourcePut**
+
 > ProductionResourcePutRequest ProductionResourcePut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, ProductionResourcePutRequest? productionResourcePutRequest = null)
 
 PUT
 
-+ ResourceCapacities, ResourceCosts, ResourceRemarks, ResourceAttachments do not support modifying. Only creation and deletion.
+-   ResourceCapacities, ResourceCosts, ResourceRemarks, ResourceAttachments do not support modifying. Only creation and deletion.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2451,9 +2554,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var productionResourcePutRequest = new ProductionResourcePutRequest?(); // ProductionResourcePutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var productionResourcePutRequest = new ProductionResourcePutRequest?(); // ProductionResourcePutRequest? |  (optional)
 
             try
             {
@@ -2473,6 +2576,7 @@ namespace Example
 ```
 
 #### Using the ProductionResourcePutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2494,11 +2598,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **productionResourcePutRequest** | [**ProductionResourcePutRequest?**](ProductionResourcePutRequest?.md) |  | [optional]  |
+| Name                             | Type                                                                  | Description                               | Notes      |
+| -------------------------------- | --------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**             | **string?**                                                           | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**        | **string?**                                                           | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **productionResourcePutRequest** | [**ProductionResourcePutRequest?**](ProductionResourcePutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -2510,30 +2614,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionresourceresourceiddelete"></a>
+
 # **ProductionResourceResourceidDelete**
+
 > ProductionResourcePutRequest ProductionResourceResourceidDelete (string resourceID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2545,8 +2652,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
             var resourceID = "resourceID_example";  // string | Identifier of Resource
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2566,6 +2673,7 @@ namespace Example
 ```
 
 #### Using the ProductionResourceResourceidDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2587,11 +2695,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **resourceID** | **string** | Identifier of Resource |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **resourceID**            | **string**  | Identifier of Resource                    |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -2603,30 +2711,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionresourceresourceidincludeattachmentsget"></a>
+
 # **ProductionResourceResourceidIncludeattachmentsGet**
+
 > void ProductionResourceResourceidIncludeattachmentsGet (string resourceID, bool includeAttachments, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2639,8 +2750,8 @@ namespace Example
             var apiInstance = new ProductionApi(config);
             var resourceID = "resourceID_example";  // string | Identifier of Resource
             var includeAttachments = false;  // bool |  (default to false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2659,6 +2770,7 @@ namespace Example
 ```
 
 #### Using the ProductionResourceResourceidIncludeattachmentsGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2677,12 +2789,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **resourceID** | **string** | Identifier of Resource |  |
-| **includeAttachments** | **bool** |  | [default to false] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes              |
+| ------------------------- | ----------- | ----------------------------------------- | ------------------ |
+| **resourceID**            | **string**  | Identifier of Resource                    |                    |
+| **includeAttachments**    | **bool**    |                                           | [default to false] |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]         |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]         |
 
 ### Return type
 
@@ -2694,32 +2806,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
+-   **Content-Type**: Not defined
+-   **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionresourcelistpglmtnameonlyactiveget"></a>
+
 # **ProductionResourcelistPgLmtNameOnlyactiveGet**
+
 > void ProductionResourcelistPgLmtNameOnlyactiveGet (decimal page, decimal limit, string name, bool onlyActive, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
-+ Method will return all resources.
+-   Method will return all resources.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2734,8 +2849,8 @@ namespace Example
             var limit = 100MD;  // decimal |  (default to 100M)
             var name = "name_example";  // string | Only return Resources that start with the specific Name or Code
             var onlyActive = true;  // bool |  (default to true)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2754,6 +2869,7 @@ namespace Example
 ```
 
 #### Using the ProductionResourcelistPgLmtNameOnlyactiveGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2772,14 +2888,14 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **page** | **decimal** |  | [default to 1M] |
-| **limit** | **decimal** |  | [default to 100M] |
-| **name** | **string** | Only return Resources that start with the specific Name or Code |  |
-| **onlyActive** | **bool** |  | [default to true] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                     | Notes             |
+| ------------------------- | ----------- | --------------------------------------------------------------- | ----------------- |
+| **page**                  | **decimal** |                                                                 | [default to 1M]   |
+| **limit**                 | **decimal** |                                                                 | [default to 100M] |
+| **name**                  | **string**  | Only return Resources that start with the specific Name or Code |                   |
+| **onlyActive**            | **bool**    |                                                                 | [default to true] |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                       | [optional]        |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                       | [optional]        |
 
 ### Return type
 
@@ -2791,32 +2907,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
+-   **Content-Type**: Not defined
+-   **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionsuspendreasonpglmtworkcenteridget"></a>
+
 # **ProductionSuspendreasonPgLmtWorkcenteridGet**
+
 > void ProductionSuspendreasonPgLmtWorkcenteridGet (decimal page, decimal limit, string workcenterID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
-+ Method will return all suspend reasons.
+-   Method will return all suspend reasons.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2830,8 +2949,8 @@ namespace Example
             var page = 1MD;  // decimal |  (default to 1M)
             var limit = 100MD;  // decimal |  (default to 100M)
             var workcenterID = "\"null\"";  // string |  (default to "null")
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2850,6 +2969,7 @@ namespace Example
 ```
 
 #### Using the ProductionSuspendreasonPgLmtWorkcenteridGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2868,13 +2988,13 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **page** | **decimal** |  | [default to 1M] |
-| **limit** | **decimal** |  | [default to 100M] |
-| **workcenterID** | **string** |  | [default to &quot;null&quot;] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes                         |
+| ------------------------- | ----------- | ----------------------------------------- | ----------------------------- |
+| **page**                  | **decimal** |                                           | [default to 1M]               |
+| **limit**                 | **decimal** |                                           | [default to 100M]             |
+| **workcenterID**          | **string**  |                                           | [default to &quot;null&quot;] |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]                    |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]                    |
 
 ### Return type
 
@@ -2886,32 +3006,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
+-   **Content-Type**: Not defined
+-   **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionsuspendreasonput"></a>
+
 # **ProductionSuspendreasonPut**
+
 > ProductionSuspendreasonPut200Response ProductionSuspendreasonPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 PUT
 
-+ Workcenters do not support modifying. Only creation and deletion.  ### Available Fields for SuspendReason  | Property | Type           | Length | Required |Notes       | |:- -- -- --|- -- -- -- -- -- -- -- -- -- -- -|- -- -- -- --|- -- -- -- -- -|- -- -- -- -- -| | `SuspendReasonID`  | Guid           |         | Yes* | If it is empty, then will add new Suspend Reason, otherwise it will be modified | | `Reason`  | String             |         | Yes*  | Only for new entity | | `Workcenters`  | Guid Array             |         |    |  |
+-   Workcenters do not support modifying. Only creation and deletion. ### Available Fields for SuspendReason | Property | Type | Length | Required |Notes | |:- -- -- --|- -- -- -- -- -- -- -- -- -- -- -|- -- -- -- --|- -- -- -- -- -|- -- -- -- -- -| | `SuspendReasonID` | Guid | | Yes* | If it is empty, then will add new Suspend Reason, otherwise it will be modified | | `Reason` | String | | Yes* | Only for new entity | | `Workcenters` | Guid Array | | | |
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2922,8 +3045,8 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2943,6 +3066,7 @@ namespace Example
 ```
 
 #### Using the ProductionSuspendreasonPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2964,10 +3088,10 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -2979,32 +3103,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionworkcenterspglmtnameget"></a>
+
 # **ProductionWorkcentersPgLmtNameGet**
+
 > void ProductionWorkcentersPgLmtNameGet (decimal page, decimal limit, string name, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
-+ Method will return all workcenters.
+-   Method will return all workcenters.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3018,8 +3145,8 @@ namespace Example
             var page = 1MD;  // decimal |  (default to 1M)
             var limit = 100MD;  // decimal |  (default to 100M)
             var name = "name_example";  // string | Only return WorkCenters that start with the specific Name
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -3038,6 +3165,7 @@ namespace Example
 ```
 
 #### Using the ProductionWorkcentersPgLmtNameGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3056,13 +3184,13 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **page** | **decimal** |  | [default to 1M] |
-| **limit** | **decimal** |  | [default to 100M] |
-| **name** | **string** | Only return WorkCenters that start with the specific Name |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                               | Notes             |
+| ------------------------- | ----------- | --------------------------------------------------------- | ----------------- |
+| **page**                  | **decimal** |                                                           | [default to 1M]   |
+| **limit**                 | **decimal** |                                                           | [default to 100M] |
+| **name**                  | **string**  | Only return WorkCenters that start with the specific Name |                   |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                 | [optional]        |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                 | [optional]        |
 
 ### Return type
 
@@ -3074,32 +3202,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
+-   **Content-Type**: Not defined
+-   **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionworkcenterspost"></a>
+
 # **ProductionWorkcentersPost**
+
 > ProductionWorkcentersPost200Response ProductionWorkcentersPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 POST
 
-+ Work center locations will be created.
+-   Work center locations will be created.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3110,8 +3241,8 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -3131,6 +3262,7 @@ namespace Example
 ```
 
 #### Using the ProductionWorkcentersPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3152,10 +3284,10 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -3167,32 +3299,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionworkcentersput"></a>
+
 # **ProductionWorkcentersPut**
+
 > ProductionWorkcentersPut200Response ProductionWorkcentersPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, ProductionWorkcentersPutRequest? productionWorkcentersPutRequest = null)
 
 PUT
 
-+ If work center location does not exist, it will be created. If work center location exists, it will be updated.
+-   If work center location does not exist, it will be created. If work center location exists, it will be updated.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3203,9 +3338,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var productionWorkcentersPutRequest = new ProductionWorkcentersPutRequest?(); // ProductionWorkcentersPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var productionWorkcentersPutRequest = new ProductionWorkcentersPutRequest?(); // ProductionWorkcentersPutRequest? |  (optional)
 
             try
             {
@@ -3225,6 +3360,7 @@ namespace Example
 ```
 
 #### Using the ProductionWorkcentersPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3246,11 +3382,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **productionWorkcentersPutRequest** | [**ProductionWorkcentersPutRequest?**](ProductionWorkcentersPutRequest?.md) |  | [optional]  |
+| Name                                | Type                                                                        | Description                               | Notes      |
+| ----------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**                | **string?**                                                                 | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**           | **string?**                                                                 | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **productionWorkcentersPutRequest** | [**ProductionWorkcentersPutRequest?**](ProductionWorkcentersPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -3262,32 +3398,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productionworkcentersworkcenteriddelete"></a>
+
 # **ProductionWorkcentersWorkcenteridDelete**
+
 > void ProductionWorkcentersWorkcenteridDelete (string workCenterId, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
-+ Method will delete workcenter with specified WorkCenterId if it exists.
+-   Method will delete workcenter with specified WorkCenterId if it exists.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3299,8 +3438,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
             var workCenterId = "workCenterId_example";  // string | Identifier of WorkCenter to delete
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -3319,6 +3458,7 @@ namespace Example
 ```
 
 #### Using the ProductionWorkcentersWorkcenteridDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3337,11 +3477,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **workCenterId** | **string** | Identifier of WorkCenter to delete |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **workCenterId**          | **string**  | Identifier of WorkCenter to delete        |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -3353,32 +3493,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
+-   **Content-Type**: Not defined
+-   **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="putattachment"></a>
+
 # **PutAttachment**
+
 > PutAttachment200Response PutAttachment (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 Put Attachment
 
-+ Method allows to update IsProcessed field of Production Order attachment.
+-   Method allows to update IsProcessed field of Production Order attachment.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3389,8 +3532,8 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -3410,6 +3553,7 @@ namespace Example
 ```
 
 #### Using the PutAttachmentWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3431,10 +3575,10 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -3446,32 +3590,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="release"></a>
+
 # **Release**
+
 > Release200Response Release (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, ReleaseRequest? releaseRequest = null)
 
 Release
 
-+ Method will release Production Order.
+-   Method will release Production Order.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3482,9 +3629,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var releaseRequest = new ReleaseRequest?(); // ReleaseRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var releaseRequest = new ReleaseRequest?(); // ReleaseRequest? |  (optional)
 
             try
             {
@@ -3504,6 +3651,7 @@ namespace Example
 ```
 
 #### Using the ReleaseWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3525,11 +3673,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **releaseRequest** | [**ReleaseRequest?**](ReleaseRequest?.md) |  | [optional]  |
+| Name                      | Type                                      | Description                               | Notes      |
+| ------------------------- | ----------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?**                               | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?**                               | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **releaseRequest**        | [**ReleaseRequest?**](ReleaseRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -3541,32 +3689,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="resumerunoperation"></a>
+
 # **ResumeRunOperation**
+
 > ResumeRunOperation200Response ResumeRunOperation (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, ResumeRunOperationRequest? resumeRunOperationRequest = null)
 
 Resume Run Operation
 
-+ Method will resume operation.
+-   Method will resume operation.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3577,9 +3728,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var resumeRunOperationRequest = new ResumeRunOperationRequest?(); // ResumeRunOperationRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var resumeRunOperationRequest = new ResumeRunOperationRequest?(); // ResumeRunOperationRequest? |  (optional)
 
             try
             {
@@ -3599,6 +3750,7 @@ namespace Example
 ```
 
 #### Using the ResumeRunOperationWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3620,11 +3772,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **resumeRunOperationRequest** | [**ResumeRunOperationRequest?**](ResumeRunOperationRequest?.md) |  | [optional]  |
+| Name                          | Type                                                            | Description                               | Notes      |
+| ----------------------------- | --------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**          | **string?**                                                     | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**     | **string?**                                                     | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **resumeRunOperationRequest** | [**ResumeRunOperationRequest?**](ResumeRunOperationRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -3636,32 +3788,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="startrunoperation"></a>
+
 # **StartRunOperation**
+
 > StartRunOperation200Response StartRunOperation (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, StartRunOperationRequest? startRunOperationRequest = null)
 
 Start Run Operation
 
-+ Method will start operation.  \"InputProducts\" - (optional) is used only if we want to send specific quantity or batch for input products.
+-   Method will start operation. \"InputProducts\" - (optional) is used only if we want to send specific quantity or batch for input products.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3672,9 +3827,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var startRunOperationRequest = new StartRunOperationRequest?(); // StartRunOperationRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var startRunOperationRequest = new StartRunOperationRequest?(); // StartRunOperationRequest? |  (optional)
 
             try
             {
@@ -3694,6 +3849,7 @@ namespace Example
 ```
 
 #### Using the StartRunOperationWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3715,11 +3871,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **startRunOperationRequest** | [**StartRunOperationRequest?**](StartRunOperationRequest?.md) |  | [optional]  |
+| Name                         | Type                                                          | Description                               | Notes      |
+| ---------------------------- | ------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**         | **string?**                                                   | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**    | **string?**                                                   | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **startRunOperationRequest** | [**StartRunOperationRequest?**](StartRunOperationRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -3731,32 +3887,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="suspendrunoperation"></a>
+
 # **SuspendRunOperation**
+
 > SuspendRunOperation200Response SuspendRunOperation (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, SuspendRunOperationRequest? suspendRunOperationRequest = null)
 
 Suspend Run Operation
 
-+ Method will suspend operation.
+-   Method will suspend operation.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3767,9 +3926,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var suspendRunOperationRequest = new SuspendRunOperationRequest?(); // SuspendRunOperationRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var suspendRunOperationRequest = new SuspendRunOperationRequest?(); // SuspendRunOperationRequest? |  (optional)
 
             try
             {
@@ -3789,6 +3948,7 @@ namespace Example
 ```
 
 #### Using the SuspendRunOperationWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3810,11 +3970,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **suspendRunOperationRequest** | [**SuspendRunOperationRequest?**](SuspendRunOperationRequest?.md) |  | [optional]  |
+| Name                           | Type                                                              | Description                               | Notes      |
+| ------------------------------ | ----------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**           | **string?**                                                       | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**      | **string?**                                                       | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **suspendRunOperationRequest** | [**SuspendRunOperationRequest?**](SuspendRunOperationRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -3826,32 +3986,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="undo"></a>
+
 # **Undo**
+
 > Undo200Response Undo (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, UndoRequest? undoRequest = null)
 
 Undo
 
-+ Method will undo Production Order.
+-   Method will undo Production Order.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3862,9 +4025,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var undoRequest = new UndoRequest?(); // UndoRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var undoRequest = new UndoRequest?(); // UndoRequest? |  (optional)
 
             try
             {
@@ -3884,6 +4047,7 @@ namespace Example
 ```
 
 #### Using the UndoWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3905,11 +4069,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **undoRequest** | [**UndoRequest?**](UndoRequest?.md) |  | [optional]  |
+| Name                      | Type                                | Description                               | Notes      |
+| ------------------------- | ----------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?**                         | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?**                         | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **undoRequest**           | [**UndoRequest?**](UndoRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -3921,32 +4085,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="undorun"></a>
+
 # **UndoRun**
+
 > UndoRun200Response UndoRun (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, UndoRunRequest? undoRunRequest = null)
 
 Undo Run
 
-+ Method will undo Run.
+-   Method will undo Run.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3957,9 +4124,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var undoRunRequest = new UndoRunRequest?(); // UndoRunRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var undoRunRequest = new UndoRunRequest?(); // UndoRunRequest? |  (optional)
 
             try
             {
@@ -3979,6 +4146,7 @@ namespace Example
 ```
 
 #### Using the UndoRunWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -4000,11 +4168,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **undoRunRequest** | [**UndoRunRequest?**](UndoRunRequest?.md) |  | [optional]  |
+| Name                      | Type                                      | Description                               | Notes      |
+| ------------------------- | ----------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?**                               | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?**                               | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **undoRunRequest**        | [**UndoRunRequest?**](UndoRunRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -4016,32 +4184,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="updatemanualjournals"></a>
+
 # **UpdateManualJournals**
+
 > void UpdateManualJournals (string productionOrderID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 Update Manual Journals
 
-+ Method will create or update Manual Journals of Run.
+-   Method will create or update Manual Journals of Run.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -4053,8 +4224,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
             var productionOrderID = "productionOrderID_example";  // string | Production Order identifier
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -4073,6 +4244,7 @@ namespace Example
 ```
 
 #### Using the UpdateManualJournalsWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -4091,11 +4263,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **productionOrderID** | **string** | Production Order identifier |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **productionOrderID**     | **string**  | Production Order identifier               |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -4107,32 +4279,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
+-   **Content-Type**: Not defined
+-   **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="voidrun"></a>
+
 # **VoidRun**
+
 > UndoRun200Response VoidRun (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, UndoRunRequest? undoRunRequest = null)
 
 Void Run
 
-+ Method will void Run.
+-   Method will void Run.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -4143,9 +4318,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ProductionApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var undoRunRequest = new UndoRunRequest?(); // UndoRunRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var undoRunRequest = new UndoRunRequest?(); // UndoRunRequest? |  (optional)
 
             try
             {
@@ -4165,6 +4340,7 @@ namespace Example
 ```
 
 #### Using the VoidRunWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -4186,11 +4362,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **undoRunRequest** | [**UndoRunRequest?**](UndoRunRequest?.md) |  | [optional]  |
+| Name                      | Type                                      | Description                               | Notes      |
+| ------------------------- | ----------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?**                               | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?**                               | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **undoRunRequest**        | [**UndoRunRequest?**](UndoRunRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -4202,14 +4378,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

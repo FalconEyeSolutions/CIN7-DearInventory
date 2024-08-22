@@ -1,32 +1,35 @@
-# Org.OpenAPITools.Api.FinishedGoodsApi
+# CIN7.DearInventory.Api.FinishedGoodsApi
 
 All URIs are relative to *https://inventory.dearsystems.com/ExternalApi/v2*
 
-| Method | HTTP request | Description |
-|--------|--------------|-------------|
-| [**FinishedgoodsIdVoidDelete**](FinishedGoodsApi.md#finishedgoodsidvoiddelete) | **DELETE** /finishedGoods?ID&#x3D;{ID}&amp;Void&#x3D;{Void} | Delete |
-| [**FinishedgoodsOrderPost**](FinishedGoodsApi.md#finishedgoodsorderpost) | **POST** /finishedGoods/order | POST |
-| [**FinishedgoodsOrderTaskidGet**](FinishedGoodsApi.md#finishedgoodsordertaskidget) | **GET** /finishedGoods/order?TaskID&#x3D;{TaskID} | GET |
-| [**FinishedgoodsPickPost**](FinishedGoodsApi.md#finishedgoodspickpost) | **POST** /finishedGoods/pick | POST |
-| [**FinishedgoodsPickTaskidGet**](FinishedGoodsApi.md#finishedgoodspicktaskidget) | **GET** /finishedGoods/pick?TaskID&#x3D;{TaskID} | GET |
-| [**FinishedgoodsPost**](FinishedGoodsApi.md#finishedgoodspost) | **POST** /finishedGoods | POST |
-| [**FinishedgoodsPut**](FinishedGoodsApi.md#finishedgoodsput) | **PUT** /finishedGoods | PUT |
-| [**FinishedgoodsTaskidGet**](FinishedGoodsApi.md#finishedgoodstaskidget) | **GET** /finishedGoods?TaskID&#x3D;{TaskID} | GET |
-| [**FinishedgoodslistPgLmtStsSrchSaleidGet**](FinishedGoodsApi.md#finishedgoodslistpglmtstssrchsaleidget) | **GET** /finishedGoodsList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Status&#x3D;{Status}&amp;Search&#x3D;{Search}&amp;SaleID&#x3D;{SaleID} | GET |
+| Method                                                                                                   | HTTP request                                                                                                                                  | Description |
+| -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [**FinishedgoodsIdVoidDelete**](FinishedGoodsApi.md#finishedgoodsidvoiddelete)                           | **DELETE** /finishedGoods?ID&#x3D;{ID}&amp;Void&#x3D;{Void}                                                                                   | Delete      |
+| [**FinishedgoodsOrderPost**](FinishedGoodsApi.md#finishedgoodsorderpost)                                 | **POST** /finishedGoods/order                                                                                                                 | POST        |
+| [**FinishedgoodsOrderTaskidGet**](FinishedGoodsApi.md#finishedgoodsordertaskidget)                       | **GET** /finishedGoods/order?TaskID&#x3D;{TaskID}                                                                                             | GET         |
+| [**FinishedgoodsPickPost**](FinishedGoodsApi.md#finishedgoodspickpost)                                   | **POST** /finishedGoods/pick                                                                                                                  | POST        |
+| [**FinishedgoodsPickTaskidGet**](FinishedGoodsApi.md#finishedgoodspicktaskidget)                         | **GET** /finishedGoods/pick?TaskID&#x3D;{TaskID}                                                                                              | GET         |
+| [**FinishedgoodsPost**](FinishedGoodsApi.md#finishedgoodspost)                                           | **POST** /finishedGoods                                                                                                                       | POST        |
+| [**FinishedgoodsPut**](FinishedGoodsApi.md#finishedgoodsput)                                             | **PUT** /finishedGoods                                                                                                                        | PUT         |
+| [**FinishedgoodsTaskidGet**](FinishedGoodsApi.md#finishedgoodstaskidget)                                 | **GET** /finishedGoods?TaskID&#x3D;{TaskID}                                                                                                   | GET         |
+| [**FinishedgoodslistPgLmtStsSrchSaleidGet**](FinishedGoodsApi.md#finishedgoodslistpglmtstssrchsaleidget) | **GET** /finishedGoodsList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Status&#x3D;{Status}&amp;Search&#x3D;{Search}&amp;SaleID&#x3D;{SaleID} | GET         |
 
 <a id="finishedgoodsidvoiddelete"></a>
+
 # **FinishedgoodsIdVoidDelete**
+
 > FinishedgoodsIdVoidDelete200Response FinishedgoodsIdVoidDelete (string ID, bool varVoid, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 Delete
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -39,8 +42,8 @@ namespace Example
             var apiInstance = new FinishedGoodsApi(config);
             var ID = "ID_example";  // string | ID of Finished Goods to Void or Undo
             var varVoid = false;  // bool |  (default to false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -60,6 +63,7 @@ namespace Example
 ```
 
 #### Using the FinishedgoodsIdVoidDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -81,12 +85,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ID** | **string** | ID of Finished Goods to Void or Undo |  |
-| **varVoid** | **bool** |  | [default to false] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes              |
+| ------------------------- | ----------- | ----------------------------------------- | ------------------ |
+| **ID**                    | **string**  | ID of Finished Goods to Void or Undo      |                    |
+| **varVoid**               | **bool**    |                                           | [default to false] |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]         |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]         |
 
 ### Return type
 
@@ -98,30 +102,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="finishedgoodsorderpost"></a>
+
 # **FinishedgoodsOrderPost**
+
 > FinishedgoodsOrderPostRequest FinishedgoodsOrderPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, FinishedgoodsOrderPostRequest? finishedgoodsOrderPostRequest = null)
 
 POST
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -132,9 +139,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new FinishedGoodsApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var finishedgoodsOrderPostRequest = new FinishedgoodsOrderPostRequest?(); // FinishedgoodsOrderPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var finishedgoodsOrderPostRequest = new FinishedgoodsOrderPostRequest?(); // FinishedgoodsOrderPostRequest? |  (optional)
 
             try
             {
@@ -154,6 +161,7 @@ namespace Example
 ```
 
 #### Using the FinishedgoodsOrderPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -175,11 +183,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **finishedgoodsOrderPostRequest** | [**FinishedgoodsOrderPostRequest?**](FinishedgoodsOrderPostRequest?.md) |  | [optional]  |
+| Name                              | Type                                                                    | Description                               | Notes      |
+| --------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**              | **string?**                                                             | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**         | **string?**                                                             | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **finishedgoodsOrderPostRequest** | [**FinishedgoodsOrderPostRequest?**](FinishedgoodsOrderPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -191,30 +199,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="finishedgoodsordertaskidget"></a>
+
 # **FinishedgoodsOrderTaskidGet**
+
 > FinishedgoodsOrderTaskidGet200Response FinishedgoodsOrderTaskidGet (string taskID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -226,8 +237,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new FinishedGoodsApi(config);
             var taskID = "taskID_example";  // string | Returns Order info of a particular Finished Goods
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -247,6 +258,7 @@ namespace Example
 ```
 
 #### Using the FinishedgoodsOrderTaskidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -268,11 +280,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | Returns Order info of a particular Finished Goods |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                       | Notes      |
+| ------------------------- | ----------- | ------------------------------------------------- | ---------- |
+| **taskID**                | **string**  | Returns Order info of a particular Finished Goods |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b         | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033         | [optional] |
 
 ### Return type
 
@@ -284,30 +296,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="finishedgoodspickpost"></a>
+
 # **FinishedgoodsPickPost**
+
 > FinishedgoodsPickPost200Response FinishedgoodsPickPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, FinishedgoodsPickPostRequest? finishedgoodsPickPostRequest = null)
 
 POST
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -318,9 +333,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new FinishedGoodsApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var finishedgoodsPickPostRequest = new FinishedgoodsPickPostRequest?(); // FinishedgoodsPickPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var finishedgoodsPickPostRequest = new FinishedgoodsPickPostRequest?(); // FinishedgoodsPickPostRequest? |  (optional)
 
             try
             {
@@ -340,6 +355,7 @@ namespace Example
 ```
 
 #### Using the FinishedgoodsPickPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -361,11 +377,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **finishedgoodsPickPostRequest** | [**FinishedgoodsPickPostRequest?**](FinishedgoodsPickPostRequest?.md) |  | [optional]  |
+| Name                             | Type                                                                  | Description                               | Notes      |
+| -------------------------------- | --------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**             | **string?**                                                           | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**        | **string?**                                                           | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **finishedgoodsPickPostRequest** | [**FinishedgoodsPickPostRequest?**](FinishedgoodsPickPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -377,30 +393,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="finishedgoodspicktaskidget"></a>
+
 # **FinishedgoodsPickTaskidGet**
+
 > FinishedgoodsPickTaskidGet200Response FinishedgoodsPickTaskidGet (string taskID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -412,8 +431,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new FinishedGoodsApi(config);
             var taskID = "taskID_example";  // string | Returns Pick info of a particular Finished Goods
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -433,6 +452,7 @@ namespace Example
 ```
 
 #### Using the FinishedgoodsPickTaskidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -454,11 +474,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | Returns Pick info of a particular Finished Goods |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                      | Notes      |
+| ------------------------- | ----------- | ------------------------------------------------ | ---------- |
+| **taskID**                | **string**  | Returns Pick info of a particular Finished Goods |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b        | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033        | [optional] |
 
 ### Return type
 
@@ -470,30 +490,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="finishedgoodspost"></a>
+
 # **FinishedgoodsPost**
+
 > FinishedgoodsPost200Response FinishedgoodsPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, FinishedgoodsPostRequest? finishedgoodsPostRequest = null)
 
 POST
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -504,9 +527,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new FinishedGoodsApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var finishedgoodsPostRequest = new FinishedgoodsPostRequest?(); // FinishedgoodsPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var finishedgoodsPostRequest = new FinishedgoodsPostRequest?(); // FinishedgoodsPostRequest? |  (optional)
 
             try
             {
@@ -526,6 +549,7 @@ namespace Example
 ```
 
 #### Using the FinishedgoodsPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -547,11 +571,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **finishedgoodsPostRequest** | [**FinishedgoodsPostRequest?**](FinishedgoodsPostRequest?.md) |  | [optional]  |
+| Name                         | Type                                                          | Description                               | Notes      |
+| ---------------------------- | ------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**         | **string?**                                                   | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**    | **string?**                                                   | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **finishedgoodsPostRequest** | [**FinishedgoodsPostRequest?**](FinishedgoodsPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -563,30 +587,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="finishedgoodsput"></a>
+
 # **FinishedgoodsPut**
+
 > FinishedgoodsPut200Response FinishedgoodsPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, FinishedgoodsPutRequest? finishedgoodsPutRequest = null)
 
 PUT
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -597,9 +624,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new FinishedGoodsApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var finishedgoodsPutRequest = new FinishedgoodsPutRequest?(); // FinishedgoodsPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var finishedgoodsPutRequest = new FinishedgoodsPutRequest?(); // FinishedgoodsPutRequest? |  (optional)
 
             try
             {
@@ -619,6 +646,7 @@ namespace Example
 ```
 
 #### Using the FinishedgoodsPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -640,11 +668,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **finishedgoodsPutRequest** | [**FinishedgoodsPutRequest?**](FinishedgoodsPutRequest?.md) |  | [optional]  |
+| Name                        | Type                                                        | Description                               | Notes      |
+| --------------------------- | ----------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**        | **string?**                                                 | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**   | **string?**                                                 | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **finishedgoodsPutRequest** | [**FinishedgoodsPutRequest?**](FinishedgoodsPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -656,30 +684,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="finishedgoodstaskidget"></a>
+
 # **FinishedgoodsTaskidGet**
+
 > FinishedgoodsTaskidGet200Response FinishedgoodsTaskidGet (string taskID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -691,8 +722,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new FinishedGoodsApi(config);
             var taskID = "taskID_example";  // string | Returns detailed info of a particular Finished Goods
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -712,6 +743,7 @@ namespace Example
 ```
 
 #### Using the FinishedgoodsTaskidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -733,11 +765,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | Returns detailed info of a particular Finished Goods |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                          | Notes      |
+| ------------------------- | ----------- | ---------------------------------------------------- | ---------- |
+| **taskID**                | **string**  | Returns detailed info of a particular Finished Goods |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b            | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033            | [optional] |
 
 ### Return type
 
@@ -749,30 +781,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="finishedgoodslistpglmtstssrchsaleidget"></a>
+
 # **FinishedgoodslistPgLmtStsSrchSaleidGet**
+
 > FinishedgoodslistPgLmtStsSrchSaleidGet200Response FinishedgoodslistPgLmtStsSrchSaleidGet (decimal page, decimal limit, string status, string search, string saleID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -788,8 +823,8 @@ namespace Example
             var status = "status_example";  // string | Only return Finished Goods with specified status (Default: null)
             var search = "search_example";  // string | Only return Finished Goods with search value contained in one of these fields: AssemblyNumber, Location, Status, Name, ProductCode, BatchSN, Notes (Default: null)
             var saleID = "saleID_example";  // string | Only return Finished Goods related to particular Sale
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -809,6 +844,7 @@ namespace Example
 ```
 
 #### Using the FinishedgoodslistPgLmtStsSrchSaleidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -830,15 +866,15 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **page** | **decimal** | Page (Default: 1) |  |
-| **limit** | **decimal** | Specifies the page size for pagination. Default page size is 100. (Default: 100) |  |
-| **status** | **string** | Only return Finished Goods with specified status (Default: null) |  |
-| **search** | **string** | Only return Finished Goods with search value contained in one of these fields: AssemblyNumber, Location, Status, Name, ProductCode, BatchSN, Notes (Default: null) |  |
-| **saleID** | **string** | Only return Finished Goods related to particular Sale |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                                                                                                                        | Notes      |
+| ------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- |
+| **page**                  | **decimal** | Page (Default: 1)                                                                                                                                                  |            |
+| **limit**                 | **decimal** | Specifies the page size for pagination. Default page size is 100. (Default: 100)                                                                                   |            |
+| **status**                | **string**  | Only return Finished Goods with specified status (Default: null)                                                                                                   |            |
+| **search**                | **string**  | Only return Finished Goods with search value contained in one of these fields: AssemblyNumber, Location, Status, Name, ProductCode, BatchSN, Notes (Default: null) |            |
+| **saleID**                | **string**  | Only return Finished Goods related to particular Sale                                                                                                              |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                                                                                                                          | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                                                                                                                          | [optional] |
 
 ### Return type
 
@@ -850,14 +886,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

@@ -1,40 +1,43 @@
-# Org.OpenAPITools.Api.StockApi
+# CIN7.DearInventory.Api.StockApi
 
 All URIs are relative to *https://inventory.dearsystems.com/ExternalApi/v2*
 
-| Method | HTTP request | Description |
-|--------|--------------|-------------|
-| [**StockadjustmentIdVoidDelete**](StockApi.md#stockadjustmentidvoiddelete) | **DELETE** /stockadjustment?ID&#x3D;{ID}&amp;Void&#x3D;{Void} | DELETE |
-| [**StockadjustmentPost**](StockApi.md#stockadjustmentpost) | **POST** /stockadjustment | POST |
-| [**StockadjustmentPut**](StockApi.md#stockadjustmentput) | **PUT** /stockadjustment | PUT |
-| [**StockadjustmentTaskidGet**](StockApi.md#stockadjustmenttaskidget) | **GET** /stockadjustment?TaskID&#x3D;{TaskID} | GET |
-| [**StockadjustmentlistPgLmtStsGet**](StockApi.md#stockadjustmentlistpglmtstsget) | **GET** /stockadjustmentList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Status&#x3D;{Status} | GET |
-| [**StocktakeIdVoidDelete**](StockApi.md#stocktakeidvoiddelete) | **DELETE** /stocktake?ID&#x3D;{ID}&amp;Void&#x3D;{Void} | DELETE |
-| [**StocktakePost**](StockApi.md#stocktakepost) | **POST** /stocktake | POST |
-| [**StocktakePut**](StockApi.md#stocktakeput) | **PUT** /stocktake | PUT |
-| [**StocktakeTaskidGet**](StockApi.md#stocktaketaskidget) | **GET** /stocktake?TaskID&#x3D;{TaskID} | GET |
-| [**StocktakelistPgLmtStsGet**](StockApi.md#stocktakelistpglmtstsget) | **GET** /stockTakeList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Status&#x3D;{Status} | GET |
-| [**StocktransferIdVoidDelete**](StockApi.md#stocktransferidvoiddelete) | **DELETE** /stockTransfer?ID&#x3D;{ID}&amp;Void&#x3D;{Void} | DELETE |
-| [**StocktransferOrderPost**](StockApi.md#stocktransferorderpost) | **POST** /stockTransfer/order | POST |
-| [**StocktransferOrderTaskidGet**](StockApi.md#stocktransferordertaskidget) | **GET** /stockTransfer/order?TaskID&#x3D;{TaskID} | GET |
-| [**StocktransferPost**](StockApi.md#stocktransferpost) | **POST** /stockTransfer | POST |
-| [**StocktransferPut**](StockApi.md#stocktransferput) | **PUT** /stockTransfer | PUT |
-| [**StocktransferTaskidGet**](StockApi.md#stocktransfertaskidget) | **GET** /stockTransfer?TaskID&#x3D;{TaskID} | GET |
-| [**StocktransferlistPgLmtStsSrchGet**](StockApi.md#stocktransferlistpglmtstssrchget) | **GET** /stockTransferList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Status&#x3D;{Status}&amp;Search&#x3D;{Search} | GET |
+| Method                                                                               | HTTP request                                                                                                         | Description |
+| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [**StockadjustmentIdVoidDelete**](StockApi.md#stockadjustmentidvoiddelete)           | **DELETE** /stockadjustment?ID&#x3D;{ID}&amp;Void&#x3D;{Void}                                                        | DELETE      |
+| [**StockadjustmentPost**](StockApi.md#stockadjustmentpost)                           | **POST** /stockadjustment                                                                                            | POST        |
+| [**StockadjustmentPut**](StockApi.md#stockadjustmentput)                             | **PUT** /stockadjustment                                                                                             | PUT         |
+| [**StockadjustmentTaskidGet**](StockApi.md#stockadjustmenttaskidget)                 | **GET** /stockadjustment?TaskID&#x3D;{TaskID}                                                                        | GET         |
+| [**StockadjustmentlistPgLmtStsGet**](StockApi.md#stockadjustmentlistpglmtstsget)     | **GET** /stockadjustmentList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Status&#x3D;{Status}                        | GET         |
+| [**StocktakeIdVoidDelete**](StockApi.md#stocktakeidvoiddelete)                       | **DELETE** /stocktake?ID&#x3D;{ID}&amp;Void&#x3D;{Void}                                                              | DELETE      |
+| [**StocktakePost**](StockApi.md#stocktakepost)                                       | **POST** /stocktake                                                                                                  | POST        |
+| [**StocktakePut**](StockApi.md#stocktakeput)                                         | **PUT** /stocktake                                                                                                   | PUT         |
+| [**StocktakeTaskidGet**](StockApi.md#stocktaketaskidget)                             | **GET** /stocktake?TaskID&#x3D;{TaskID}                                                                              | GET         |
+| [**StocktakelistPgLmtStsGet**](StockApi.md#stocktakelistpglmtstsget)                 | **GET** /stockTakeList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Status&#x3D;{Status}                              | GET         |
+| [**StocktransferIdVoidDelete**](StockApi.md#stocktransferidvoiddelete)               | **DELETE** /stockTransfer?ID&#x3D;{ID}&amp;Void&#x3D;{Void}                                                          | DELETE      |
+| [**StocktransferOrderPost**](StockApi.md#stocktransferorderpost)                     | **POST** /stockTransfer/order                                                                                        | POST        |
+| [**StocktransferOrderTaskidGet**](StockApi.md#stocktransferordertaskidget)           | **GET** /stockTransfer/order?TaskID&#x3D;{TaskID}                                                                    | GET         |
+| [**StocktransferPost**](StockApi.md#stocktransferpost)                               | **POST** /stockTransfer                                                                                              | POST        |
+| [**StocktransferPut**](StockApi.md#stocktransferput)                                 | **PUT** /stockTransfer                                                                                               | PUT         |
+| [**StocktransferTaskidGet**](StockApi.md#stocktransfertaskidget)                     | **GET** /stockTransfer?TaskID&#x3D;{TaskID}                                                                          | GET         |
+| [**StocktransferlistPgLmtStsSrchGet**](StockApi.md#stocktransferlistpglmtstssrchget) | **GET** /stockTransferList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Status&#x3D;{Status}&amp;Search&#x3D;{Search} | GET         |
 
 <a id="stockadjustmentidvoiddelete"></a>
+
 # **StockadjustmentIdVoidDelete**
+
 > StockadjustmentIdVoidDelete200Response StockadjustmentIdVoidDelete (string ID, bool varVoid, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -47,8 +50,8 @@ namespace Example
             var apiInstance = new StockApi(config);
             var ID = "ID_example";  // string | ID of Stock Adjustment to Void
             var varVoid = true;  // bool | Void or Undo Stock Adjustment
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -68,6 +71,7 @@ namespace Example
 ```
 
 #### Using the StockadjustmentIdVoidDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -89,12 +93,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ID** | **string** | ID of Stock Adjustment to Void |  |
-| **varVoid** | **bool** | Void or Undo Stock Adjustment |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **ID**                    | **string**  | ID of Stock Adjustment to Void            |            |
+| **varVoid**               | **bool**    | Void or Undo Stock Adjustment             |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -106,32 +110,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="stockadjustmentpost"></a>
+
 # **StockadjustmentPost**
+
 > StockadjustmentPost200Response StockadjustmentPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, StockadjustmentPostRequest? stockadjustmentPostRequest = null)
 
 POST
 
-+ POST method will create new stock adjustment.  + To modify existing stock adjustment use PUT.
+-   POST method will create new stock adjustment. + To modify existing stock adjustment use PUT.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -142,9 +149,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new StockApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var stockadjustmentPostRequest = new StockadjustmentPostRequest?(); // StockadjustmentPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var stockadjustmentPostRequest = new StockadjustmentPostRequest?(); // StockadjustmentPostRequest? |  (optional)
 
             try
             {
@@ -164,6 +171,7 @@ namespace Example
 ```
 
 #### Using the StockadjustmentPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -185,11 +193,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **stockadjustmentPostRequest** | [**StockadjustmentPostRequest?**](StockadjustmentPostRequest?.md) |  | [optional]  |
+| Name                           | Type                                                              | Description                               | Notes      |
+| ------------------------------ | ----------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**           | **string?**                                                       | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**      | **string?**                                                       | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **stockadjustmentPostRequest** | [**StockadjustmentPostRequest?**](StockadjustmentPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -201,30 +209,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="stockadjustmentput"></a>
+
 # **StockadjustmentPut**
+
 > StockadjustmentPut200Response StockadjustmentPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, StockadjustmentPutRequest? stockadjustmentPutRequest = null)
 
 PUT
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -235,9 +246,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new StockApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var stockadjustmentPutRequest = new StockadjustmentPutRequest?(); // StockadjustmentPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var stockadjustmentPutRequest = new StockadjustmentPutRequest?(); // StockadjustmentPutRequest? |  (optional)
 
             try
             {
@@ -257,6 +268,7 @@ namespace Example
 ```
 
 #### Using the StockadjustmentPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -278,11 +290,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **stockadjustmentPutRequest** | [**StockadjustmentPutRequest?**](StockadjustmentPutRequest?.md) |  | [optional]  |
+| Name                          | Type                                                            | Description                               | Notes      |
+| ----------------------------- | --------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**          | **string?**                                                     | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**     | **string?**                                                     | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **stockadjustmentPutRequest** | [**StockadjustmentPutRequest?**](StockadjustmentPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -294,30 +306,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="stockadjustmenttaskidget"></a>
+
 # **StockadjustmentTaskidGet**
+
 > StockadjustmentTaskidGet200Response StockadjustmentTaskidGet (string taskID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -329,8 +344,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new StockApi(config);
             var taskID = "taskID_example";  // string | Returns detailed info of a particular Stock Adjustment
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -350,6 +365,7 @@ namespace Example
 ```
 
 #### Using the StockadjustmentTaskidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -371,11 +387,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | Returns detailed info of a particular Stock Adjustment |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                            | Notes      |
+| ------------------------- | ----------- | ------------------------------------------------------ | ---------- |
+| **taskID**                | **string**  | Returns detailed info of a particular Stock Adjustment |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b              | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033              | [optional] |
 
 ### Return type
 
@@ -387,30 +403,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="stockadjustmentlistpglmtstsget"></a>
+
 # **StockadjustmentlistPgLmtStsGet**
+
 > StockadjustmentlistPgLmtStsGet200Response StockadjustmentlistPgLmtStsGet (decimal page, decimal limit, string status, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -424,8 +443,8 @@ namespace Example
             var page = 1MD;  // decimal |  (default to 1M)
             var limit = 100MD;  // decimal |  (default to 100M)
             var status = "\"null\"";  // string |  (default to "null")
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -445,6 +464,7 @@ namespace Example
 ```
 
 #### Using the StockadjustmentlistPgLmtStsGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -466,13 +486,13 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **page** | **decimal** |  | [default to 1M] |
-| **limit** | **decimal** |  | [default to 100M] |
-| **status** | **string** |  | [default to &quot;null&quot;] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes                         |
+| ------------------------- | ----------- | ----------------------------------------- | ----------------------------- |
+| **page**                  | **decimal** |                                           | [default to 1M]               |
+| **limit**                 | **decimal** |                                           | [default to 100M]             |
+| **status**                | **string**  |                                           | [default to &quot;null&quot;] |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]                    |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]                    |
 
 ### Return type
 
@@ -484,30 +504,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="stocktakeidvoiddelete"></a>
+
 # **StocktakeIdVoidDelete**
+
 > StocktakeIdVoidDelete200Response StocktakeIdVoidDelete (string ID, bool varVoid, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -520,8 +543,8 @@ namespace Example
             var apiInstance = new StockApi(config);
             var ID = "ID_example";  // string | ID of Stock Transfer to Void
             var varVoid = true;  // bool | Void or Undo Stock Transfer
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -541,6 +564,7 @@ namespace Example
 ```
 
 #### Using the StocktakeIdVoidDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -562,12 +586,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ID** | **string** | ID of Stock Transfer to Void |  |
-| **varVoid** | **bool** | Void or Undo Stock Transfer |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **ID**                    | **string**  | ID of Stock Transfer to Void              |            |
+| **varVoid**               | **bool**    | Void or Undo Stock Transfer               |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -579,32 +603,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="stocktakepost"></a>
+
 # **StocktakePost**
+
 > StocktakePost200Response StocktakePost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, StocktakePostRequest? stocktakePostRequest = null)
 
 POST
 
-+ POST method will create new stocktask with status IN PROGRESS.  + To modify existing stocktake use PUT.
+-   POST method will create new stocktask with status IN PROGRESS. + To modify existing stocktake use PUT.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -615,9 +642,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new StockApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var stocktakePostRequest = new StocktakePostRequest?(); // StocktakePostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var stocktakePostRequest = new StocktakePostRequest?(); // StocktakePostRequest? |  (optional)
 
             try
             {
@@ -637,6 +664,7 @@ namespace Example
 ```
 
 #### Using the StocktakePostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -658,11 +686,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **stocktakePostRequest** | [**StocktakePostRequest?**](StocktakePostRequest?.md) |  | [optional]  |
+| Name                      | Type                                                  | Description                               | Notes      |
+| ------------------------- | ----------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?**                                           | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?**                                           | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **stocktakePostRequest**  | [**StocktakePostRequest?**](StocktakePostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -674,30 +702,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="stocktakeput"></a>
+
 # **StocktakePut**
+
 > StocktakePut200Response StocktakePut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, StocktakePutRequest? stocktakePutRequest = null)
 
 PUT
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -708,9 +739,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new StockApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var stocktakePutRequest = new StocktakePutRequest?(); // StocktakePutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var stocktakePutRequest = new StocktakePutRequest?(); // StocktakePutRequest? |  (optional)
 
             try
             {
@@ -730,6 +761,7 @@ namespace Example
 ```
 
 #### Using the StocktakePutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -751,11 +783,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **stocktakePutRequest** | [**StocktakePutRequest?**](StocktakePutRequest?.md) |  | [optional]  |
+| Name                      | Type                                                | Description                               | Notes      |
+| ------------------------- | --------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?**                                         | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?**                                         | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **stocktakePutRequest**   | [**StocktakePutRequest?**](StocktakePutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -767,30 +799,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="stocktaketaskidget"></a>
+
 # **StocktakeTaskidGet**
+
 > StocktakeTaskidGet200Response StocktakeTaskidGet (string taskID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -802,8 +837,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new StockApi(config);
             var taskID = "taskID_example";  // string | Returns detailed info of a particular Stock Take
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -823,6 +858,7 @@ namespace Example
 ```
 
 #### Using the StocktakeTaskidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -844,11 +880,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | Returns detailed info of a particular Stock Take |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                      | Notes      |
+| ------------------------- | ----------- | ------------------------------------------------ | ---------- |
+| **taskID**                | **string**  | Returns detailed info of a particular Stock Take |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b        | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033        | [optional] |
 
 ### Return type
 
@@ -860,30 +896,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="stocktakelistpglmtstsget"></a>
+
 # **StocktakelistPgLmtStsGet**
+
 > StocktakelistPgLmtStsGet200Response StocktakelistPgLmtStsGet (decimal page, decimal limit, string status, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -897,8 +936,8 @@ namespace Example
             var page = 1MD;  // decimal |  (default to 1M)
             var limit = 100MD;  // decimal |  (default to 100M)
             var status = "\"null\"";  // string |  (default to "null")
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -918,6 +957,7 @@ namespace Example
 ```
 
 #### Using the StocktakelistPgLmtStsGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -939,13 +979,13 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **page** | **decimal** |  | [default to 1M] |
-| **limit** | **decimal** |  | [default to 100M] |
-| **status** | **string** |  | [default to &quot;null&quot;] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes                         |
+| ------------------------- | ----------- | ----------------------------------------- | ----------------------------- |
+| **page**                  | **decimal** |                                           | [default to 1M]               |
+| **limit**                 | **decimal** |                                           | [default to 100M]             |
+| **status**                | **string**  |                                           | [default to &quot;null&quot;] |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]                    |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]                    |
 
 ### Return type
 
@@ -957,30 +997,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="stocktransferidvoiddelete"></a>
+
 # **StocktransferIdVoidDelete**
+
 > StocktransferIdVoidDelete200Response StocktransferIdVoidDelete (string ID, bool varVoid, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -993,8 +1036,8 @@ namespace Example
             var apiInstance = new StockApi(config);
             var ID = "ID_example";  // string | ID of Stock Transfer to Void
             var varVoid = true;  // bool | Void or Undo Stock Transfer
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1014,6 +1057,7 @@ namespace Example
 ```
 
 #### Using the StocktransferIdVoidDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1035,12 +1079,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ID** | **string** | ID of Stock Transfer to Void |  |
-| **varVoid** | **bool** | Void or Undo Stock Transfer |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **ID**                    | **string**  | ID of Stock Transfer to Void              |            |
+| **varVoid**               | **bool**    | Void or Undo Stock Transfer               |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -1052,32 +1096,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="stocktransferorderpost"></a>
+
 # **StocktransferOrderPost**
+
 > StocktransferOrderPost200Response StocktransferOrderPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, StocktransferOrderPostRequest? stocktransferOrderPostRequest = null)
 
 POST
 
-+ POST method will create and update stock transfer order.
+-   POST method will create and update stock transfer order.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1088,9 +1135,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new StockApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var stocktransferOrderPostRequest = new StocktransferOrderPostRequest?(); // StocktransferOrderPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var stocktransferOrderPostRequest = new StocktransferOrderPostRequest?(); // StocktransferOrderPostRequest? |  (optional)
 
             try
             {
@@ -1110,6 +1157,7 @@ namespace Example
 ```
 
 #### Using the StocktransferOrderPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1131,11 +1179,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **stocktransferOrderPostRequest** | [**StocktransferOrderPostRequest?**](StocktransferOrderPostRequest?.md) |  | [optional]  |
+| Name                              | Type                                                                    | Description                               | Notes      |
+| --------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**              | **string?**                                                             | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**         | **string?**                                                             | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **stocktransferOrderPostRequest** | [**StocktransferOrderPostRequest?**](StocktransferOrderPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1147,30 +1195,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="stocktransferordertaskidget"></a>
+
 # **StocktransferOrderTaskidGet**
+
 > StocktransferOrderPost200Response StocktransferOrderTaskidGet (string taskID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1182,8 +1233,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new StockApi(config);
             var taskID = "taskID_example";  // string | Returns detailed info of a particular Stock Transfer Order
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1203,6 +1254,7 @@ namespace Example
 ```
 
 #### Using the StocktransferOrderTaskidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1224,11 +1276,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | Returns detailed info of a particular Stock Transfer Order |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                | Notes      |
+| ------------------------- | ----------- | ---------------------------------------------------------- | ---------- |
+| **taskID**                | **string**  | Returns detailed info of a particular Stock Transfer Order |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                  | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                  | [optional] |
 
 ### Return type
 
@@ -1240,32 +1292,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="stocktransferpost"></a>
+
 # **StocktransferPost**
+
 > StocktransferPost200Response StocktransferPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, StocktransferPostRequest? stocktransferPostRequest = null)
 
 POST
 
-+ POST method will create new stock transfer.  + To modify existing stock transfer use PUT.
+-   POST method will create new stock transfer. + To modify existing stock transfer use PUT.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1276,9 +1331,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new StockApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var stocktransferPostRequest = new StocktransferPostRequest?(); // StocktransferPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var stocktransferPostRequest = new StocktransferPostRequest?(); // StocktransferPostRequest? |  (optional)
 
             try
             {
@@ -1298,6 +1353,7 @@ namespace Example
 ```
 
 #### Using the StocktransferPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1319,11 +1375,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **stocktransferPostRequest** | [**StocktransferPostRequest?**](StocktransferPostRequest?.md) |  | [optional]  |
+| Name                         | Type                                                          | Description                               | Notes      |
+| ---------------------------- | ------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**         | **string?**                                                   | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**    | **string?**                                                   | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **stocktransferPostRequest** | [**StocktransferPostRequest?**](StocktransferPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1335,30 +1391,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="stocktransferput"></a>
+
 # **StocktransferPut**
+
 > StocktransferPut200Response StocktransferPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, StocktransferPutRequest? stocktransferPutRequest = null)
 
 PUT
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1369,9 +1428,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new StockApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var stocktransferPutRequest = new StocktransferPutRequest?(); // StocktransferPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var stocktransferPutRequest = new StocktransferPutRequest?(); // StocktransferPutRequest? |  (optional)
 
             try
             {
@@ -1391,6 +1450,7 @@ namespace Example
 ```
 
 #### Using the StocktransferPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1412,11 +1472,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **stocktransferPutRequest** | [**StocktransferPutRequest?**](StocktransferPutRequest?.md) |  | [optional]  |
+| Name                        | Type                                                        | Description                               | Notes      |
+| --------------------------- | ----------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**        | **string?**                                                 | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**   | **string?**                                                 | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **stocktransferPutRequest** | [**StocktransferPutRequest?**](StocktransferPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1428,30 +1488,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="stocktransfertaskidget"></a>
+
 # **StocktransferTaskidGet**
+
 > StocktransferTaskidGet200Response StocktransferTaskidGet (string taskID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1463,8 +1526,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new StockApi(config);
             var taskID = "taskID_example";  // string | Returns detailed info of a particular Stock Transfer
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1484,6 +1547,7 @@ namespace Example
 ```
 
 #### Using the StocktransferTaskidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1505,11 +1569,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | Returns detailed info of a particular Stock Transfer |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                          | Notes      |
+| ------------------------- | ----------- | ---------------------------------------------------- | ---------- |
+| **taskID**                | **string**  | Returns detailed info of a particular Stock Transfer |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b            | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033            | [optional] |
 
 ### Return type
 
@@ -1521,30 +1585,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="stocktransferlistpglmtstssrchget"></a>
+
 # **StocktransferlistPgLmtStsSrchGet**
+
 > StocktransferlistPgLmtStsSrchGet200Response StocktransferlistPgLmtStsSrchGet (decimal page, decimal limit, string status, string search, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1559,8 +1626,8 @@ namespace Example
             var limit = 100MD;  // decimal |  (default to 100M)
             var status = "\"null\"";  // string |  (default to "null")
             var search = "\"null\"";  // string |  (default to "null")
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1580,6 +1647,7 @@ namespace Example
 ```
 
 #### Using the StocktransferlistPgLmtStsSrchGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1601,14 +1669,14 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **page** | **decimal** |  | [default to 1M] |
-| **limit** | **decimal** |  | [default to 100M] |
-| **status** | **string** |  | [default to &quot;null&quot;] |
-| **search** | **string** |  | [default to &quot;null&quot;] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes                         |
+| ------------------------- | ----------- | ----------------------------------------- | ----------------------------- |
+| **page**                  | **decimal** |                                           | [default to 1M]               |
+| **limit**                 | **decimal** |                                           | [default to 100M]             |
+| **status**                | **string**  |                                           | [default to &quot;null&quot;] |
+| **search**                | **string**  |                                           | [default to &quot;null&quot;] |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]                    |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]                    |
 
 ### Return type
 
@@ -1620,14 +1688,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

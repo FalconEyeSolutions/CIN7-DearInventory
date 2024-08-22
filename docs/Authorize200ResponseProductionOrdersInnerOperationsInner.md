@@ -1,32 +1,31 @@
-# Org.OpenAPITools.Model.Authorize200ResponseProductionOrdersInnerOperationsInner
+# CIN7.DearInventory.Model.Authorize200ResponseProductionOrdersInnerOperationsInner
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Attachments** | **List&lt;string&gt;** |  | [optional] 
-**ComponentLocationID** | **Object** |  | [optional] 
-**Components** | [**List&lt;Authorize200ResponseProductionOrdersInnerOperationsInnerComponentsInner&gt;**](Authorize200ResponseProductionOrdersInnerOperationsInnerComponentsInner.md) |  | [optional] 
-**CycleTime** | **decimal** |  | [optional] 
-**FinishedProducts** | **List&lt;string&gt;** |  | [optional] 
-**InputProducts** | **List&lt;string&gt;** |  | [optional] 
-**IsBackflush** | **bool** |  | [optional] 
-**IsDropShip** | **bool** |  | [optional] 
-**Name** | **string** |  | [optional] 
-**Notes** | [**List&lt;Authorize200ResponseProductionOrdersInnerOperationsInnerNotesInner&gt;**](Authorize200ResponseProductionOrdersInnerOperationsInnerNotesInner.md) |  | [optional] 
-**OperationID** | **string** |  | [optional] 
-**OperationLinks** | [**List&lt;Authorize200ResponseProductionOrdersInnerOperationsInnerOperationLinksInner&gt;**](Authorize200ResponseProductionOrdersInnerOperationsInnerOperationLinksInner.md) |  | [optional] 
-**OperationType** | **string** |  | [optional] 
-**Order** | **decimal** |  | [optional] 
-**OutputProducts** | [**List&lt;Authorize200ResponseProductionOrdersInnerOperationsInnerOutputProductsInner&gt;**](Authorize200ResponseProductionOrdersInnerOperationsInnerOutputProductsInner.md) |  | [optional] 
-**Resources** | [**List&lt;Authorize200ResponseProductionOrdersInnerOperationsInnerResourcesInner&gt;**](Authorize200ResponseProductionOrdersInnerOperationsInnerResourcesInner.md) |  | [optional] 
-**TotalCycleTime** | **decimal** |  | [optional] 
-**TotalUnitsPerCycle** | **decimal** |  | [optional] 
-**UnitsPerCycle** | **decimal** |  | [optional] 
-**WorkCenterCoManProcurementType** | **Object** |  | [optional] 
-**WorkCenterCode** | **string** |  | [optional] 
-**WorkCenterID** | **string** |  | [optional] 
-**WorkCenterName** | **string** |  | [optional] 
+| Name                               | Type                                                                                                                                                                          | Description | Notes      |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
+| **Attachments**                    | **List&lt;string&gt;**                                                                                                                                                        |             | [optional] |
+| **ComponentLocationID**            | **Object**                                                                                                                                                                    |             | [optional] |
+| **Components**                     | [**List&lt;Authorize200ResponseProductionOrdersInnerOperationsInnerComponentsInner&gt;**](Authorize200ResponseProductionOrdersInnerOperationsInnerComponentsInner.md)         |             | [optional] |
+| **CycleTime**                      | **decimal**                                                                                                                                                                   |             | [optional] |
+| **FinishedProducts**               | **List&lt;string&gt;**                                                                                                                                                        |             | [optional] |
+| **InputProducts**                  | **List&lt;string&gt;**                                                                                                                                                        |             | [optional] |
+| **IsBackflush**                    | **bool**                                                                                                                                                                      |             | [optional] |
+| **IsDropShip**                     | **bool**                                                                                                                                                                      |             | [optional] |
+| **Name**                           | **string**                                                                                                                                                                    |             | [optional] |
+| **Notes**                          | [**List&lt;Authorize200ResponseProductionOrdersInnerOperationsInnerNotesInner&gt;**](Authorize200ResponseProductionOrdersInnerOperationsInnerNotesInner.md)                   |             | [optional] |
+| **OperationID**                    | **string**                                                                                                                                                                    |             | [optional] |
+| **OperationLinks**                 | [**List&lt;Authorize200ResponseProductionOrdersInnerOperationsInnerOperationLinksInner&gt;**](Authorize200ResponseProductionOrdersInnerOperationsInnerOperationLinksInner.md) |             | [optional] |
+| **OperationType**                  | **string**                                                                                                                                                                    |             | [optional] |
+| **Order**                          | **decimal**                                                                                                                                                                   |             | [optional] |
+| **OutputProducts**                 | [**List&lt;Authorize200ResponseProductionOrdersInnerOperationsInnerOutputProductsInner&gt;**](Authorize200ResponseProductionOrdersInnerOperationsInnerOutputProductsInner.md) |             | [optional] |
+| **Resources**                      | [**List&lt;Authorize200ResponseProductionOrdersInnerOperationsInnerResourcesInner&gt;**](Authorize200ResponseProductionOrdersInnerOperationsInnerResourcesInner.md)           |             | [optional] |
+| **TotalCycleTime**                 | **decimal**                                                                                                                                                                   |             | [optional] |
+| **TotalUnitsPerCycle**             | **decimal**                                                                                                                                                                   |             | [optional] |
+| **UnitsPerCycle**                  | **decimal**                                                                                                                                                                   |             | [optional] |
+| **WorkCenterCoManProcurementType** | **Object**                                                                                                                                                                    |             | [optional] |
+| **WorkCenterCode**                 | **string**                                                                                                                                                                    |             | [optional] |
+| **WorkCenterID**                   | **string**                                                                                                                                                                    |             | [optional] |
+| **WorkCenterName**                 | **string**                                                                                                                                                                    |             | [optional] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-

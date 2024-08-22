@@ -1,28 +1,31 @@
-# Org.OpenAPITools.Api.InventoryWriteOffApi
+# CIN7.DearInventory.Api.InventoryWriteOffApi
 
 All URIs are relative to *https://inventory.dearsystems.com/ExternalApi/v2*
 
-| Method | HTTP request | Description |
-|--------|--------------|-------------|
-| [**InventorywriteoffIdVoidDelete**](InventoryWriteOffApi.md#inventorywriteoffidvoiddelete) | **DELETE** /inventoryWriteOff?ID&#x3D;{ID}&amp;Void&#x3D;{Void} | Delete |
-| [**InventorywriteoffPost**](InventoryWriteOffApi.md#inventorywriteoffpost) | **POST** /inventoryWriteOff | POST |
-| [**InventorywriteoffPut**](InventoryWriteOffApi.md#inventorywriteoffput) | **PUT** /inventoryWriteOff | PUT |
-| [**InventorywriteoffTaskidGet**](InventoryWriteOffApi.md#inventorywriteofftaskidget) | **GET** /inventoryWriteOff?TaskID&#x3D;{TaskID} | GET |
-| [**InventorywriteofflistPgLmtStsSrchGet**](InventoryWriteOffApi.md#inventorywriteofflistpglmtstssrchget) | **GET** /inventoryWriteOffList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Status&#x3D;{Status}&amp;Search&#x3D;{Search} | GET |
+| Method                                                                                                   | HTTP request                                                                                                             | Description |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| [**InventorywriteoffIdVoidDelete**](InventoryWriteOffApi.md#inventorywriteoffidvoiddelete)               | **DELETE** /inventoryWriteOff?ID&#x3D;{ID}&amp;Void&#x3D;{Void}                                                          | Delete      |
+| [**InventorywriteoffPost**](InventoryWriteOffApi.md#inventorywriteoffpost)                               | **POST** /inventoryWriteOff                                                                                              | POST        |
+| [**InventorywriteoffPut**](InventoryWriteOffApi.md#inventorywriteoffput)                                 | **PUT** /inventoryWriteOff                                                                                               | PUT         |
+| [**InventorywriteoffTaskidGet**](InventoryWriteOffApi.md#inventorywriteofftaskidget)                     | **GET** /inventoryWriteOff?TaskID&#x3D;{TaskID}                                                                          | GET         |
+| [**InventorywriteofflistPgLmtStsSrchGet**](InventoryWriteOffApi.md#inventorywriteofflistpglmtstssrchget) | **GET** /inventoryWriteOffList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Status&#x3D;{Status}&amp;Search&#x3D;{Search} | GET         |
 
 <a id="inventorywriteoffidvoiddelete"></a>
+
 # **InventorywriteoffIdVoidDelete**
+
 > InventorywriteoffIdVoidDelete200Response InventorywriteoffIdVoidDelete (string ID, bool varVoid, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 Delete
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -35,8 +38,8 @@ namespace Example
             var apiInstance = new InventoryWriteOffApi(config);
             var ID = "ID_example";  // string | ID of Inventory Write-Off to Void or Undo
             var varVoid = false;  // bool |  (default to false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -56,6 +59,7 @@ namespace Example
 ```
 
 #### Using the InventorywriteoffIdVoidDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -77,12 +81,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ID** | **string** | ID of Inventory Write-Off to Void or Undo |  |
-| **varVoid** | **bool** |  | [default to false] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes              |
+| ------------------------- | ----------- | ----------------------------------------- | ------------------ |
+| **ID**                    | **string**  | ID of Inventory Write-Off to Void or Undo |                    |
+| **varVoid**               | **bool**    |                                           | [default to false] |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]         |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]         |
 
 ### Return type
 
@@ -94,30 +98,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="inventorywriteoffpost"></a>
+
 # **InventorywriteoffPost**
+
 > InventorywriteoffPost200Response InventorywriteoffPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, InventorywriteoffPostRequest? inventorywriteoffPostRequest = null)
 
 POST
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -128,9 +135,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new InventoryWriteOffApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var inventorywriteoffPostRequest = new InventorywriteoffPostRequest?(); // InventorywriteoffPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var inventorywriteoffPostRequest = new InventorywriteoffPostRequest?(); // InventorywriteoffPostRequest? |  (optional)
 
             try
             {
@@ -150,6 +157,7 @@ namespace Example
 ```
 
 #### Using the InventorywriteoffPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -171,11 +179,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **inventorywriteoffPostRequest** | [**InventorywriteoffPostRequest?**](InventorywriteoffPostRequest?.md) |  | [optional]  |
+| Name                             | Type                                                                  | Description                               | Notes      |
+| -------------------------------- | --------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**             | **string?**                                                           | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**        | **string?**                                                           | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **inventorywriteoffPostRequest** | [**InventorywriteoffPostRequest?**](InventorywriteoffPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -187,30 +195,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="inventorywriteoffput"></a>
+
 # **InventorywriteoffPut**
+
 > InventorywriteoffPut200Response InventorywriteoffPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, InventorywriteoffPutRequest? inventorywriteoffPutRequest = null)
 
 PUT
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -221,9 +232,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new InventoryWriteOffApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var inventorywriteoffPutRequest = new InventorywriteoffPutRequest?(); // InventorywriteoffPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var inventorywriteoffPutRequest = new InventorywriteoffPutRequest?(); // InventorywriteoffPutRequest? |  (optional)
 
             try
             {
@@ -243,6 +254,7 @@ namespace Example
 ```
 
 #### Using the InventorywriteoffPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -264,11 +276,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **inventorywriteoffPutRequest** | [**InventorywriteoffPutRequest?**](InventorywriteoffPutRequest?.md) |  | [optional]  |
+| Name                            | Type                                                                | Description                               | Notes      |
+| ------------------------------- | ------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**            | **string?**                                                         | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**       | **string?**                                                         | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **inventorywriteoffPutRequest** | [**InventorywriteoffPutRequest?**](InventorywriteoffPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -280,30 +292,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="inventorywriteofftaskidget"></a>
+
 # **InventorywriteoffTaskidGet**
+
 > InventorywriteoffPost200Response InventorywriteoffTaskidGet (string taskID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -315,8 +330,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new InventoryWriteOffApi(config);
             var taskID = "taskID_example";  // string | Returns detailed info of a particular Inventory Write-Off
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -336,6 +351,7 @@ namespace Example
 ```
 
 #### Using the InventorywriteoffTaskidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -357,11 +373,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | Returns detailed info of a particular Inventory Write-Off |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                               | Notes      |
+| ------------------------- | ----------- | --------------------------------------------------------- | ---------- |
+| **taskID**                | **string**  | Returns detailed info of a particular Inventory Write-Off |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                 | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                 | [optional] |
 
 ### Return type
 
@@ -373,30 +389,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="inventorywriteofflistpglmtstssrchget"></a>
+
 # **InventorywriteofflistPgLmtStsSrchGet**
+
 > InventorywriteofflistPgLmtStsSrchGet200Response InventorywriteofflistPgLmtStsSrchGet (decimal page, decimal limit, string status, string search, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -411,8 +430,8 @@ namespace Example
             var limit = 8.14D;  // decimal | Specifies the page size for pagination. Default page size is 100. (Default: 100)
             var status = "status_example";  // string | Only return Inventory Write-Off with specified status (Default: null)
             var search = "search_example";  // string | Only return Inventory Write-Off with search value contained in one of these fields: InventoryWriteOffNumber, Location, Status, Notes (Default: null)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -432,6 +451,7 @@ namespace Example
 ```
 
 #### Using the InventorywriteofflistPgLmtStsSrchGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -453,14 +473,14 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **page** | **decimal** | Page (Default: 1) |  |
-| **limit** | **decimal** | Specifies the page size for pagination. Default page size is 100. (Default: 100) |  |
-| **status** | **string** | Only return Inventory Write-Off with specified status (Default: null) |  |
-| **search** | **string** | Only return Inventory Write-Off with search value contained in one of these fields: InventoryWriteOffNumber, Location, Status, Notes (Default: null) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                                                                                                          | Notes      |
+| ------------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| **page**                  | **decimal** | Page (Default: 1)                                                                                                                                    |            |
+| **limit**                 | **decimal** | Specifies the page size for pagination. Default page size is 100. (Default: 100)                                                                     |            |
+| **status**                | **string**  | Only return Inventory Write-Off with specified status (Default: null)                                                                                |            |
+| **search**                | **string**  | Only return Inventory Write-Off with search value contained in one of these fields: InventoryWriteOffNumber, Location, Status, Notes (Default: null) |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                                                                                                            | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                                                                                                            | [optional] |
 
 ### Return type
 
@@ -472,14 +492,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

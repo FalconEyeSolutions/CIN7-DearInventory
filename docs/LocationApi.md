@@ -1,27 +1,30 @@
-# Org.OpenAPITools.Api.LocationApi
+# CIN7.DearInventory.Api.LocationApi
 
 All URIs are relative to *https://inventory.dearsystems.com/ExternalApi/v2*
 
-| Method | HTTP request | Description |
-|--------|--------------|-------------|
-| [**LocIdPgLmtDeprecatedEtc**](LocationApi.md#locidpglmtdeprecatedetc) | **GET** /ref/location?ID&#x3D;{ID}&amp;Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Deprecated&#x3D;{Deprecated}&amp;Name&#x3D;{Name} | GET |
-| [**RefLocIdDelete**](LocationApi.md#reflociddelete) | **DELETE** /ref/location?ID&#x3D;{ID} | DELETE |
-| [**RefLocPost**](LocationApi.md#reflocpost) | **POST** /ref/location | POST |
-| [**RefLocPut**](LocationApi.md#reflocput) | **PUT** /ref/location | PUT |
+| Method                                                                | HTTP request                                                                                                                         | Description |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| [**LocIdPgLmtDeprecatedEtc**](LocationApi.md#locidpglmtdeprecatedetc) | **GET** /ref/location?ID&#x3D;{ID}&amp;Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Deprecated&#x3D;{Deprecated}&amp;Name&#x3D;{Name} | GET         |
+| [**RefLocIdDelete**](LocationApi.md#reflociddelete)                   | **DELETE** /ref/location?ID&#x3D;{ID}                                                                                                | DELETE      |
+| [**RefLocPost**](LocationApi.md#reflocpost)                           | **POST** /ref/location                                                                                                               | POST        |
+| [**RefLocPut**](LocationApi.md#reflocput)                             | **PUT** /ref/location                                                                                                                | PUT         |
 
 <a id="locidpglmtdeprecatedetc"></a>
+
 # **LocIdPgLmtDeprecatedEtc**
+
 > LocIdPgLmtDeprecatedEtc200Response LocIdPgLmtDeprecatedEtc (decimal page, decimal limit, string ID, bool deprecated, string name, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -37,8 +40,8 @@ namespace Example
             var ID = "ID_example";  // string | Only return location that with the specific ID
             var deprecated = true;  // bool | Only return deprecated locations
             var name = "name_example";  // string | Only return locations that start with the specific name
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -58,6 +61,7 @@ namespace Example
 ```
 
 #### Using the LocIdPgLmtDeprecatedEtcWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -79,15 +83,15 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **page** | **decimal** |  | [default to 1M] |
-| **limit** | **decimal** |  | [default to 100M] |
-| **ID** | **string** | Only return location that with the specific ID |  |
-| **deprecated** | **bool** | Only return deprecated locations |  |
-| **name** | **string** | Only return locations that start with the specific name |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                             | Notes             |
+| ------------------------- | ----------- | ------------------------------------------------------- | ----------------- |
+| **page**                  | **decimal** |                                                         | [default to 1M]   |
+| **limit**                 | **decimal** |                                                         | [default to 100M] |
+| **ID**                    | **string**  | Only return location that with the specific ID          |                   |
+| **deprecated**            | **bool**    | Only return deprecated locations                        |                   |
+| **name**                  | **string**  | Only return locations that start with the specific name |                   |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b               | [optional]        |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033               | [optional]        |
 
 ### Return type
 
@@ -99,30 +103,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="reflociddelete"></a>
+
 # **RefLocIdDelete**
+
 > MeAddressesIdDelete200Response RefLocIdDelete (string ID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -134,8 +141,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new LocationApi(config);
             var ID = "ID_example";  // string | ID of Location to Delete
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -155,6 +162,7 @@ namespace Example
 ```
 
 #### Using the RefLocIdDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -176,11 +184,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ID** | **string** | ID of Location to Delete |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **ID**                    | **string**  | ID of Location to Delete                  |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -192,32 +200,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="reflocpost"></a>
+
 # **RefLocPost**
+
 > RefLocPost200Response RefLocPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, RefLocPostRequest? refLocPostRequest = null)
 
 POST
 
-+ Bins do not support modifying. Only creation and deletion.
+-   Bins do not support modifying. Only creation and deletion.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -228,9 +239,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new LocationApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var refLocPostRequest = new RefLocPostRequest?(); // RefLocPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var refLocPostRequest = new RefLocPostRequest?(); // RefLocPostRequest? |  (optional)
 
             try
             {
@@ -250,6 +261,7 @@ namespace Example
 ```
 
 #### Using the RefLocPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -271,11 +283,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **refLocPostRequest** | [**RefLocPostRequest?**](RefLocPostRequest?.md) |  | [optional]  |
+| Name                      | Type                                            | Description                               | Notes      |
+| ------------------------- | ----------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?**                                     | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?**                                     | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **refLocPostRequest**     | [**RefLocPostRequest?**](RefLocPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -287,32 +299,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="reflocput"></a>
+
 # **RefLocPut**
+
 > RefLocPut200Response RefLocPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, RefLocPutRequest? refLocPutRequest = null)
 
 PUT
 
-+ Bins do not support modifying. Only creation and deletion.
+-   Bins do not support modifying. Only creation and deletion.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -323,9 +338,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new LocationApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var refLocPutRequest = new RefLocPutRequest?(); // RefLocPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var refLocPutRequest = new RefLocPutRequest?(); // RefLocPutRequest? |  (optional)
 
             try
             {
@@ -345,6 +360,7 @@ namespace Example
 ```
 
 #### Using the RefLocPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -366,11 +382,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **refLocPutRequest** | [**RefLocPutRequest?**](RefLocPutRequest?.md) |  | [optional]  |
+| Name                      | Type                                          | Description                               | Notes      |
+| ------------------------- | --------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?**                                   | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?**                                   | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **refLocPutRequest**      | [**RefLocPutRequest?**](RefLocPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -382,14 +398,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

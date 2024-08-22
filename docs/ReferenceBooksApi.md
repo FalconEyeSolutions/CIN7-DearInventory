@@ -1,44 +1,47 @@
-# Org.OpenAPITools.Api.ReferenceBooksApi
+# CIN7.DearInventory.Api.ReferenceBooksApi
 
 All URIs are relative to *https://inventory.dearsystems.com/ExternalApi/v2*
 
-| Method | HTTP request | Description |
-|--------|--------------|-------------|
-| [**CustomPricesPost**](ReferenceBooksApi.md#custompricespost) | **POST** /custom-prices | POST |
-| [**CustomPricesProductidCustomeridDelete**](ReferenceBooksApi.md#custompricesproductidcustomeriddelete) | **DELETE** /custom-prices?ProductID&#x3D;{ProductID}&amp;CustomerID&#x3D;{CustomerID} | DELETE |
-| [**CustomPricesPut**](ReferenceBooksApi.md#custompricesput) | **PUT** /custom-prices | PUT |
-| [**Get**](ReferenceBooksApi.md#get) | **GET** /reference/shipZonesEnabled | Get |
-| [**ProductSuppliersPost**](ReferenceBooksApi.md#productsupplierspost) | **POST** /product-suppliers | POST |
-| [**ProductSuppliersProductidGet**](ReferenceBooksApi.md#productsuppliersproductidget) | **GET** /product-suppliers?ProductID&#x3D;{ProductID} | GET |
-| [**ProductSuppliersProductidSupplieridDelete**](ReferenceBooksApi.md#productsuppliersproductidsupplieriddelete) | **DELETE** /product-suppliers?ProductID&#x3D;{ProductID}&amp;SupplierID&#x3D;{SupplierID} | DELETE |
-| [**ProductSuppliersPut**](ReferenceBooksApi.md#productsuppliersput) | **PUT** /product-suppliers | PUT |
-| [**ReferenceDealsIdPgLmtSrchGet**](ReferenceBooksApi.md#referencedealsidpglmtsrchget) | **GET** /reference/deals?ID&#x3D;{ID}&amp;Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Search&#x3D;{Search} | GET |
-| [**ReferenceDealsPost**](ReferenceBooksApi.md#referencedealspost) | **POST** /reference/deals | POST |
-| [**ReferenceDealsPut**](ReferenceBooksApi.md#referencedealsput) | **PUT** /reference/deals | PUT |
-| [**ReferenceDiscountIdPgLmtSrchGet**](ReferenceBooksApi.md#referencediscountidpglmtsrchget) | **GET** /reference/discount?ID&#x3D;{ID}&amp;Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Search&#x3D;{Search} | GET |
-| [**ReferenceDiscountPost**](ReferenceBooksApi.md#referencediscountpost) | **POST** /reference/discount | POST |
-| [**ReferenceDiscountPut**](ReferenceBooksApi.md#referencediscountput) | **PUT** /reference/discount | PUT |
-| [**ReferenceShipzonesIdPgLmtSrchGet**](ReferenceBooksApi.md#referenceshipzonesidpglmtsrchget) | **GET** /reference/shipZones?ID&#x3D;{ID}&amp;Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Search&#x3D;{Search} | GET |
-| [**ReferenceShipzonesPost**](ReferenceBooksApi.md#referenceshipzonespost) | **POST** /reference/shipZones | POST |
-| [**ReferenceShipzonesPut**](ReferenceBooksApi.md#referenceshipzonesput) | **PUT** /reference/shipZones | PUT |
-| [**ReferenceShipzonesShipzoneidDelete**](ReferenceBooksApi.md#referenceshipzonesshipzoneiddelete) | **DELETE** /reference/shipZones?ShipZoneID &#x3D;{ShipZoneID} | Delete |
-| [**Update**](ReferenceBooksApi.md#update) | **PUT** /reference/shipZonesEnabled | Update |
+| Method                                                                                                          | HTTP request                                                                                                   | Description |
+| --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------- |
+| [**CustomPricesPost**](ReferenceBooksApi.md#custompricespost)                                                   | **POST** /custom-prices                                                                                        | POST        |
+| [**CustomPricesProductidCustomeridDelete**](ReferenceBooksApi.md#custompricesproductidcustomeriddelete)         | **DELETE** /custom-prices?ProductID&#x3D;{ProductID}&amp;CustomerID&#x3D;{CustomerID}                          | DELETE      |
+| [**CustomPricesPut**](ReferenceBooksApi.md#custompricesput)                                                     | **PUT** /custom-prices                                                                                         | PUT         |
+| [**Get**](ReferenceBooksApi.md#get)                                                                             | **GET** /reference/shipZonesEnabled                                                                            | Get         |
+| [**ProductSuppliersPost**](ReferenceBooksApi.md#productsupplierspost)                                           | **POST** /product-suppliers                                                                                    | POST        |
+| [**ProductSuppliersProductidGet**](ReferenceBooksApi.md#productsuppliersproductidget)                           | **GET** /product-suppliers?ProductID&#x3D;{ProductID}                                                          | GET         |
+| [**ProductSuppliersProductidSupplieridDelete**](ReferenceBooksApi.md#productsuppliersproductidsupplieriddelete) | **DELETE** /product-suppliers?ProductID&#x3D;{ProductID}&amp;SupplierID&#x3D;{SupplierID}                      | DELETE      |
+| [**ProductSuppliersPut**](ReferenceBooksApi.md#productsuppliersput)                                             | **PUT** /product-suppliers                                                                                     | PUT         |
+| [**ReferenceDealsIdPgLmtSrchGet**](ReferenceBooksApi.md#referencedealsidpglmtsrchget)                           | **GET** /reference/deals?ID&#x3D;{ID}&amp;Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Search&#x3D;{Search}     | GET         |
+| [**ReferenceDealsPost**](ReferenceBooksApi.md#referencedealspost)                                               | **POST** /reference/deals                                                                                      | POST        |
+| [**ReferenceDealsPut**](ReferenceBooksApi.md#referencedealsput)                                                 | **PUT** /reference/deals                                                                                       | PUT         |
+| [**ReferenceDiscountIdPgLmtSrchGet**](ReferenceBooksApi.md#referencediscountidpglmtsrchget)                     | **GET** /reference/discount?ID&#x3D;{ID}&amp;Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Search&#x3D;{Search}  | GET         |
+| [**ReferenceDiscountPost**](ReferenceBooksApi.md#referencediscountpost)                                         | **POST** /reference/discount                                                                                   | POST        |
+| [**ReferenceDiscountPut**](ReferenceBooksApi.md#referencediscountput)                                           | **PUT** /reference/discount                                                                                    | PUT         |
+| [**ReferenceShipzonesIdPgLmtSrchGet**](ReferenceBooksApi.md#referenceshipzonesidpglmtsrchget)                   | **GET** /reference/shipZones?ID&#x3D;{ID}&amp;Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Search&#x3D;{Search} | GET         |
+| [**ReferenceShipzonesPost**](ReferenceBooksApi.md#referenceshipzonespost)                                       | **POST** /reference/shipZones                                                                                  | POST        |
+| [**ReferenceShipzonesPut**](ReferenceBooksApi.md#referenceshipzonesput)                                         | **PUT** /reference/shipZones                                                                                   | PUT         |
+| [**ReferenceShipzonesShipzoneidDelete**](ReferenceBooksApi.md#referenceshipzonesshipzoneiddelete)               | **DELETE** /reference/shipZones?ShipZoneID &#x3D;{ShipZoneID}                                                  | Delete      |
+| [**Update**](ReferenceBooksApi.md#update)                                                                       | **PUT** /reference/shipZonesEnabled                                                                            | Update      |
 
 <a id="custompricespost"></a>
+
 # **CustomPricesPost**
+
 > CustomPricesPut200Response CustomPricesPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, CustomPricesPutRequest? customPricesPutRequest = null)
 
 POST
 
-+ Method will create new Customer specific prices for specified products.
+-   Method will create new Customer specific prices for specified products.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -49,9 +52,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ReferenceBooksApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var customPricesPutRequest = new CustomPricesPutRequest?(); // CustomPricesPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var customPricesPutRequest = new CustomPricesPutRequest?(); // CustomPricesPutRequest? |  (optional)
 
             try
             {
@@ -71,6 +74,7 @@ namespace Example
 ```
 
 #### Using the CustomPricesPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -92,11 +96,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **customPricesPutRequest** | [**CustomPricesPutRequest?**](CustomPricesPutRequest?.md) |  | [optional]  |
+| Name                       | Type                                                      | Description                               | Notes      |
+| -------------------------- | --------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**       | **string?**                                               | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**  | **string?**                                               | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **customPricesPutRequest** | [**CustomPricesPutRequest?**](CustomPricesPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -108,32 +112,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="custompricesproductidcustomeriddelete"></a>
+
 # **CustomPricesProductidCustomeridDelete**
+
 > void CustomPricesProductidCustomeridDelete (string productID, string customerID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
-+ Method will delete specified Production BOM of specified product.
+-   Method will delete specified Production BOM of specified product.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -146,8 +153,8 @@ namespace Example
             var apiInstance = new ReferenceBooksApi(config);
             var productID = "productID_example";  // string | Identifier of the Product whose Custom Price will be deleted
             var customerID = "customerID_example";  // string | Identifier of a Customer whose Custom Price will be deleted
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -166,6 +173,7 @@ namespace Example
 ```
 
 #### Using the CustomPricesProductidCustomeridDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -184,12 +192,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **productID** | **string** | Identifier of the Product whose Custom Price will be deleted |  |
-| **customerID** | **string** | Identifier of a Customer whose Custom Price will be deleted |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                  | Notes      |
+| ------------------------- | ----------- | ------------------------------------------------------------ | ---------- |
+| **productID**             | **string**  | Identifier of the Product whose Custom Price will be deleted |            |
+| **customerID**            | **string**  | Identifier of a Customer whose Custom Price will be deleted  |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                    | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                    | [optional] |
 
 ### Return type
 
@@ -201,32 +209,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
+-   **Content-Type**: Not defined
+-   **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="custompricesput"></a>
+
 # **CustomPricesPut**
+
 > CustomPricesPut200Response CustomPricesPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, CustomPricesPutRequest? customPricesPutRequest = null)
 
 PUT
 
-+ Method will update Production BOM for specified product.
+-   Method will update Production BOM for specified product.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -237,9 +248,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ReferenceBooksApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var customPricesPutRequest = new CustomPricesPutRequest?(); // CustomPricesPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var customPricesPutRequest = new CustomPricesPutRequest?(); // CustomPricesPutRequest? |  (optional)
 
             try
             {
@@ -259,6 +270,7 @@ namespace Example
 ```
 
 #### Using the CustomPricesPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -280,11 +292,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **customPricesPutRequest** | [**CustomPricesPutRequest?**](CustomPricesPutRequest?.md) |  | [optional]  |
+| Name                       | Type                                                      | Description                               | Notes      |
+| -------------------------- | --------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**       | **string?**                                               | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**  | **string?**                                               | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **customPricesPutRequest** | [**CustomPricesPutRequest?**](CustomPricesPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -296,30 +308,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="get"></a>
+
 # **Get**
+
 > Get200Response Get (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 Get
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -330,8 +345,8 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ReferenceBooksApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -351,6 +366,7 @@ namespace Example
 ```
 
 #### Using the GetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -372,10 +388,10 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -387,30 +403,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productsupplierspost"></a>
+
 # **ProductSuppliersPost**
+
 > MeAddressesIdDelete200Response ProductSuppliersPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, ProductSuppliersPostRequest? productSuppliersPostRequest = null)
 
 POST
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -421,9 +440,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ReferenceBooksApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var productSuppliersPostRequest = new ProductSuppliersPostRequest?(); // ProductSuppliersPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var productSuppliersPostRequest = new ProductSuppliersPostRequest?(); // ProductSuppliersPostRequest? |  (optional)
 
             try
             {
@@ -443,6 +462,7 @@ namespace Example
 ```
 
 #### Using the ProductSuppliersPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -464,11 +484,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **productSuppliersPostRequest** | [**ProductSuppliersPostRequest?**](ProductSuppliersPostRequest?.md) |  | [optional]  |
+| Name                            | Type                                                                | Description                               | Notes      |
+| ------------------------------- | ------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**            | **string?**                                                         | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**       | **string?**                                                         | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **productSuppliersPostRequest** | [**ProductSuppliersPostRequest?**](ProductSuppliersPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -480,30 +500,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productsuppliersproductidget"></a>
+
 # **ProductSuppliersProductidGet**
+
 > ProductSuppliersProductidGet200Response ProductSuppliersProductidGet (string productID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -515,8 +538,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ReferenceBooksApi(config);
             var productID = "productID_example";  // string | Return product suppliers of a particular Product
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -536,6 +559,7 @@ namespace Example
 ```
 
 #### Using the ProductSuppliersProductidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -557,11 +581,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **productID** | **string** | Return product suppliers of a particular Product |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                      | Notes      |
+| ------------------------- | ----------- | ------------------------------------------------ | ---------- |
+| **productID**             | **string**  | Return product suppliers of a particular Product |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b        | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033        | [optional] |
 
 ### Return type
 
@@ -573,32 +597,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productsuppliersproductidsupplieriddelete"></a>
+
 # **ProductSuppliersProductidSupplieridDelete**
+
 > void ProductSuppliersProductidSupplieridDelete (string productID, string supplierID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
-+ Method will delete specified Product Supplier settings with their Options and Intervals.
+-   Method will delete specified Product Supplier settings with their Options and Intervals.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -611,8 +638,8 @@ namespace Example
             var apiInstance = new ReferenceBooksApi(config);
             var productID = "productID_example";  // string | Identifier of the Product
             var supplierID = "supplierID_example";  // string | Identifier of a Supplier
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -631,6 +658,7 @@ namespace Example
 ```
 
 #### Using the ProductSuppliersProductidSupplieridDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -649,12 +677,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **productID** | **string** | Identifier of the Product |  |
-| **supplierID** | **string** | Identifier of a Supplier |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **productID**             | **string**  | Identifier of the Product                 |            |
+| **supplierID**            | **string**  | Identifier of a Supplier                  |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -666,30 +694,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
+-   **Content-Type**: Not defined
+-   **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="productsuppliersput"></a>
+
 # **ProductSuppliersPut**
+
 > MeAddressesIdDelete200Response ProductSuppliersPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, ProductSuppliersPutRequest? productSuppliersPutRequest = null)
 
 PUT
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -700,9 +731,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ReferenceBooksApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var productSuppliersPutRequest = new ProductSuppliersPutRequest?(); // ProductSuppliersPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var productSuppliersPutRequest = new ProductSuppliersPutRequest?(); // ProductSuppliersPutRequest? |  (optional)
 
             try
             {
@@ -722,6 +753,7 @@ namespace Example
 ```
 
 #### Using the ProductSuppliersPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -743,11 +775,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **productSuppliersPutRequest** | [**ProductSuppliersPutRequest?**](ProductSuppliersPutRequest?.md) |  | [optional]  |
+| Name                           | Type                                                              | Description                               | Notes      |
+| ------------------------------ | ----------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**           | **string?**                                                       | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**      | **string?**                                                       | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **productSuppliersPutRequest** | [**ProductSuppliersPutRequest?**](ProductSuppliersPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -759,30 +791,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="referencedealsidpglmtsrchget"></a>
+
 # **ReferenceDealsIdPgLmtSrchGet**
+
 > ReferenceDealsIdPgLmtSrchGet200Response ReferenceDealsIdPgLmtSrchGet (string ID, decimal page, decimal limit, string search, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -797,8 +832,8 @@ namespace Example
             var page = 8.14D;  // decimal | Page (Default: 1)
             var limit = 8.14D;  // decimal | Specifies the page size for pagination. Default page size is 25 (Default: 25)
             var search = "search_example";  // string | Only return Product Deal that have the provided text in Name (Default: not set)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -818,6 +853,7 @@ namespace Example
 ```
 
 #### Using the ReferenceDealsIdPgLmtSrchGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -839,14 +875,14 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ID** | **string** | Returns detailed info of a particular Product Deal |  |
-| **page** | **decimal** | Page (Default: 1) |  |
-| **limit** | **decimal** | Specifies the page size for pagination. Default page size is 25 (Default: 25) |  |
-| **search** | **string** | Only return Product Deal that have the provided text in Name (Default: not set) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                                     | Notes      |
+| ------------------------- | ----------- | ------------------------------------------------------------------------------- | ---------- |
+| **ID**                    | **string**  | Returns detailed info of a particular Product Deal                              |            |
+| **page**                  | **decimal** | Page (Default: 1)                                                               |            |
+| **limit**                 | **decimal** | Specifies the page size for pagination. Default page size is 25 (Default: 25)   |            |
+| **search**                | **string**  | Only return Product Deal that have the provided text in Name (Default: not set) |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                                       | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                                       | [optional] |
 
 ### Return type
 
@@ -858,30 +894,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="referencedealspost"></a>
+
 # **ReferenceDealsPost**
+
 > ReferenceDealsPost200Response ReferenceDealsPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, ReferenceDealsPostRequest? referenceDealsPostRequest = null)
 
 POST
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -892,9 +931,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ReferenceBooksApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var referenceDealsPostRequest = new ReferenceDealsPostRequest?(); // ReferenceDealsPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var referenceDealsPostRequest = new ReferenceDealsPostRequest?(); // ReferenceDealsPostRequest? |  (optional)
 
             try
             {
@@ -914,6 +953,7 @@ namespace Example
 ```
 
 #### Using the ReferenceDealsPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -935,11 +975,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **referenceDealsPostRequest** | [**ReferenceDealsPostRequest?**](ReferenceDealsPostRequest?.md) |  | [optional]  |
+| Name                          | Type                                                            | Description                               | Notes      |
+| ----------------------------- | --------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**          | **string?**                                                     | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**     | **string?**                                                     | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **referenceDealsPostRequest** | [**ReferenceDealsPostRequest?**](ReferenceDealsPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -951,30 +991,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="referencedealsput"></a>
+
 # **ReferenceDealsPut**
+
 > ReferenceDealsPut200Response ReferenceDealsPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, ReferenceDealsPutRequest? referenceDealsPutRequest = null)
 
 PUT
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -985,9 +1028,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ReferenceBooksApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var referenceDealsPutRequest = new ReferenceDealsPutRequest?(); // ReferenceDealsPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var referenceDealsPutRequest = new ReferenceDealsPutRequest?(); // ReferenceDealsPutRequest? |  (optional)
 
             try
             {
@@ -1007,6 +1050,7 @@ namespace Example
 ```
 
 #### Using the ReferenceDealsPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1028,11 +1072,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **referenceDealsPutRequest** | [**ReferenceDealsPutRequest?**](ReferenceDealsPutRequest?.md) |  | [optional]  |
+| Name                         | Type                                                          | Description                               | Notes      |
+| ---------------------------- | ------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**         | **string?**                                                   | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**    | **string?**                                                   | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **referenceDealsPutRequest** | [**ReferenceDealsPutRequest?**](ReferenceDealsPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1044,30 +1088,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="referencediscountidpglmtsrchget"></a>
+
 # **ReferenceDiscountIdPgLmtSrchGet**
+
 > ReferenceDiscountIdPgLmtSrchGet200Response ReferenceDiscountIdPgLmtSrchGet (string ID, decimal page, decimal limit, string search, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1082,8 +1129,8 @@ namespace Example
             var page = 8.14D;  // decimal | Page (Default: 1)
             var limit = 8.14D;  // decimal | Specifies the page size for pagination. Default page size is 25 (Default: 25)
             var search = "search_example";  // string | Only return Discount Rules that have the provided text in Name (Default: not set)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1103,6 +1150,7 @@ namespace Example
 ```
 
 #### Using the ReferenceDiscountIdPgLmtSrchGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1124,14 +1172,14 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ID** | **string** | Returns detailed info of a particular Discount Rule |  |
-| **page** | **decimal** | Page (Default: 1) |  |
-| **limit** | **decimal** | Specifies the page size for pagination. Default page size is 25 (Default: 25) |  |
-| **search** | **string** | Only return Discount Rules that have the provided text in Name (Default: not set) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                                       | Notes      |
+| ------------------------- | ----------- | --------------------------------------------------------------------------------- | ---------- |
+| **ID**                    | **string**  | Returns detailed info of a particular Discount Rule                               |            |
+| **page**                  | **decimal** | Page (Default: 1)                                                                 |            |
+| **limit**                 | **decimal** | Specifies the page size for pagination. Default page size is 25 (Default: 25)     |            |
+| **search**                | **string**  | Only return Discount Rules that have the provided text in Name (Default: not set) |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                                         | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                                         | [optional] |
 
 ### Return type
 
@@ -1143,30 +1191,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="referencediscountpost"></a>
+
 # **ReferenceDiscountPost**
+
 > ReferenceDiscountPost200Response ReferenceDiscountPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, ReferenceDiscountPostRequest? referenceDiscountPostRequest = null)
 
 POST
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1177,9 +1228,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ReferenceBooksApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var referenceDiscountPostRequest = new ReferenceDiscountPostRequest?(); // ReferenceDiscountPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var referenceDiscountPostRequest = new ReferenceDiscountPostRequest?(); // ReferenceDiscountPostRequest? |  (optional)
 
             try
             {
@@ -1199,6 +1250,7 @@ namespace Example
 ```
 
 #### Using the ReferenceDiscountPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1220,11 +1272,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **referenceDiscountPostRequest** | [**ReferenceDiscountPostRequest?**](ReferenceDiscountPostRequest?.md) |  | [optional]  |
+| Name                             | Type                                                                  | Description                               | Notes      |
+| -------------------------------- | --------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**             | **string?**                                                           | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**        | **string?**                                                           | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **referenceDiscountPostRequest** | [**ReferenceDiscountPostRequest?**](ReferenceDiscountPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1236,30 +1288,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="referencediscountput"></a>
+
 # **ReferenceDiscountPut**
+
 > ReferenceDiscountPut200Response ReferenceDiscountPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, ReferenceDiscountPutRequest? referenceDiscountPutRequest = null)
 
 PUT
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1270,9 +1325,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ReferenceBooksApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var referenceDiscountPutRequest = new ReferenceDiscountPutRequest?(); // ReferenceDiscountPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var referenceDiscountPutRequest = new ReferenceDiscountPutRequest?(); // ReferenceDiscountPutRequest? |  (optional)
 
             try
             {
@@ -1292,6 +1347,7 @@ namespace Example
 ```
 
 #### Using the ReferenceDiscountPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1313,11 +1369,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **referenceDiscountPutRequest** | [**ReferenceDiscountPutRequest?**](ReferenceDiscountPutRequest?.md) |  | [optional]  |
+| Name                            | Type                                                                | Description                               | Notes      |
+| ------------------------------- | ------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**            | **string?**                                                         | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**       | **string?**                                                         | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **referenceDiscountPutRequest** | [**ReferenceDiscountPutRequest?**](ReferenceDiscountPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1329,30 +1385,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="referenceshipzonesidpglmtsrchget"></a>
+
 # **ReferenceShipzonesIdPgLmtSrchGet**
+
 > ReferenceShipzonesIdPgLmtSrchGet200Response ReferenceShipzonesIdPgLmtSrchGet (string ID, decimal page, decimal limit, string search, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1367,8 +1426,8 @@ namespace Example
             var page = 8.14D;  // decimal | Page (Default: 1)
             var limit = 8.14D;  // decimal | Specifies the page size for pagination. Default page size is 25 (Default: 25)
             var search = "search_example";  // string | Only return Shiping Zones that have the provided text in Name (Default: not set)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1388,6 +1447,7 @@ namespace Example
 ```
 
 #### Using the ReferenceShipzonesIdPgLmtSrchGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1409,14 +1469,14 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ID** | **string** | Returns detailed info of a particular Shipping zone |  |
-| **page** | **decimal** | Page (Default: 1) |  |
-| **limit** | **decimal** | Specifies the page size for pagination. Default page size is 25 (Default: 25) |  |
-| **search** | **string** | Only return Shiping Zones that have the provided text in Name (Default: not set) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                                      | Notes      |
+| ------------------------- | ----------- | -------------------------------------------------------------------------------- | ---------- |
+| **ID**                    | **string**  | Returns detailed info of a particular Shipping zone                              |            |
+| **page**                  | **decimal** | Page (Default: 1)                                                                |            |
+| **limit**                 | **decimal** | Specifies the page size for pagination. Default page size is 25 (Default: 25)    |            |
+| **search**                | **string**  | Only return Shiping Zones that have the provided text in Name (Default: not set) |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                                        | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                                        | [optional] |
 
 ### Return type
 
@@ -1428,30 +1488,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="referenceshipzonespost"></a>
+
 # **ReferenceShipzonesPost**
+
 > ReferenceShipzonesPost200Response ReferenceShipzonesPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, ReferenceShipzonesPostRequest? referenceShipzonesPostRequest = null)
 
 POST
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1462,9 +1525,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ReferenceBooksApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var referenceShipzonesPostRequest = new ReferenceShipzonesPostRequest?(); // ReferenceShipzonesPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var referenceShipzonesPostRequest = new ReferenceShipzonesPostRequest?(); // ReferenceShipzonesPostRequest? |  (optional)
 
             try
             {
@@ -1484,6 +1547,7 @@ namespace Example
 ```
 
 #### Using the ReferenceShipzonesPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1505,11 +1569,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **referenceShipzonesPostRequest** | [**ReferenceShipzonesPostRequest?**](ReferenceShipzonesPostRequest?.md) |  | [optional]  |
+| Name                              | Type                                                                    | Description                               | Notes      |
+| --------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**              | **string?**                                                             | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**         | **string?**                                                             | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **referenceShipzonesPostRequest** | [**ReferenceShipzonesPostRequest?**](ReferenceShipzonesPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1521,30 +1585,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="referenceshipzonesput"></a>
+
 # **ReferenceShipzonesPut**
+
 > ReferenceShipzonesPut200Response ReferenceShipzonesPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, ReferenceShipzonesPutRequest? referenceShipzonesPutRequest = null)
 
 PUT
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1555,9 +1622,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ReferenceBooksApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var referenceShipzonesPutRequest = new ReferenceShipzonesPutRequest?(); // ReferenceShipzonesPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var referenceShipzonesPutRequest = new ReferenceShipzonesPutRequest?(); // ReferenceShipzonesPutRequest? |  (optional)
 
             try
             {
@@ -1577,6 +1644,7 @@ namespace Example
 ```
 
 #### Using the ReferenceShipzonesPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1598,11 +1666,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **referenceShipzonesPutRequest** | [**ReferenceShipzonesPutRequest?**](ReferenceShipzonesPutRequest?.md) |  | [optional]  |
+| Name                             | Type                                                                  | Description                               | Notes      |
+| -------------------------------- | --------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**             | **string?**                                                           | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**        | **string?**                                                           | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **referenceShipzonesPutRequest** | [**ReferenceShipzonesPutRequest?**](ReferenceShipzonesPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1614,30 +1682,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="referenceshipzonesshipzoneiddelete"></a>
+
 # **ReferenceShipzonesShipzoneidDelete**
+
 > MeAddressesIdDelete200Response ReferenceShipzonesShipzoneidDelete (string shipZoneID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 Delete
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1649,8 +1720,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ReferenceBooksApi(config);
             var shipZoneID = "shipZoneID_example";  // string | ID of Ship Zone to delete
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1670,6 +1741,7 @@ namespace Example
 ```
 
 #### Using the ReferenceShipzonesShipzoneidDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1691,11 +1763,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **shipZoneID** | **string** | ID of Ship Zone to delete |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **shipZoneID**            | **string**  | ID of Ship Zone to delete                 |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -1707,30 +1779,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="update"></a>
+
 # **Update**
+
 > UpdateRequest Update (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, UpdateRequest? updateRequest = null)
 
 Update
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1741,9 +1816,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new ReferenceBooksApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var updateRequest = new UpdateRequest?(); // UpdateRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var updateRequest = new UpdateRequest?(); // UpdateRequest? |  (optional)
 
             try
             {
@@ -1763,6 +1838,7 @@ namespace Example
 ```
 
 #### Using the UpdateWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1784,11 +1860,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **updateRequest** | [**UpdateRequest?**](UpdateRequest?.md) |  | [optional]  |
+| Name                      | Type                                    | Description                               | Notes      |
+| ------------------------- | --------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?**                             | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?**                             | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **updateRequest**         | [**UpdateRequest?**](UpdateRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1800,14 +1876,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

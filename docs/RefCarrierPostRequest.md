@@ -1,10 +1,9 @@
-# Org.OpenAPITools.Model.RefCarrierPostRequest
+# CIN7.DearInventory.Model.RefCarrierPostRequest
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Description** | **string** |  | [optional] 
+| Name            | Type       | Description | Notes      |
+| --------------- | ---------- | ----------- | ---------- |
+| **Description** | **string** |             | [optional] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-

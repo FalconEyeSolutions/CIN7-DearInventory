@@ -3,7 +3,7 @@
 image: Visual Studio 2019
 clone_depth: 1
 build_script:
-- dotnet build -c Release
-- dotnet test -c Release
+    - dotnet build -c Release
+    - dotnet test -c Release
 after_build:
-- dotnet pack .\src\Org.OpenAPITools\Org.OpenAPITools.csproj -o ../../output -c Release --no-build
+    - dotnet pack .\src\CIN7.DearInventory\CIN7.DearInventory.csproj -o ../../output -c Release --no-build

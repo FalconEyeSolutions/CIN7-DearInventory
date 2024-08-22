@@ -1,30 +1,29 @@
-# Org.OpenAPITools.Model.ProductionProductionbomProductidReturnattachmentscontentGet200ResponseProductionBOMsInner
+# CIN7.DearInventory.Model.ProductionProductionbomProductidReturnattachmentscontentGet200ResponseProductionBOMsInner
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**BOMID** | **string** |  | [optional] 
-**BufferPercent** | **decimal** |  | [optional] 
-**ComponentProductionLeadTime** | **decimal** |  | [optional] 
-**CreatedDate** | **string** |  | [optional] 
-**DeliveryToID** | **Object** |  | [optional] 
-**DeliveryToName** | **Object** |  | [optional] 
-**DeviationPercent** | **decimal** |  | [optional] 
-**IgnoreCumulativeLeadTime** | **bool** |  | [optional] 
-**InstructionUrl** | **string** |  | [optional] 
-**IsDefault** | **bool** |  | [optional] 
-**IsTracing** | **bool** |  | [optional] 
-**IssueMethod** | **decimal** |  | [optional] 
-**IssueMethodComponent** | **decimal** |  | [optional] 
-**IssueMethodParameter** | **decimal** |  | [optional] 
-**MaxQuantity** | **decimal** |  | [optional] 
-**MinQuantity** | **decimal** |  | [optional] 
-**Name** | **string** |  | [optional] 
-**Operations** | [**List&lt;ProductionProductionbomProductidReturnattachmentscontentGet200ResponseProductionBOMsInnerOperationsInner&gt;**](ProductionProductionbomProductidReturnattachmentscontentGet200ResponseProductionBOMsInnerOperationsInner.md) |  | [optional] 
-**OutputQuantity** | **decimal** |  | [optional] 
-**RunSize** | **decimal** |  | [optional] 
-**VarVersion** | **decimal** |  | [optional] 
+| Name                            | Type                                                                                                                                                                                                                                    | Description | Notes      |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
+| **BOMID**                       | **string**                                                                                                                                                                                                                              |             | [optional] |
+| **BufferPercent**               | **decimal**                                                                                                                                                                                                                             |             | [optional] |
+| **ComponentProductionLeadTime** | **decimal**                                                                                                                                                                                                                             |             | [optional] |
+| **CreatedDate**                 | **string**                                                                                                                                                                                                                              |             | [optional] |
+| **DeliveryToID**                | **Object**                                                                                                                                                                                                                              |             | [optional] |
+| **DeliveryToName**              | **Object**                                                                                                                                                                                                                              |             | [optional] |
+| **DeviationPercent**            | **decimal**                                                                                                                                                                                                                             |             | [optional] |
+| **IgnoreCumulativeLeadTime**    | **bool**                                                                                                                                                                                                                                |             | [optional] |
+| **InstructionUrl**              | **string**                                                                                                                                                                                                                              |             | [optional] |
+| **IsDefault**                   | **bool**                                                                                                                                                                                                                                |             | [optional] |
+| **IsTracing**                   | **bool**                                                                                                                                                                                                                                |             | [optional] |
+| **IssueMethod**                 | **decimal**                                                                                                                                                                                                                             |             | [optional] |
+| **IssueMethodComponent**        | **decimal**                                                                                                                                                                                                                             |             | [optional] |
+| **IssueMethodParameter**        | **decimal**                                                                                                                                                                                                                             |             | [optional] |
+| **MaxQuantity**                 | **decimal**                                                                                                                                                                                                                             |             | [optional] |
+| **MinQuantity**                 | **decimal**                                                                                                                                                                                                                             |             | [optional] |
+| **Name**                        | **string**                                                                                                                                                                                                                              |             | [optional] |
+| **Operations**                  | [**List&lt;ProductionProductionbomProductidReturnattachmentscontentGet200ResponseProductionBOMsInnerOperationsInner&gt;**](ProductionProductionbomProductidReturnattachmentscontentGet200ResponseProductionBOMsInnerOperationsInner.md) |             | [optional] |
+| **OutputQuantity**              | **decimal**                                                                                                                                                                                                                             |             | [optional] |
+| **RunSize**                     | **decimal**                                                                                                                                                                                                                             |             | [optional] |
+| **VarVersion**                  | **decimal**                                                                                                                                                                                                                             |             | [optional] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-

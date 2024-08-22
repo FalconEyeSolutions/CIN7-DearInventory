@@ -1,69 +1,72 @@
-# Org.OpenAPITools.Api.PurchaseApi
+# CIN7.DearInventory.Api.PurchaseApi
 
 All URIs are relative to *https://inventory.dearsystems.com/ExternalApi/v2*
 
-| Method | HTTP request | Description |
-|--------|--------------|-------------|
-| [**AdvancedPurchaseAwayPost**](PurchaseApi.md#advancedpurchaseawaypost) | **POST** /advanced-purchase/put-away | POST |
-| [**AdvancedPurchaseAwayPurchaseidGet**](PurchaseApi.md#advancedpurchaseawaypurchaseidget) | **GET** /advanced-purchase/put-away?PurchaseID&#x3D;{PurchaseID} | GET |
-| [**AdvancedPurchaseCreditnotePost**](PurchaseApi.md#advancedpurchasecreditnotepost) | **POST** /advanced-purchase/creditnote | POST |
-| [**AdvancedPurchaseCreditnotePurchaseidCombineadditionalchargesGet**](PurchaseApi.md#advancedpurchasecreditnotepurchaseidcombineadditionalchargesget) | **GET** /advanced-purchase/creditnote?PurchaseID&#x3D;{PurchaseID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges} | GET |
-| [**AdvancedPurchaseCreditnoteTaskidDelete**](PurchaseApi.md#advancedpurchasecreditnotetaskiddelete) | **DELETE** /advanced-purchase/creditnote?TaskID&#x3D;{TaskID} | DELETE |
-| [**AdvancedPurchaseIdCombineadditionalchargesGet**](PurchaseApi.md#advancedpurchaseidcombineadditionalchargesget) | **GET** /advanced-purchase?ID&#x3D;{ID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges} | GET |
-| [**AdvancedPurchaseIdVoidDelete**](PurchaseApi.md#advancedpurchaseidvoiddelete) | **DELETE** /advanced-purchase?ID&#x3D;{ID}&amp;Void&#x3D;{Void} | DELETE |
-| [**AdvancedPurchaseInvoicePost**](PurchaseApi.md#advancedpurchaseinvoicepost) | **POST** /advanced-purchase/invoice | POST |
-| [**AdvancedPurchaseInvoicePurchaseidCombineadditionalchargesGet**](PurchaseApi.md#advancedpurchaseinvoicepurchaseidcombineadditionalchargesget) | **GET** /advanced-purchase/invoice?PurchaseID&#x3D;{PurchaseID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges}  | GET |
-| [**AdvancedPurchaseInvoiceTaskidVoidDelete**](PurchaseApi.md#advancedpurchaseinvoicetaskidvoiddelete) | **DELETE** /advanced-purchase/invoice?TaskID&#x3D;{TaskID}&amp;Void&#x3D;{Void} | DELETE |
-| [**AdvancedPurchaseManualjournalPost**](PurchaseApi.md#advancedpurchasemanualjournalpost) | **POST** /advanced-purchase/manualJournal | POST |
-| [**AdvancedPurchaseManualjournalPurchaseidGet**](PurchaseApi.md#advancedpurchasemanualjournalpurchaseidget) | **GET** /advanced-purchase/manualJournal?PurchaseID&#x3D;{PurchaseID} | GET |
-| [**AdvancedPurchasePaymentPost**](PurchaseApi.md#advancedpurchasepaymentpost) | **POST** /advanced-purchase/payment | POST |
-| [**AdvancedPurchasePaymentPut**](PurchaseApi.md#advancedpurchasepaymentput) | **PUT** /advanced-purchase/payment | PUT |
-| [**AdvancedPurchasePost**](PurchaseApi.md#advancedpurchasepost) | **POST** /advanced-purchase | POST |
-| [**AdvancedPurchasePut**](PurchaseApi.md#advancedpurchaseput) | **PUT** /advanced-purchase | PUT |
-| [**AdvancedPurchaseStockPost**](PurchaseApi.md#advancedpurchasestockpost) | **POST** /advanced-purchase/stock | POST |
-| [**AdvancedPurchaseStockPurchaseidGet**](PurchaseApi.md#advancedpurchasestockpurchaseidget) | **GET** /advanced-purchase/stock?PurchaseID&#x3D;{PurchaseID} | GET |
-| [**AdvancedPurchaseStockPut**](PurchaseApi.md#advancedpurchasestockput) | **PUT** /advanced-purchase/stock | PUT |
-| [**AdvancedPurchaseStockTaskidVoidDelete**](PurchaseApi.md#advancedpurchasestocktaskidvoiddelete) | **DELETE** /advanced-purchase/stock?TaskID&#x3D;{TaskID}&amp;Void&#x3D;{Void} | DELETE |
-| [**PgLmtSrchRequiredbyUpdatedsinceEtc**](PurchaseApi.md#pglmtsrchrequiredbyupdatedsinceetc) | **GET** /purchaseList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Search&#x3D;{Search}&amp;RequiredBy&#x3D;{RequiredBy}&amp;UpdatedSince&#x3D;{UpdatedSince}&amp;OrderStatus&#x3D;{OrderStatus}&amp;RestockReceivedStatus&#x3D;{RestockReceivedStatus}&amp;InvoiceStatus&#x3D;{InvoiceStatus}&amp;CreditNoteStatus&#x3D;{CreditNoteStatus}&amp;UnstockStatus&#x3D;{UnstockStatus}&amp;Status{Status}&amp;DropShipTaskID&#x3D;{DropShipTaskID} | GET |
-| [**PgLmtSrchUpdatedsinceCreditnotestatusEtc**](PurchaseApi.md#pglmtsrchupdatedsincecreditnotestatusetc) | **GET** /purchaseCreditNoteList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Search&#x3D;{Search}&amp;UpdatedSince&#x3D;{UpdatedSince}&amp;CreditNoteStatus&#x3D;{CreditNoteStatus}&amp;Status{Status} | GET |
-| [**PurchaseAttachmentIdDelete**](PurchaseApi.md#purchaseattachmentiddelete) | **DELETE** /purchase/attachment?ID&#x3D;{ID} | DELETE |
-| [**PurchaseAttachmentPost**](PurchaseApi.md#purchaseattachmentpost) | **POST** /purchase/attachment | POST |
-| [**PurchaseAttachmentTaskidGet**](PurchaseApi.md#purchaseattachmenttaskidget) | **GET** /purchase/attachment?TaskID&#x3D;{TaskID} | GET |
-| [**PurchaseCreditnotePost**](PurchaseApi.md#purchasecreditnotepost) | **POST** /purchase/creditnote | POST |
-| [**PurchaseCreditnoteTaskidCombineadditionalchargesGet**](PurchaseApi.md#purchasecreditnotetaskidcombineadditionalchargesget) | **GET** /purchase/creditnote?TaskID&#x3D;{TaskID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges} | GET |
-| [**PurchaseIdCombineadditionalchargesGet**](PurchaseApi.md#purchaseidcombineadditionalchargesget) | **GET** /purchase?ID&#x3D;{ID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges} | GET |
-| [**PurchaseIdVoidDelete**](PurchaseApi.md#purchaseidvoiddelete) | **DELETE** /purchase?ID&#x3D;{ID}&amp;Void&#x3D;{Void} | DELETE |
-| [**PurchaseInvoicePost**](PurchaseApi.md#purchaseinvoicepost) | **POST** /purchase/invoice | POST |
-| [**PurchaseInvoiceTaskidCombineadditionalchargesGet**](PurchaseApi.md#purchaseinvoicetaskidcombineadditionalchargesget) | **GET** /purchase/invoice?TaskID&#x3D;{TaskID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges}  | GET |
-| [**PurchaseManualjournalPost**](PurchaseApi.md#purchasemanualjournalpost) | **POST** /purchase/manualJournal | POST |
-| [**PurchaseManualjournalTaskidGet**](PurchaseApi.md#purchasemanualjournaltaskidget) | **GET** /purchase/manualJournal?TaskID&#x3D;{TaskID} | GET |
-| [**PurchaseOrderPost**](PurchaseApi.md#purchaseorderpost) | **POST** /purchase/order | POST |
-| [**PurchaseOrderTaskidCombineadditionalchargesGet**](PurchaseApi.md#purchaseordertaskidcombineadditionalchargesget) | **GET** /purchase/order?TaskID&#x3D;{TaskID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges} | GET |
-| [**PurchasePaymentIdallocationDelete**](PurchaseApi.md#purchasepaymentidallocationdelete) | **DELETE** /purchase/payment?ID&#x3D;{ID}&amp;DeleteAllocation&#x3D;{DeleteAllocation} | DELETE |
-| [**PurchasePaymentPost**](PurchaseApi.md#purchasepaymentpost) | **POST** /purchase/payment | POST |
-| [**PurchasePaymentPurchaseidOrdernumberInvoicenumberEtc**](PurchaseApi.md#purchasepaymentpurchaseidordernumberinvoicenumberetc) | **GET** /advanced-purchase/payment?PurchaseID&#x3D;{PurchaseID}&amp;OrderNumber&#x3D;{OrderNumber}&amp;InvoiceNumber&#x3D;{InvoiceNumber}&amp;CreditNoteNumber&#x3D;{CreditNoteNumber} | GET |
-| [**PurchasePaymentPut**](PurchaseApi.md#purchasepaymentput) | **PUT** /purchase/payment | PUT |
-| [**PurchasePaymentTaskidGet**](PurchaseApi.md#purchasepaymenttaskidget) | **GET** /purchase/payment?TaskID&#x3D;{TaskID} | GET |
-| [**PurchasePost**](PurchaseApi.md#purchasepost) | **POST** /purchase | POST |
-| [**PurchasePut**](PurchaseApi.md#purchaseput) | **PUT** /purchase | PUT |
-| [**PurchaseStockPost**](PurchaseApi.md#purchasestockpost) | **POST** /purchase/stock | POST |
-| [**PurchaseStockTaskidGet**](PurchaseApi.md#purchasestocktaskidget) | **GET** /purchase/stock?TaskID&#x3D;{TaskID} | GET |
+| Method                                                                                                                                                | HTTP request                                                                                                                                                                                                                                                                                                                                                                                                                                  | Description |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [**AdvancedPurchaseAwayPost**](PurchaseApi.md#advancedpurchaseawaypost)                                                                               | **POST** /advanced-purchase/put-away                                                                                                                                                                                                                                                                                                                                                                                                          | POST        |
+| [**AdvancedPurchaseAwayPurchaseidGet**](PurchaseApi.md#advancedpurchaseawaypurchaseidget)                                                             | **GET** /advanced-purchase/put-away?PurchaseID&#x3D;{PurchaseID}                                                                                                                                                                                                                                                                                                                                                                              | GET         |
+| [**AdvancedPurchaseCreditnotePost**](PurchaseApi.md#advancedpurchasecreditnotepost)                                                                   | **POST** /advanced-purchase/creditnote                                                                                                                                                                                                                                                                                                                                                                                                        | POST        |
+| [**AdvancedPurchaseCreditnotePurchaseidCombineadditionalchargesGet**](PurchaseApi.md#advancedpurchasecreditnotepurchaseidcombineadditionalchargesget) | **GET** /advanced-purchase/creditnote?PurchaseID&#x3D;{PurchaseID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges}                                                                                                                                                                                                                                                                                                               | GET         |
+| [**AdvancedPurchaseCreditnoteTaskidDelete**](PurchaseApi.md#advancedpurchasecreditnotetaskiddelete)                                                   | **DELETE** /advanced-purchase/creditnote?TaskID&#x3D;{TaskID}                                                                                                                                                                                                                                                                                                                                                                                 | DELETE      |
+| [**AdvancedPurchaseIdCombineadditionalchargesGet**](PurchaseApi.md#advancedpurchaseidcombineadditionalchargesget)                                     | **GET** /advanced-purchase?ID&#x3D;{ID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges}                                                                                                                                                                                                                                                                                                                                          | GET         |
+| [**AdvancedPurchaseIdVoidDelete**](PurchaseApi.md#advancedpurchaseidvoiddelete)                                                                       | **DELETE** /advanced-purchase?ID&#x3D;{ID}&amp;Void&#x3D;{Void}                                                                                                                                                                                                                                                                                                                                                                               | DELETE      |
+| [**AdvancedPurchaseInvoicePost**](PurchaseApi.md#advancedpurchaseinvoicepost)                                                                         | **POST** /advanced-purchase/invoice                                                                                                                                                                                                                                                                                                                                                                                                           | POST        |
+| [**AdvancedPurchaseInvoicePurchaseidCombineadditionalchargesGet**](PurchaseApi.md#advancedpurchaseinvoicepurchaseidcombineadditionalchargesget)       | **GET** /advanced-purchase/invoice?PurchaseID&#x3D;{PurchaseID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges}                                                                                                                                                                                                                                                                                                                  | GET         |
+| [**AdvancedPurchaseInvoiceTaskidVoidDelete**](PurchaseApi.md#advancedpurchaseinvoicetaskidvoiddelete)                                                 | **DELETE** /advanced-purchase/invoice?TaskID&#x3D;{TaskID}&amp;Void&#x3D;{Void}                                                                                                                                                                                                                                                                                                                                                               | DELETE      |
+| [**AdvancedPurchaseManualjournalPost**](PurchaseApi.md#advancedpurchasemanualjournalpost)                                                             | **POST** /advanced-purchase/manualJournal                                                                                                                                                                                                                                                                                                                                                                                                     | POST        |
+| [**AdvancedPurchaseManualjournalPurchaseidGet**](PurchaseApi.md#advancedpurchasemanualjournalpurchaseidget)                                           | **GET** /advanced-purchase/manualJournal?PurchaseID&#x3D;{PurchaseID}                                                                                                                                                                                                                                                                                                                                                                         | GET         |
+| [**AdvancedPurchasePaymentPost**](PurchaseApi.md#advancedpurchasepaymentpost)                                                                         | **POST** /advanced-purchase/payment                                                                                                                                                                                                                                                                                                                                                                                                           | POST        |
+| [**AdvancedPurchasePaymentPut**](PurchaseApi.md#advancedpurchasepaymentput)                                                                           | **PUT** /advanced-purchase/payment                                                                                                                                                                                                                                                                                                                                                                                                            | PUT         |
+| [**AdvancedPurchasePost**](PurchaseApi.md#advancedpurchasepost)                                                                                       | **POST** /advanced-purchase                                                                                                                                                                                                                                                                                                                                                                                                                   | POST        |
+| [**AdvancedPurchasePut**](PurchaseApi.md#advancedpurchaseput)                                                                                         | **PUT** /advanced-purchase                                                                                                                                                                                                                                                                                                                                                                                                                    | PUT         |
+| [**AdvancedPurchaseStockPost**](PurchaseApi.md#advancedpurchasestockpost)                                                                             | **POST** /advanced-purchase/stock                                                                                                                                                                                                                                                                                                                                                                                                             | POST        |
+| [**AdvancedPurchaseStockPurchaseidGet**](PurchaseApi.md#advancedpurchasestockpurchaseidget)                                                           | **GET** /advanced-purchase/stock?PurchaseID&#x3D;{PurchaseID}                                                                                                                                                                                                                                                                                                                                                                                 | GET         |
+| [**AdvancedPurchaseStockPut**](PurchaseApi.md#advancedpurchasestockput)                                                                               | **PUT** /advanced-purchase/stock                                                                                                                                                                                                                                                                                                                                                                                                              | PUT         |
+| [**AdvancedPurchaseStockTaskidVoidDelete**](PurchaseApi.md#advancedpurchasestocktaskidvoiddelete)                                                     | **DELETE** /advanced-purchase/stock?TaskID&#x3D;{TaskID}&amp;Void&#x3D;{Void}                                                                                                                                                                                                                                                                                                                                                                 | DELETE      |
+| [**PgLmtSrchRequiredbyUpdatedsinceEtc**](PurchaseApi.md#pglmtsrchrequiredbyupdatedsinceetc)                                                           | **GET** /purchaseList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Search&#x3D;{Search}&amp;RequiredBy&#x3D;{RequiredBy}&amp;UpdatedSince&#x3D;{UpdatedSince}&amp;OrderStatus&#x3D;{OrderStatus}&amp;RestockReceivedStatus&#x3D;{RestockReceivedStatus}&amp;InvoiceStatus&#x3D;{InvoiceStatus}&amp;CreditNoteStatus&#x3D;{CreditNoteStatus}&amp;UnstockStatus&#x3D;{UnstockStatus}&amp;Status{Status}&amp;DropShipTaskID&#x3D;{DropShipTaskID} | GET         |
+| [**PgLmtSrchUpdatedsinceCreditnotestatusEtc**](PurchaseApi.md#pglmtsrchupdatedsincecreditnotestatusetc)                                               | **GET** /purchaseCreditNoteList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Search&#x3D;{Search}&amp;UpdatedSince&#x3D;{UpdatedSince}&amp;CreditNoteStatus&#x3D;{CreditNoteStatus}&amp;Status{Status}                                                                                                                                                                                                                                         | GET         |
+| [**PurchaseAttachmentIdDelete**](PurchaseApi.md#purchaseattachmentiddelete)                                                                           | **DELETE** /purchase/attachment?ID&#x3D;{ID}                                                                                                                                                                                                                                                                                                                                                                                                  | DELETE      |
+| [**PurchaseAttachmentPost**](PurchaseApi.md#purchaseattachmentpost)                                                                                   | **POST** /purchase/attachment                                                                                                                                                                                                                                                                                                                                                                                                                 | POST        |
+| [**PurchaseAttachmentTaskidGet**](PurchaseApi.md#purchaseattachmenttaskidget)                                                                         | **GET** /purchase/attachment?TaskID&#x3D;{TaskID}                                                                                                                                                                                                                                                                                                                                                                                             | GET         |
+| [**PurchaseCreditnotePost**](PurchaseApi.md#purchasecreditnotepost)                                                                                   | **POST** /purchase/creditnote                                                                                                                                                                                                                                                                                                                                                                                                                 | POST        |
+| [**PurchaseCreditnoteTaskidCombineadditionalchargesGet**](PurchaseApi.md#purchasecreditnotetaskidcombineadditionalchargesget)                         | **GET** /purchase/creditnote?TaskID&#x3D;{TaskID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges}                                                                                                                                                                                                                                                                                                                                | GET         |
+| [**PurchaseIdCombineadditionalchargesGet**](PurchaseApi.md#purchaseidcombineadditionalchargesget)                                                     | **GET** /purchase?ID&#x3D;{ID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges}                                                                                                                                                                                                                                                                                                                                                   | GET         |
+| [**PurchaseIdVoidDelete**](PurchaseApi.md#purchaseidvoiddelete)                                                                                       | **DELETE** /purchase?ID&#x3D;{ID}&amp;Void&#x3D;{Void}                                                                                                                                                                                                                                                                                                                                                                                        | DELETE      |
+| [**PurchaseInvoicePost**](PurchaseApi.md#purchaseinvoicepost)                                                                                         | **POST** /purchase/invoice                                                                                                                                                                                                                                                                                                                                                                                                                    | POST        |
+| [**PurchaseInvoiceTaskidCombineadditionalchargesGet**](PurchaseApi.md#purchaseinvoicetaskidcombineadditionalchargesget)                               | **GET** /purchase/invoice?TaskID&#x3D;{TaskID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges}                                                                                                                                                                                                                                                                                                                                   | GET         |
+| [**PurchaseManualjournalPost**](PurchaseApi.md#purchasemanualjournalpost)                                                                             | **POST** /purchase/manualJournal                                                                                                                                                                                                                                                                                                                                                                                                              | POST        |
+| [**PurchaseManualjournalTaskidGet**](PurchaseApi.md#purchasemanualjournaltaskidget)                                                                   | **GET** /purchase/manualJournal?TaskID&#x3D;{TaskID}                                                                                                                                                                                                                                                                                                                                                                                          | GET         |
+| [**PurchaseOrderPost**](PurchaseApi.md#purchaseorderpost)                                                                                             | **POST** /purchase/order                                                                                                                                                                                                                                                                                                                                                                                                                      | POST        |
+| [**PurchaseOrderTaskidCombineadditionalchargesGet**](PurchaseApi.md#purchaseordertaskidcombineadditionalchargesget)                                   | **GET** /purchase/order?TaskID&#x3D;{TaskID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges}                                                                                                                                                                                                                                                                                                                                     | GET         |
+| [**PurchasePaymentIdallocationDelete**](PurchaseApi.md#purchasepaymentidallocationdelete)                                                             | **DELETE** /purchase/payment?ID&#x3D;{ID}&amp;DeleteAllocation&#x3D;{DeleteAllocation}                                                                                                                                                                                                                                                                                                                                                        | DELETE      |
+| [**PurchasePaymentPost**](PurchaseApi.md#purchasepaymentpost)                                                                                         | **POST** /purchase/payment                                                                                                                                                                                                                                                                                                                                                                                                                    | POST        |
+| [**PurchasePaymentPurchaseidOrdernumberInvoicenumberEtc**](PurchaseApi.md#purchasepaymentpurchaseidordernumberinvoicenumberetc)                       | **GET** /advanced-purchase/payment?PurchaseID&#x3D;{PurchaseID}&amp;OrderNumber&#x3D;{OrderNumber}&amp;InvoiceNumber&#x3D;{InvoiceNumber}&amp;CreditNoteNumber&#x3D;{CreditNoteNumber}                                                                                                                                                                                                                                                        | GET         |
+| [**PurchasePaymentPut**](PurchaseApi.md#purchasepaymentput)                                                                                           | **PUT** /purchase/payment                                                                                                                                                                                                                                                                                                                                                                                                                     | PUT         |
+| [**PurchasePaymentTaskidGet**](PurchaseApi.md#purchasepaymenttaskidget)                                                                               | **GET** /purchase/payment?TaskID&#x3D;{TaskID}                                                                                                                                                                                                                                                                                                                                                                                                | GET         |
+| [**PurchasePost**](PurchaseApi.md#purchasepost)                                                                                                       | **POST** /purchase                                                                                                                                                                                                                                                                                                                                                                                                                            | POST        |
+| [**PurchasePut**](PurchaseApi.md#purchaseput)                                                                                                         | **PUT** /purchase                                                                                                                                                                                                                                                                                                                                                                                                                             | PUT         |
+| [**PurchaseStockPost**](PurchaseApi.md#purchasestockpost)                                                                                             | **POST** /purchase/stock                                                                                                                                                                                                                                                                                                                                                                                                                      | POST        |
+| [**PurchaseStockTaskidGet**](PurchaseApi.md#purchasestocktaskidget)                                                                                   | **GET** /purchase/stock?TaskID&#x3D;{TaskID}                                                                                                                                                                                                                                                                                                                                                                                                  | GET         |
 
 <a id="advancedpurchaseawaypost"></a>
+
 # **AdvancedPurchaseAwayPost**
+
 > AdvancedPurchaseAwayPost200Response AdvancedPurchaseAwayPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, AdvancedPurchaseAwayPostRequest? advancedPurchaseAwayPostRequest = null)
 
 POST
 
-+ POST method will return exception if Order status is not - `AUTHORISED`  + POST method will return exception if Put Away status is not - `DRAFT` or `NOT AVAILABLE`  + POST method will return exception if Purchase `Approach` = `INVOICE` and `InvoiceStatus` is not - `AUTHORISED`  + POST method is used to add only new stock lines.  + POST method will create new Stock Receiving Task, if value of `TaskID` is not provided or equals to `00000000-0000-0000-0000-000000000000`.  + To Authorize Put Away, Request with empty lines in payload can be done.  + If duplicated lines found in one payload, one line with sum quantity will be created.  + If lines with same Product, location, batch and expiry Date already exist, error will be thrown.
+-   POST method will return exception if Order status is not - `AUTHORISED` + POST method will return exception if Put Away status is not - `DRAFT` or `NOT AVAILABLE` + POST method will return exception if Purchase `Approach` = `INVOICE` and `InvoiceStatus` is not - `AUTHORISED` + POST method is used to add only new stock lines. + POST method will create new Stock Receiving Task, if value of `TaskID` is not provided or equals to `00000000-0000-0000-0000-000000000000`. + To Authorize Put Away, Request with empty lines in payload can be done. + If duplicated lines found in one payload, one line with sum quantity will be created. + If lines with same Product, location, batch and expiry Date already exist, error will be thrown.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -74,9 +77,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var advancedPurchaseAwayPostRequest = new AdvancedPurchaseAwayPostRequest?(); // AdvancedPurchaseAwayPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var advancedPurchaseAwayPostRequest = new AdvancedPurchaseAwayPostRequest?(); // AdvancedPurchaseAwayPostRequest? |  (optional)
 
             try
             {
@@ -96,6 +99,7 @@ namespace Example
 ```
 
 #### Using the AdvancedPurchaseAwayPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -117,11 +121,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **advancedPurchaseAwayPostRequest** | [**AdvancedPurchaseAwayPostRequest?**](AdvancedPurchaseAwayPostRequest?.md) |  | [optional]  |
+| Name                                | Type                                                                        | Description                               | Notes      |
+| ----------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**                | **string?**                                                                 | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**           | **string?**                                                                 | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **advancedPurchaseAwayPostRequest** | [**AdvancedPurchaseAwayPostRequest?**](AdvancedPurchaseAwayPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -133,30 +137,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="advancedpurchaseawaypurchaseidget"></a>
+
 # **AdvancedPurchaseAwayPurchaseidGet**
+
 > AdvancedPurchaseAwayPost200Response AdvancedPurchaseAwayPurchaseidGet (string purchaseID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -168,8 +175,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
             var purchaseID = "purchaseID_example";  // string | Returns detailed info of a particular Purchase Order
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -189,6 +196,7 @@ namespace Example
 ```
 
 #### Using the AdvancedPurchaseAwayPurchaseidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -210,11 +218,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **purchaseID** | **string** | Returns detailed info of a particular Purchase Order |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                          | Notes      |
+| ------------------------- | ----------- | ---------------------------------------------------- | ---------- |
+| **purchaseID**            | **string**  | Returns detailed info of a particular Purchase Order |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b            | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033            | [optional] |
 
 ### Return type
 
@@ -226,32 +234,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="advancedpurchasecreditnotepost"></a>
+
 # **AdvancedPurchaseCreditnotePost**
+
 > AdvancedPurchaseCreditnotePost200Response AdvancedPurchaseCreditnotePost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, AdvancedPurchaseCreditnotePostRequest? advancedPurchaseCreditnotePostRequest = null)
 
 POST
 
-+ POST method will return exception if Invoice status is not - `AUTHORISED` or `PAID`  + POST method will return exception if Credit Note status is not - `DRAFT` or `NOT AVAILABLE`
+-   POST method will return exception if Invoice status is not - `AUTHORISED` or `PAID` + POST method will return exception if Credit Note status is not - `DRAFT` or `NOT AVAILABLE`
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -262,9 +273,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var advancedPurchaseCreditnotePostRequest = new AdvancedPurchaseCreditnotePostRequest?(); // AdvancedPurchaseCreditnotePostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var advancedPurchaseCreditnotePostRequest = new AdvancedPurchaseCreditnotePostRequest?(); // AdvancedPurchaseCreditnotePostRequest? |  (optional)
 
             try
             {
@@ -284,6 +295,7 @@ namespace Example
 ```
 
 #### Using the AdvancedPurchaseCreditnotePostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -305,11 +317,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **advancedPurchaseCreditnotePostRequest** | [**AdvancedPurchaseCreditnotePostRequest?**](AdvancedPurchaseCreditnotePostRequest?.md) |  | [optional]  |
+| Name                                      | Type                                                                                    | Description                               | Notes      |
+| ----------------------------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**                      | **string?**                                                                             | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**                 | **string?**                                                                             | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **advancedPurchaseCreditnotePostRequest** | [**AdvancedPurchaseCreditnotePostRequest?**](AdvancedPurchaseCreditnotePostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -321,30 +333,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="advancedpurchasecreditnotepurchaseidcombineadditionalchargesget"></a>
+
 # **AdvancedPurchaseCreditnotePurchaseidCombineadditionalchargesGet**
+
 > AdvancedPurchaseCreditnotePurchaseidCombineadditionalchargesGet200Response AdvancedPurchaseCreditnotePurchaseidCombineadditionalchargesGet (string purchaseID, bool combineAdditionalCharges, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -357,8 +372,8 @@ namespace Example
             var apiInstance = new PurchaseApi(config);
             var purchaseID = "purchaseID_example";  // string | Returns detailed info of a particular Purchase Credit Notes
             var combineAdditionalCharges = true;  // bool | Show additional charges in 'Lines' array (Default = false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -378,6 +393,7 @@ namespace Example
 ```
 
 #### Using the AdvancedPurchaseCreditnotePurchaseidCombineadditionalchargesGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -399,12 +415,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **purchaseID** | **string** | Returns detailed info of a particular Purchase Credit Notes |  |
-| **combineAdditionalCharges** | **bool** | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                         | Type        | Description                                                             | Notes      |
+| ---------------------------- | ----------- | ----------------------------------------------------------------------- | ---------- |
+| **purchaseID**               | **string**  | Returns detailed info of a particular Purchase Credit Notes             |            |
+| **combineAdditionalCharges** | **bool**    | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |            |
+| **apiAuthAccountid**         | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                               | [optional] |
+| **apiAuthApplicationkey**    | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                               | [optional] |
 
 ### Return type
 
@@ -416,30 +432,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="advancedpurchasecreditnotetaskiddelete"></a>
+
 # **AdvancedPurchaseCreditnoteTaskidDelete**
+
 > AdvancedPurchaseCreditnoteTaskidDelete200Response AdvancedPurchaseCreditnoteTaskidDelete (string taskID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -451,8 +470,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
             var taskID = "taskID_example";  // string | ID of Credit Note Purchase to Void
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -472,6 +491,7 @@ namespace Example
 ```
 
 #### Using the AdvancedPurchaseCreditnoteTaskidDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -493,11 +513,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | ID of Credit Note Purchase to Void |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **taskID**                | **string**  | ID of Credit Note Purchase to Void        |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -509,30 +529,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="advancedpurchaseidcombineadditionalchargesget"></a>
+
 # **AdvancedPurchaseIdCombineadditionalchargesGet**
+
 > AdvancedPurchaseIdCombineadditionalchargesGet200Response AdvancedPurchaseIdCombineadditionalchargesGet (string ID, bool combineAdditionalCharges, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -545,8 +568,8 @@ namespace Example
             var apiInstance = new PurchaseApi(config);
             var ID = "ID_example";  // string | Returns detailed info of a particular Purchase
             var combineAdditionalCharges = true;  // bool | Show additional charges in 'Lines' array (Default = false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -566,6 +589,7 @@ namespace Example
 ```
 
 #### Using the AdvancedPurchaseIdCombineadditionalchargesGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -587,12 +611,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ID** | **string** | Returns detailed info of a particular Purchase |  |
-| **combineAdditionalCharges** | **bool** | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                         | Type        | Description                                                             | Notes      |
+| ---------------------------- | ----------- | ----------------------------------------------------------------------- | ---------- |
+| **ID**                       | **string**  | Returns detailed info of a particular Purchase                          |            |
+| **combineAdditionalCharges** | **bool**    | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |            |
+| **apiAuthAccountid**         | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                               | [optional] |
+| **apiAuthApplicationkey**    | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                               | [optional] |
 
 ### Return type
 
@@ -604,30 +628,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="advancedpurchaseidvoiddelete"></a>
+
 # **AdvancedPurchaseIdVoidDelete**
+
 > AdvancedPurchaseIdVoidDelete200Response AdvancedPurchaseIdVoidDelete (string ID, bool varVoid, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -640,8 +667,8 @@ namespace Example
             var apiInstance = new PurchaseApi(config);
             var ID = "ID_example";  // string | ID of Purchase to Void or Undo
             var varVoid = false;  // bool |  (default to false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -661,6 +688,7 @@ namespace Example
 ```
 
 #### Using the AdvancedPurchaseIdVoidDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -682,12 +710,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ID** | **string** | ID of Purchase to Void or Undo |  |
-| **varVoid** | **bool** |  | [default to false] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes              |
+| ------------------------- | ----------- | ----------------------------------------- | ------------------ |
+| **ID**                    | **string**  | ID of Purchase to Void or Undo            |                    |
+| **varVoid**               | **bool**    |                                           | [default to false] |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]         |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]         |
 
 ### Return type
 
@@ -699,32 +727,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="advancedpurchaseinvoicepost"></a>
+
 # **AdvancedPurchaseInvoicePost**
+
 > AdvancedPurchaseInvoicePost200Response AdvancedPurchaseInvoicePost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, AdvancedPurchaseInvoicePostRequest? advancedPurchaseInvoicePostRequest = null)
 
 POST
 
-+ POST method will return exception if Order status is not - `AUTHORISED`  + POST method will return exception if Invoice status is not - `DRAFT` or `NOT AVAILABLE`  + POST method will return exception if Purchase `Approach` = `STOCK` and `StockReceivedStatus` is not - `AUTHORISED`
+-   POST method will return exception if Order status is not - `AUTHORISED` + POST method will return exception if Invoice status is not - `DRAFT` or `NOT AVAILABLE` + POST method will return exception if Purchase `Approach` = `STOCK` and `StockReceivedStatus` is not - `AUTHORISED`
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -735,9 +766,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var advancedPurchaseInvoicePostRequest = new AdvancedPurchaseInvoicePostRequest?(); // AdvancedPurchaseInvoicePostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var advancedPurchaseInvoicePostRequest = new AdvancedPurchaseInvoicePostRequest?(); // AdvancedPurchaseInvoicePostRequest? |  (optional)
 
             try
             {
@@ -757,6 +788,7 @@ namespace Example
 ```
 
 #### Using the AdvancedPurchaseInvoicePostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -778,11 +810,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **advancedPurchaseInvoicePostRequest** | [**AdvancedPurchaseInvoicePostRequest?**](AdvancedPurchaseInvoicePostRequest?.md) |  | [optional]  |
+| Name                                   | Type                                                                              | Description                               | Notes      |
+| -------------------------------------- | --------------------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**                   | **string?**                                                                       | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**              | **string?**                                                                       | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **advancedPurchaseInvoicePostRequest** | [**AdvancedPurchaseInvoicePostRequest?**](AdvancedPurchaseInvoicePostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -794,30 +826,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="advancedpurchaseinvoicepurchaseidcombineadditionalchargesget"></a>
+
 # **AdvancedPurchaseInvoicePurchaseidCombineadditionalchargesGet**
+
 > AdvancedPurchaseInvoicePost200Response AdvancedPurchaseInvoicePurchaseidCombineadditionalchargesGet (string purchaseID, bool combineAdditionalCharges, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -830,8 +865,8 @@ namespace Example
             var apiInstance = new PurchaseApi(config);
             var purchaseID = "purchaseID_example";  // string | Returns detailed info of a particular Purchase Order
             var combineAdditionalCharges = true;  // bool | Show additional charges in 'Lines' array (Default = false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -851,6 +886,7 @@ namespace Example
 ```
 
 #### Using the AdvancedPurchaseInvoicePurchaseidCombineadditionalchargesGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -872,12 +908,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **purchaseID** | **string** | Returns detailed info of a particular Purchase Order |  |
-| **combineAdditionalCharges** | **bool** | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                         | Type        | Description                                                             | Notes      |
+| ---------------------------- | ----------- | ----------------------------------------------------------------------- | ---------- |
+| **purchaseID**               | **string**  | Returns detailed info of a particular Purchase Order                    |            |
+| **combineAdditionalCharges** | **bool**    | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |            |
+| **apiAuthAccountid**         | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                               | [optional] |
+| **apiAuthApplicationkey**    | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                               | [optional] |
 
 ### Return type
 
@@ -889,32 +925,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="advancedpurchaseinvoicetaskidvoiddelete"></a>
+
 # **AdvancedPurchaseInvoiceTaskidVoidDelete**
+
 > AdvancedPurchaseInvoiceTaskidVoidDelete200Response AdvancedPurchaseInvoiceTaskidVoidDelete (string taskID, bool varVoid, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
-+ DELETE not available for Simple Purchases
+-   DELETE not available for Simple Purchases
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -927,8 +966,8 @@ namespace Example
             var apiInstance = new PurchaseApi(config);
             var taskID = "taskID_example";  // string | ID of Invoice Purchase to Void or Undo
             var varVoid = false;  // bool |  (default to false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -948,6 +987,7 @@ namespace Example
 ```
 
 #### Using the AdvancedPurchaseInvoiceTaskidVoidDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -969,12 +1009,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | ID of Invoice Purchase to Void or Undo |  |
-| **varVoid** | **bool** |  | [default to false] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes              |
+| ------------------------- | ----------- | ----------------------------------------- | ------------------ |
+| **taskID**                | **string**  | ID of Invoice Purchase to Void or Undo    |                    |
+| **varVoid**               | **bool**    |                                           | [default to false] |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]         |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]         |
 
 ### Return type
 
@@ -986,32 +1026,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="advancedpurchasemanualjournalpost"></a>
+
 # **AdvancedPurchaseManualjournalPost**
+
 > AdvancedPurchaseManualjournalPost200Response AdvancedPurchaseManualjournalPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, AdvancedPurchaseManualjournalPostRequest? advancedPurchaseManualjournalPostRequest = null)
 
 POST
 
-+ POST can be done even if manual journal status is `AUTHORISED`  + Line items with IsSystem value = `true` cannot be modified or deleted.
+-   POST can be done even if manual journal status is `AUTHORISED` + Line items with IsSystem value = `true` cannot be modified or deleted.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1022,9 +1065,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var advancedPurchaseManualjournalPostRequest = new AdvancedPurchaseManualjournalPostRequest?(); // AdvancedPurchaseManualjournalPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var advancedPurchaseManualjournalPostRequest = new AdvancedPurchaseManualjournalPostRequest?(); // AdvancedPurchaseManualjournalPostRequest? |  (optional)
 
             try
             {
@@ -1044,6 +1087,7 @@ namespace Example
 ```
 
 #### Using the AdvancedPurchaseManualjournalPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1065,11 +1109,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **advancedPurchaseManualjournalPostRequest** | [**AdvancedPurchaseManualjournalPostRequest?**](AdvancedPurchaseManualjournalPostRequest?.md) |  | [optional]  |
+| Name                                         | Type                                                                                          | Description                               | Notes      |
+| -------------------------------------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**                         | **string?**                                                                                   | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**                    | **string?**                                                                                   | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **advancedPurchaseManualjournalPostRequest** | [**AdvancedPurchaseManualjournalPostRequest?**](AdvancedPurchaseManualjournalPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1081,30 +1125,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="advancedpurchasemanualjournalpurchaseidget"></a>
+
 # **AdvancedPurchaseManualjournalPurchaseidGet**
+
 > AdvancedPurchaseManualjournalPurchaseidGet200Response AdvancedPurchaseManualjournalPurchaseidGet (string purchaseID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1116,8 +1163,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
             var purchaseID = "purchaseID_example";  // string | Returns detailed info of a particular Purchase Manual Journals
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1137,6 +1184,7 @@ namespace Example
 ```
 
 #### Using the AdvancedPurchaseManualjournalPurchaseidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1158,11 +1206,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **purchaseID** | **string** | Returns detailed info of a particular Purchase Manual Journals |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                    | Notes      |
+| ------------------------- | ----------- | -------------------------------------------------------------- | ---------- |
+| **purchaseID**            | **string**  | Returns detailed info of a particular Purchase Manual Journals |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                      | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                      | [optional] |
 
 ### Return type
 
@@ -1174,30 +1222,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="advancedpurchasepaymentpost"></a>
+
 # **AdvancedPurchasePaymentPost**
+
 > AdvancedPurchasePaymentPost200Response AdvancedPurchasePaymentPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, AdvancedPurchasePaymentPostRequest? advancedPurchasePaymentPostRequest = null)
 
 POST
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1208,9 +1259,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var advancedPurchasePaymentPostRequest = new AdvancedPurchasePaymentPostRequest?(); // AdvancedPurchasePaymentPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var advancedPurchasePaymentPostRequest = new AdvancedPurchasePaymentPostRequest?(); // AdvancedPurchasePaymentPostRequest? |  (optional)
 
             try
             {
@@ -1230,6 +1281,7 @@ namespace Example
 ```
 
 #### Using the AdvancedPurchasePaymentPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1251,11 +1303,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **advancedPurchasePaymentPostRequest** | [**AdvancedPurchasePaymentPostRequest?**](AdvancedPurchasePaymentPostRequest?.md) |  | [optional]  |
+| Name                                   | Type                                                                              | Description                               | Notes      |
+| -------------------------------------- | --------------------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**                   | **string?**                                                                       | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**              | **string?**                                                                       | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **advancedPurchasePaymentPostRequest** | [**AdvancedPurchasePaymentPostRequest?**](AdvancedPurchasePaymentPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1267,32 +1319,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="advancedpurchasepaymentput"></a>
+
 # **AdvancedPurchasePaymentPut**
+
 > AdvancedPurchasePaymentPut200Response AdvancedPurchasePaymentPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, AdvancedPurchasePaymentPutRequest? advancedPurchasePaymentPutRequest = null)
 
 PUT
 
-+ Please note, that Payment with type Prepayment cannot be modified.
+-   Please note, that Payment with type Prepayment cannot be modified.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1303,9 +1358,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var advancedPurchasePaymentPutRequest = new AdvancedPurchasePaymentPutRequest?(); // AdvancedPurchasePaymentPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var advancedPurchasePaymentPutRequest = new AdvancedPurchasePaymentPutRequest?(); // AdvancedPurchasePaymentPutRequest? |  (optional)
 
             try
             {
@@ -1325,6 +1380,7 @@ namespace Example
 ```
 
 #### Using the AdvancedPurchasePaymentPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1346,11 +1402,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **advancedPurchasePaymentPutRequest** | [**AdvancedPurchasePaymentPutRequest?**](AdvancedPurchasePaymentPutRequest?.md) |  | [optional]  |
+| Name                                  | Type                                                                            | Description                               | Notes      |
+| ------------------------------------- | ------------------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**                  | **string?**                                                                     | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**             | **string?**                                                                     | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **advancedPurchasePaymentPutRequest** | [**AdvancedPurchasePaymentPutRequest?**](AdvancedPurchasePaymentPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1362,30 +1418,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="advancedpurchasepost"></a>
+
 # **AdvancedPurchasePost**
+
 > AdvancedPurchasePost200Response AdvancedPurchasePost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, AdvancedPurchasePostRequest? advancedPurchasePostRequest = null)
 
 POST
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1396,9 +1455,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var advancedPurchasePostRequest = new AdvancedPurchasePostRequest?(); // AdvancedPurchasePostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var advancedPurchasePostRequest = new AdvancedPurchasePostRequest?(); // AdvancedPurchasePostRequest? |  (optional)
 
             try
             {
@@ -1418,6 +1477,7 @@ namespace Example
 ```
 
 #### Using the AdvancedPurchasePostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1439,11 +1499,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **advancedPurchasePostRequest** | [**AdvancedPurchasePostRequest?**](AdvancedPurchasePostRequest?.md) |  | [optional]  |
+| Name                            | Type                                                                | Description                               | Notes      |
+| ------------------------------- | ------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**            | **string?**                                                         | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**       | **string?**                                                         | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **advancedPurchasePostRequest** | [**AdvancedPurchasePostRequest?**](AdvancedPurchasePostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1455,30 +1515,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="advancedpurchaseput"></a>
+
 # **AdvancedPurchasePut**
+
 > AdvancedPurchasePut200Response AdvancedPurchasePut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, AdvancedPurchasePutRequest? advancedPurchasePutRequest = null)
 
 PUT
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1489,9 +1552,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var advancedPurchasePutRequest = new AdvancedPurchasePutRequest?(); // AdvancedPurchasePutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var advancedPurchasePutRequest = new AdvancedPurchasePutRequest?(); // AdvancedPurchasePutRequest? |  (optional)
 
             try
             {
@@ -1511,6 +1574,7 @@ namespace Example
 ```
 
 #### Using the AdvancedPurchasePutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1532,11 +1596,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **advancedPurchasePutRequest** | [**AdvancedPurchasePutRequest?**](AdvancedPurchasePutRequest?.md) |  | [optional]  |
+| Name                           | Type                                                              | Description                               | Notes      |
+| ------------------------------ | ----------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**           | **string?**                                                       | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**      | **string?**                                                       | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **advancedPurchasePutRequest** | [**AdvancedPurchasePutRequest?**](AdvancedPurchasePutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1548,32 +1612,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="advancedpurchasestockpost"></a>
+
 # **AdvancedPurchaseStockPost**
+
 > AdvancedPurchaseStockPut200Response AdvancedPurchaseStockPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, AdvancedPurchaseStockPutRequest? advancedPurchaseStockPutRequest = null)
 
 POST
 
-+ POST method will return exception if Order status is not - `AUTHORISED`  + POST method will return exception if Stock Received status is not - `DRAFT` or `NOT AVAILABLE` or `PARTIALLY RECEIVED`  + POST method will return exception if Purchase `Approach` = `INVOICE` and `InvoiceStatus` is not - `AUTHORISED`  + POST method is used to add only new stock lines.  + POST method will create new Stock Receiving Task, if value of `TaskID` is not provided or equals to `00000000-0000-0000-0000-000000000000`.  + To Authorize Stock Received, Request with empty lines in payload can be done.  + If duplicated lines found in one payload, one line with sum quantity will be created.  + If lines with same Product, location, batch and expiry Date already exist, error will be thrown.
+-   POST method will return exception if Order status is not - `AUTHORISED` + POST method will return exception if Stock Received status is not - `DRAFT` or `NOT AVAILABLE` or `PARTIALLY RECEIVED` + POST method will return exception if Purchase `Approach` = `INVOICE` and `InvoiceStatus` is not - `AUTHORISED` + POST method is used to add only new stock lines. + POST method will create new Stock Receiving Task, if value of `TaskID` is not provided or equals to `00000000-0000-0000-0000-000000000000`. + To Authorize Stock Received, Request with empty lines in payload can be done. + If duplicated lines found in one payload, one line with sum quantity will be created. + If lines with same Product, location, batch and expiry Date already exist, error will be thrown.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1584,9 +1651,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var advancedPurchaseStockPutRequest = new AdvancedPurchaseStockPutRequest?(); // AdvancedPurchaseStockPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var advancedPurchaseStockPutRequest = new AdvancedPurchaseStockPutRequest?(); // AdvancedPurchaseStockPutRequest? |  (optional)
 
             try
             {
@@ -1606,6 +1673,7 @@ namespace Example
 ```
 
 #### Using the AdvancedPurchaseStockPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1627,11 +1695,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **advancedPurchaseStockPutRequest** | [**AdvancedPurchaseStockPutRequest?**](AdvancedPurchaseStockPutRequest?.md) |  | [optional]  |
+| Name                                | Type                                                                        | Description                               | Notes      |
+| ----------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**                | **string?**                                                                 | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**           | **string?**                                                                 | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **advancedPurchaseStockPutRequest** | [**AdvancedPurchaseStockPutRequest?**](AdvancedPurchaseStockPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1643,30 +1711,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="advancedpurchasestockpurchaseidget"></a>
+
 # **AdvancedPurchaseStockPurchaseidGet**
+
 > AdvancedPurchaseStockPurchaseidGet200Response AdvancedPurchaseStockPurchaseidGet (string purchaseID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1678,8 +1749,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
             var purchaseID = "purchaseID_example";  // string | Returns detailed info of a particular Purchase Order
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1699,6 +1770,7 @@ namespace Example
 ```
 
 #### Using the AdvancedPurchaseStockPurchaseidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1720,11 +1792,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **purchaseID** | **string** | Returns detailed info of a particular Purchase Order |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                          | Notes      |
+| ------------------------- | ----------- | ---------------------------------------------------- | ---------- |
+| **purchaseID**            | **string**  | Returns detailed info of a particular Purchase Order |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b            | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033            | [optional] |
 
 ### Return type
 
@@ -1736,32 +1808,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="advancedpurchasestockput"></a>
+
 # **AdvancedPurchaseStockPut**
+
 > AdvancedPurchaseStockPut200Response AdvancedPurchaseStockPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, AdvancedPurchaseStockPutRequest? advancedPurchaseStockPutRequest = null)
 
 PUT
 
-+ PUT method will return exception if Order status is not - `AUTHORISED`  + PUT method will return exception if Stock Received status is not - `DRAFT` or `NOT AVAILABLE` or `PARTIALLY RECEIVED`  + PUT method will return exception if Purchase `Approach` = `INVOICE` and `InvoiceStatus` is not - `AUTHORISED`  + PUT method will overwrite data in the related Purchase Task.  + If duplicated lines found in one payload, one line with sum quantity will be created.  + If lines with same Product, location, batch and expiry Date already exist, error will be thrown.
+-   PUT method will return exception if Order status is not - `AUTHORISED` + PUT method will return exception if Stock Received status is not - `DRAFT` or `NOT AVAILABLE` or `PARTIALLY RECEIVED` + PUT method will return exception if Purchase `Approach` = `INVOICE` and `InvoiceStatus` is not - `AUTHORISED` + PUT method will overwrite data in the related Purchase Task. + If duplicated lines found in one payload, one line with sum quantity will be created. + If lines with same Product, location, batch and expiry Date already exist, error will be thrown.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1772,9 +1847,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var advancedPurchaseStockPutRequest = new AdvancedPurchaseStockPutRequest?(); // AdvancedPurchaseStockPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var advancedPurchaseStockPutRequest = new AdvancedPurchaseStockPutRequest?(); // AdvancedPurchaseStockPutRequest? |  (optional)
 
             try
             {
@@ -1794,6 +1869,7 @@ namespace Example
 ```
 
 #### Using the AdvancedPurchaseStockPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1815,11 +1891,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **advancedPurchaseStockPutRequest** | [**AdvancedPurchaseStockPutRequest?**](AdvancedPurchaseStockPutRequest?.md) |  | [optional]  |
+| Name                                | Type                                                                        | Description                               | Notes      |
+| ----------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**                | **string?**                                                                 | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**           | **string?**                                                                 | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **advancedPurchaseStockPutRequest** | [**AdvancedPurchaseStockPutRequest?**](AdvancedPurchaseStockPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1831,32 +1907,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="advancedpurchasestocktaskidvoiddelete"></a>
+
 # **AdvancedPurchaseStockTaskidVoidDelete**
+
 > AdvancedPurchaseStockTaskidVoidDelete200Response AdvancedPurchaseStockTaskidVoidDelete (string taskID, bool varVoid, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
-+ DELETE not available for Simple Purchases
+-   DELETE not available for Simple Purchases
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1869,8 +1948,8 @@ namespace Example
             var apiInstance = new PurchaseApi(config);
             var taskID = "taskID_example";  // string | ID of Stock Receiving Purchase to Void or Undo
             var varVoid = false;  // bool |  (default to false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1890,6 +1969,7 @@ namespace Example
 ```
 
 #### Using the AdvancedPurchaseStockTaskidVoidDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1911,12 +1991,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | ID of Stock Receiving Purchase to Void or Undo |  |
-| **varVoid** | **bool** |  | [default to false] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                    | Notes              |
+| ------------------------- | ----------- | ---------------------------------------------- | ------------------ |
+| **taskID**                | **string**  | ID of Stock Receiving Purchase to Void or Undo |                    |
+| **varVoid**               | **bool**    |                                                | [default to false] |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b      | [optional]         |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033      | [optional]         |
 
 ### Return type
 
@@ -1928,30 +2008,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="pglmtsrchrequiredbyupdatedsinceetc"></a>
+
 # **PgLmtSrchRequiredbyUpdatedsinceEtc**
+
 > PgLmtSrchRequiredbyUpdatedsinceEtc200Response PgLmtSrchRequiredbyUpdatedsinceEtc (decimal page, decimal limit, string search, string requiredBy, string updatedSince, string orderStatus, string restockReceivedStatus, string invoiceStatus, string creditNoteStatus, string unstockStatus, string status, string dropShipTaskID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1974,8 +2057,8 @@ namespace Example
             var unstockStatus = "unstockStatus_example";  // string | Only return purchase orders with specified unstock status
             var status = "status_example";  // string | Only return purchase orders with specified purchase status
             var dropShipTaskID = "dropShipTaskID_example";  // string | Only return drop ship purchase which was created by specified sale task ID
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1995,6 +2078,7 @@ namespace Example
 ```
 
 #### Using the PgLmtSrchRequiredbyUpdatedsinceEtcWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2016,22 +2100,22 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **page** | **decimal** |  | [default to 1M] |
-| **limit** | **decimal** |  | [default to 100M] |
-| **search** | **string** | Only return purchase orders with search value contained in one of these fields: OrderNumber, Status, Supplier, InvoiceNumber, CreditNoteNumber |  |
-| **requiredBy** | **string** | Only return purchase orders with Required By date on or before specified date. Date must follow  ISO 8601 format. |  |
-| **updatedSince** | **string** | Only return purchase changed after specified date. Date must follow  ISO 8601 format. |  |
-| **orderStatus** | **string** | Only return purchase orders with specified order status |  |
-| **restockReceivedStatus** | **string** | Only return purchase orders with specified stock received (put away) status |  |
-| **invoiceStatus** | **string** | Only return purchase orders with specified invoice status |  |
-| **creditNoteStatus** | **string** | Only return purchase orders with specified credit note status |  |
-| **unstockStatus** | **string** | Only return purchase orders with specified unstock status |  |
-| **status** | **string** | Only return purchase orders with specified purchase status |  |
-| **dropShipTaskID** | **string** | Only return drop ship purchase which was created by specified sale task ID |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                                                                                                    | Notes             |
+| ------------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| **page**                  | **decimal** |                                                                                                                                                | [default to 1M]   |
+| **limit**                 | **decimal** |                                                                                                                                                | [default to 100M] |
+| **search**                | **string**  | Only return purchase orders with search value contained in one of these fields: OrderNumber, Status, Supplier, InvoiceNumber, CreditNoteNumber |                   |
+| **requiredBy**            | **string**  | Only return purchase orders with Required By date on or before specified date. Date must follow ISO 8601 format.                               |                   |
+| **updatedSince**          | **string**  | Only return purchase changed after specified date. Date must follow ISO 8601 format.                                                           |                   |
+| **orderStatus**           | **string**  | Only return purchase orders with specified order status                                                                                        |                   |
+| **restockReceivedStatus** | **string**  | Only return purchase orders with specified stock received (put away) status                                                                    |                   |
+| **invoiceStatus**         | **string**  | Only return purchase orders with specified invoice status                                                                                      |                   |
+| **creditNoteStatus**      | **string**  | Only return purchase orders with specified credit note status                                                                                  |                   |
+| **unstockStatus**         | **string**  | Only return purchase orders with specified unstock status                                                                                      |                   |
+| **status**                | **string**  | Only return purchase orders with specified purchase status                                                                                     |                   |
+| **dropShipTaskID**        | **string**  | Only return drop ship purchase which was created by specified sale task ID                                                                     |                   |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                                                                                                      | [optional]        |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                                                                                                      | [optional]        |
 
 ### Return type
 
@@ -2043,30 +2127,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="pglmtsrchupdatedsincecreditnotestatusetc"></a>
+
 # **PgLmtSrchUpdatedsinceCreditnotestatusEtc**
+
 > PgLmtSrchUpdatedsinceCreditnotestatusEtc200Response PgLmtSrchUpdatedsinceCreditnotestatusEtc (decimal page, decimal limit, string search, string updatedSince, string creditNoteStatus, string status, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2083,8 +2170,8 @@ namespace Example
             var updatedSince = "updatedSince_example";  // string | Only return purchase changed after specified date. Date must follow  ISO 8601 format.
             var creditNoteStatus = "creditNoteStatus_example";  // string | Only return purchase orders with specified credit note status
             var status = "status_example";  // string | Only return purchase orders with specified purchase status
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2104,6 +2191,7 @@ namespace Example
 ```
 
 #### Using the PgLmtSrchUpdatedsinceCreditnotestatusEtcWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2125,16 +2213,16 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **page** | **decimal** |  | [default to 1M] |
-| **limit** | **decimal** |  | [default to 100M] |
-| **search** | **string** | Only return purchase orders with search value contained in one of these fields: OrderNumber, Status, Supplier, InvoiceNumber, CreditNoteNumber |  |
-| **updatedSince** | **string** | Only return purchase changed after specified date. Date must follow  ISO 8601 format. |  |
-| **creditNoteStatus** | **string** | Only return purchase orders with specified credit note status |  |
-| **status** | **string** | Only return purchase orders with specified purchase status |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                                                                                                    | Notes             |
+| ------------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| **page**                  | **decimal** |                                                                                                                                                | [default to 1M]   |
+| **limit**                 | **decimal** |                                                                                                                                                | [default to 100M] |
+| **search**                | **string**  | Only return purchase orders with search value contained in one of these fields: OrderNumber, Status, Supplier, InvoiceNumber, CreditNoteNumber |                   |
+| **updatedSince**          | **string**  | Only return purchase changed after specified date. Date must follow ISO 8601 format.                                                           |                   |
+| **creditNoteStatus**      | **string**  | Only return purchase orders with specified credit note status                                                                                  |                   |
+| **status**                | **string**  | Only return purchase orders with specified purchase status                                                                                     |                   |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                                                                                                      | [optional]        |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                                                                                                      | [optional]        |
 
 ### Return type
 
@@ -2146,30 +2234,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchaseattachmentiddelete"></a>
+
 # **PurchaseAttachmentIdDelete**
+
 > PurchaseAttachmentPost200Response PurchaseAttachmentIdDelete (string ID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2181,8 +2272,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
             var ID = "ID_example";  // string | ID of Purchase Attachment to delete
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2202,6 +2293,7 @@ namespace Example
 ```
 
 #### Using the PurchaseAttachmentIdDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2223,11 +2315,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ID** | **string** | ID of Purchase Attachment to delete |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **ID**                    | **string**  | ID of Purchase Attachment to delete       |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -2239,30 +2331,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchaseattachmentpost"></a>
+
 # **PurchaseAttachmentPost**
+
 > PurchaseAttachmentPost200Response PurchaseAttachmentPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 POST
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2273,8 +2368,8 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2294,6 +2389,7 @@ namespace Example
 ```
 
 #### Using the PurchaseAttachmentPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2315,10 +2411,10 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -2330,30 +2426,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchaseattachmenttaskidget"></a>
+
 # **PurchaseAttachmentTaskidGet**
+
 > PurchaseAttachmentPost200Response PurchaseAttachmentTaskidGet (string taskID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2365,8 +2464,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
             var taskID = "taskID_example";  // string | Returns Payment info of a particular purchase
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2386,6 +2485,7 @@ namespace Example
 ```
 
 #### Using the PurchaseAttachmentTaskidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2407,11 +2507,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | Returns Payment info of a particular purchase |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                   | Notes      |
+| ------------------------- | ----------- | --------------------------------------------- | ---------- |
+| **taskID**                | **string**  | Returns Payment info of a particular purchase |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b     | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033     | [optional] |
 
 ### Return type
 
@@ -2423,32 +2523,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchasecreditnotepost"></a>
+
 # **PurchaseCreditnotePost**
+
 > PurchaseCreditnotePost200Response PurchaseCreditnotePost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, PurchaseCreditnotePostRequest? purchaseCreditnotePostRequest = null)
 
 POST
 
-+ POST method will return exception if Invoice status is not - `AUTHORISED` or `PAID`  + POST method will return exception if Credit Note status is not - `DRAFT` or `NOT AVAILABLE`
+-   POST method will return exception if Invoice status is not - `AUTHORISED` or `PAID` + POST method will return exception if Credit Note status is not - `DRAFT` or `NOT AVAILABLE`
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2459,9 +2562,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var purchaseCreditnotePostRequest = new PurchaseCreditnotePostRequest?(); // PurchaseCreditnotePostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var purchaseCreditnotePostRequest = new PurchaseCreditnotePostRequest?(); // PurchaseCreditnotePostRequest? |  (optional)
 
             try
             {
@@ -2481,6 +2584,7 @@ namespace Example
 ```
 
 #### Using the PurchaseCreditnotePostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2502,11 +2606,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **purchaseCreditnotePostRequest** | [**PurchaseCreditnotePostRequest?**](PurchaseCreditnotePostRequest?.md) |  | [optional]  |
+| Name                              | Type                                                                    | Description                               | Notes      |
+| --------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**              | **string?**                                                             | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**         | **string?**                                                             | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **purchaseCreditnotePostRequest** | [**PurchaseCreditnotePostRequest?**](PurchaseCreditnotePostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -2518,30 +2622,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchasecreditnotetaskidcombineadditionalchargesget"></a>
+
 # **PurchaseCreditnoteTaskidCombineadditionalchargesGet**
+
 > PurchaseCreditnoteTaskidCombineadditionalchargesGet200Response PurchaseCreditnoteTaskidCombineadditionalchargesGet (string taskID, bool combineAdditionalCharges, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2554,8 +2661,8 @@ namespace Example
             var apiInstance = new PurchaseApi(config);
             var taskID = "taskID_example";  // string | Returns detailed info of a particular Purchase Credit Note
             var combineAdditionalCharges = true;  // bool | Show additional charges in 'Lines' array (Default = false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2575,6 +2682,7 @@ namespace Example
 ```
 
 #### Using the PurchaseCreditnoteTaskidCombineadditionalchargesGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2596,12 +2704,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | Returns detailed info of a particular Purchase Credit Note |  |
-| **combineAdditionalCharges** | **bool** | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                         | Type        | Description                                                             | Notes      |
+| ---------------------------- | ----------- | ----------------------------------------------------------------------- | ---------- |
+| **taskID**                   | **string**  | Returns detailed info of a particular Purchase Credit Note              |            |
+| **combineAdditionalCharges** | **bool**    | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |            |
+| **apiAuthAccountid**         | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                               | [optional] |
+| **apiAuthApplicationkey**    | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                               | [optional] |
 
 ### Return type
 
@@ -2613,30 +2721,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchaseidcombineadditionalchargesget"></a>
+
 # **PurchaseIdCombineadditionalchargesGet**
+
 > PurchaseIdCombineadditionalchargesGet200Response PurchaseIdCombineadditionalchargesGet (string ID, bool combineAdditionalCharges, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2649,8 +2760,8 @@ namespace Example
             var apiInstance = new PurchaseApi(config);
             var ID = "ID_example";  // string | Returns detailed info of a particular Purchase
             var combineAdditionalCharges = true;  // bool | Show additional charges in 'Lines' array (Default = false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2670,6 +2781,7 @@ namespace Example
 ```
 
 #### Using the PurchaseIdCombineadditionalchargesGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2691,12 +2803,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ID** | **string** | Returns detailed info of a particular Purchase |  |
-| **combineAdditionalCharges** | **bool** | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                         | Type        | Description                                                             | Notes      |
+| ---------------------------- | ----------- | ----------------------------------------------------------------------- | ---------- |
+| **ID**                       | **string**  | Returns detailed info of a particular Purchase                          |            |
+| **combineAdditionalCharges** | **bool**    | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |            |
+| **apiAuthAccountid**         | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                               | [optional] |
+| **apiAuthApplicationkey**    | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                               | [optional] |
 
 ### Return type
 
@@ -2708,30 +2820,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchaseidvoiddelete"></a>
+
 # **PurchaseIdVoidDelete**
+
 > PurchaseIdVoidDelete200Response PurchaseIdVoidDelete (string ID, bool varVoid, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2744,8 +2859,8 @@ namespace Example
             var apiInstance = new PurchaseApi(config);
             var ID = "ID_example";  // string | ID of Purchase to Void or Undo
             var varVoid = false;  // bool |  (default to false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2765,6 +2880,7 @@ namespace Example
 ```
 
 #### Using the PurchaseIdVoidDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2786,12 +2902,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ID** | **string** | ID of Purchase to Void or Undo |  |
-| **varVoid** | **bool** |  | [default to false] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes              |
+| ------------------------- | ----------- | ----------------------------------------- | ------------------ |
+| **ID**                    | **string**  | ID of Purchase to Void or Undo            |                    |
+| **varVoid**               | **bool**    |                                           | [default to false] |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]         |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]         |
 
 ### Return type
 
@@ -2803,32 +2919,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchaseinvoicepost"></a>
+
 # **PurchaseInvoicePost**
+
 > PurchaseInvoicePost200Response PurchaseInvoicePost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, PurchaseInvoicePostRequest? purchaseInvoicePostRequest = null)
 
 POST
 
-+ POST method will return exception if Order status is not - `AUTHORISED`  + POST method will return exception if Invoice status is not - `DRAFT` or `NOT AVAILABLE`  + POST method will return exception if Purchase `Approach` = `STOCK` and `StockReceivedStatus` is not - `AUTHORISED`
+-   POST method will return exception if Order status is not - `AUTHORISED` + POST method will return exception if Invoice status is not - `DRAFT` or `NOT AVAILABLE` + POST method will return exception if Purchase `Approach` = `STOCK` and `StockReceivedStatus` is not - `AUTHORISED`
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2839,9 +2958,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var purchaseInvoicePostRequest = new PurchaseInvoicePostRequest?(); // PurchaseInvoicePostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var purchaseInvoicePostRequest = new PurchaseInvoicePostRequest?(); // PurchaseInvoicePostRequest? |  (optional)
 
             try
             {
@@ -2861,6 +2980,7 @@ namespace Example
 ```
 
 #### Using the PurchaseInvoicePostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2882,11 +3002,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **purchaseInvoicePostRequest** | [**PurchaseInvoicePostRequest?**](PurchaseInvoicePostRequest?.md) |  | [optional]  |
+| Name                           | Type                                                              | Description                               | Notes      |
+| ------------------------------ | ----------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**           | **string?**                                                       | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**      | **string?**                                                       | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **purchaseInvoicePostRequest** | [**PurchaseInvoicePostRequest?**](PurchaseInvoicePostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -2898,30 +3018,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchaseinvoicetaskidcombineadditionalchargesget"></a>
+
 # **PurchaseInvoiceTaskidCombineadditionalchargesGet**
+
 > PurchaseInvoiceTaskidCombineadditionalchargesGet200Response PurchaseInvoiceTaskidCombineadditionalchargesGet (string taskID, bool combineAdditionalCharges, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2934,8 +3057,8 @@ namespace Example
             var apiInstance = new PurchaseApi(config);
             var taskID = "taskID_example";  // string | Returns detailed info of a particular Purchase Order
             var combineAdditionalCharges = true;  // bool | Show additional charges in 'Lines' array (Default = false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2955,6 +3078,7 @@ namespace Example
 ```
 
 #### Using the PurchaseInvoiceTaskidCombineadditionalchargesGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2976,12 +3100,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | Returns detailed info of a particular Purchase Order |  |
-| **combineAdditionalCharges** | **bool** | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                         | Type        | Description                                                             | Notes      |
+| ---------------------------- | ----------- | ----------------------------------------------------------------------- | ---------- |
+| **taskID**                   | **string**  | Returns detailed info of a particular Purchase Order                    |            |
+| **combineAdditionalCharges** | **bool**    | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |            |
+| **apiAuthAccountid**         | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                               | [optional] |
+| **apiAuthApplicationkey**    | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                               | [optional] |
 
 ### Return type
 
@@ -2993,32 +3117,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchasemanualjournalpost"></a>
+
 # **PurchaseManualjournalPost**
+
 > PurchaseManualjournalPost200Response PurchaseManualjournalPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, PurchaseManualjournalPostRequest? purchaseManualjournalPostRequest = null)
 
 POST
 
-+ POST can be done even if manual journal status is `AUTHORISED`  + Line items with IsSystem value = `true` cannot be modified or deleted.
+-   POST can be done even if manual journal status is `AUTHORISED` + Line items with IsSystem value = `true` cannot be modified or deleted.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3029,9 +3156,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var purchaseManualjournalPostRequest = new PurchaseManualjournalPostRequest?(); // PurchaseManualjournalPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var purchaseManualjournalPostRequest = new PurchaseManualjournalPostRequest?(); // PurchaseManualjournalPostRequest? |  (optional)
 
             try
             {
@@ -3051,6 +3178,7 @@ namespace Example
 ```
 
 #### Using the PurchaseManualjournalPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3072,11 +3200,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **purchaseManualjournalPostRequest** | [**PurchaseManualjournalPostRequest?**](PurchaseManualjournalPostRequest?.md) |  | [optional]  |
+| Name                                 | Type                                                                          | Description                               | Notes      |
+| ------------------------------------ | ----------------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**                 | **string?**                                                                   | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**            | **string?**                                                                   | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **purchaseManualjournalPostRequest** | [**PurchaseManualjournalPostRequest?**](PurchaseManualjournalPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -3088,30 +3216,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchasemanualjournaltaskidget"></a>
+
 # **PurchaseManualjournalTaskidGet**
+
 > PurchaseManualjournalTaskidGet200Response PurchaseManualjournalTaskidGet (string taskID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3123,8 +3254,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
             var taskID = "taskID_example";  // string | Returns detailed info of a particular Purchase Manual Journals
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -3144,6 +3275,7 @@ namespace Example
 ```
 
 #### Using the PurchaseManualjournalTaskidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3165,11 +3297,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | Returns detailed info of a particular Purchase Manual Journals |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                    | Notes      |
+| ------------------------- | ----------- | -------------------------------------------------------------- | ---------- |
+| **taskID**                | **string**  | Returns detailed info of a particular Purchase Manual Journals |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                      | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                      | [optional] |
 
 ### Return type
 
@@ -3181,32 +3313,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchaseorderpost"></a>
+
 # **PurchaseOrderPost**
+
 > PurchaseOrderPost200Response PurchaseOrderPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, PurchaseOrderPostRequest? purchaseOrderPostRequest = null)
 
 POST
 
-+ POST method will return exception if Order status is not - `DRAFT` or `NOT AVAILABLE`
+-   POST method will return exception if Order status is not - `DRAFT` or `NOT AVAILABLE`
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3217,9 +3352,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var purchaseOrderPostRequest = new PurchaseOrderPostRequest?(); // PurchaseOrderPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var purchaseOrderPostRequest = new PurchaseOrderPostRequest?(); // PurchaseOrderPostRequest? |  (optional)
 
             try
             {
@@ -3239,6 +3374,7 @@ namespace Example
 ```
 
 #### Using the PurchaseOrderPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3260,11 +3396,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **purchaseOrderPostRequest** | [**PurchaseOrderPostRequest?**](PurchaseOrderPostRequest?.md) |  | [optional]  |
+| Name                         | Type                                                          | Description                               | Notes      |
+| ---------------------------- | ------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**         | **string?**                                                   | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**    | **string?**                                                   | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **purchaseOrderPostRequest** | [**PurchaseOrderPostRequest?**](PurchaseOrderPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -3276,30 +3412,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchaseordertaskidcombineadditionalchargesget"></a>
+
 # **PurchaseOrderTaskidCombineadditionalchargesGet**
+
 > PurchaseOrderTaskidCombineadditionalchargesGet200Response PurchaseOrderTaskidCombineadditionalchargesGet (string taskID, bool combineAdditionalCharges, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3312,8 +3451,8 @@ namespace Example
             var apiInstance = new PurchaseApi(config);
             var taskID = "taskID_example";  // string | Returns detailed info of a particular Purchase Order
             var combineAdditionalCharges = true;  // bool | Show additional charges in 'Lines' array (Default = false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -3333,6 +3472,7 @@ namespace Example
 ```
 
 #### Using the PurchaseOrderTaskidCombineadditionalchargesGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3354,12 +3494,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | Returns detailed info of a particular Purchase Order |  |
-| **combineAdditionalCharges** | **bool** | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                         | Type        | Description                                                             | Notes      |
+| ---------------------------- | ----------- | ----------------------------------------------------------------------- | ---------- |
+| **taskID**                   | **string**  | Returns detailed info of a particular Purchase Order                    |            |
+| **combineAdditionalCharges** | **bool**    | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |            |
+| **apiAuthAccountid**         | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                               | [optional] |
+| **apiAuthApplicationkey**    | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                               | [optional] |
 
 ### Return type
 
@@ -3371,30 +3511,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchasepaymentidallocationdelete"></a>
+
 # **PurchasePaymentIdallocationDelete**
+
 > MeAddressesIdDelete200Response PurchasePaymentIdallocationDelete (string ID, bool deleteAllocation, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3407,8 +3550,8 @@ namespace Example
             var apiInstance = new PurchaseApi(config);
             var ID = "ID_example";  // string | ID of Payment to Delete
             var deleteAllocation = true;  // bool | Delete allocated payments (Default = true)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -3428,6 +3571,7 @@ namespace Example
 ```
 
 #### Using the PurchasePaymentIdallocationDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3449,12 +3593,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ID** | **string** | ID of Payment to Delete |  |
-| **deleteAllocation** | **bool** | Delete allocated payments (Default &#x3D; true) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                     | Notes      |
+| ------------------------- | ----------- | ----------------------------------------------- | ---------- |
+| **ID**                    | **string**  | ID of Payment to Delete                         |            |
+| **deleteAllocation**      | **bool**    | Delete allocated payments (Default &#x3D; true) |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b       | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033       | [optional] |
 
 ### Return type
 
@@ -3466,30 +3610,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchasepaymentpost"></a>
+
 # **PurchasePaymentPost**
+
 > PurchasePaymentPost200Response PurchasePaymentPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, AdvancedPurchasePaymentPostRequest? advancedPurchasePaymentPostRequest = null)
 
 POST
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3500,9 +3647,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var advancedPurchasePaymentPostRequest = new AdvancedPurchasePaymentPostRequest?(); // AdvancedPurchasePaymentPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var advancedPurchasePaymentPostRequest = new AdvancedPurchasePaymentPostRequest?(); // AdvancedPurchasePaymentPostRequest? |  (optional)
 
             try
             {
@@ -3522,6 +3669,7 @@ namespace Example
 ```
 
 #### Using the PurchasePaymentPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3543,11 +3691,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **advancedPurchasePaymentPostRequest** | [**AdvancedPurchasePaymentPostRequest?**](AdvancedPurchasePaymentPostRequest?.md) |  | [optional]  |
+| Name                                   | Type                                                                              | Description                               | Notes      |
+| -------------------------------------- | --------------------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**                   | **string?**                                                                       | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**              | **string?**                                                                       | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **advancedPurchasePaymentPostRequest** | [**AdvancedPurchasePaymentPostRequest?**](AdvancedPurchasePaymentPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -3559,30 +3707,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchasepaymentpurchaseidordernumberinvoicenumberetc"></a>
+
 # **PurchasePaymentPurchaseidOrdernumberInvoicenumberEtc**
+
 > List&lt;PurchasePaymentPurchaseidOrdernumberInvoicenumberEtc200ResponseInner&gt; PurchasePaymentPurchaseidOrdernumberInvoicenumberEtc (string purchaseID, string orderNumber, string invoiceNumber, string creditNoteNumber, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3597,8 +3748,8 @@ namespace Example
             var orderNumber = "orderNumber_example";  // string | Returns detailed info of a particular Purchase Payments with Purchase Order Number
             var invoiceNumber = "invoiceNumber_example";  // string | Returns detailed info of a particular Purchase Payments with Invoice Number
             var creditNoteNumber = "creditNoteNumber_example";  // string | Returns detailed info of a particular Purchase Payments with Credit Note Number
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -3618,6 +3769,7 @@ namespace Example
 ```
 
 #### Using the PurchasePaymentPurchaseidOrdernumberInvoicenumberEtcWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3639,14 +3791,14 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **purchaseID** | **string** | Returns detailed info of a particular Purchase Payments |  |
-| **orderNumber** | **string** | Returns detailed info of a particular Purchase Payments with Purchase Order Number |  |
-| **invoiceNumber** | **string** | Returns detailed info of a particular Purchase Payments with Invoice Number |  |
-| **creditNoteNumber** | **string** | Returns detailed info of a particular Purchase Payments with Credit Note Number |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                                        | Notes      |
+| ------------------------- | ----------- | ---------------------------------------------------------------------------------- | ---------- |
+| **purchaseID**            | **string**  | Returns detailed info of a particular Purchase Payments                            |            |
+| **orderNumber**           | **string**  | Returns detailed info of a particular Purchase Payments with Purchase Order Number |            |
+| **invoiceNumber**         | **string**  | Returns detailed info of a particular Purchase Payments with Invoice Number        |            |
+| **creditNoteNumber**      | **string**  | Returns detailed info of a particular Purchase Payments with Credit Note Number    |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                                          | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                                          | [optional] |
 
 ### Return type
 
@@ -3658,32 +3810,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchasepaymentput"></a>
+
 # **PurchasePaymentPut**
+
 > AdvancedPurchasePaymentPutRequest PurchasePaymentPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, AdvancedPurchasePaymentPutRequest? advancedPurchasePaymentPutRequest = null)
 
 PUT
 
-+ Please note, that Payment with type Prepayment cannot be modified.
+-   Please note, that Payment with type Prepayment cannot be modified.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3694,9 +3849,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var advancedPurchasePaymentPutRequest = new AdvancedPurchasePaymentPutRequest?(); // AdvancedPurchasePaymentPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var advancedPurchasePaymentPutRequest = new AdvancedPurchasePaymentPutRequest?(); // AdvancedPurchasePaymentPutRequest? |  (optional)
 
             try
             {
@@ -3716,6 +3871,7 @@ namespace Example
 ```
 
 #### Using the PurchasePaymentPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3737,11 +3893,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **advancedPurchasePaymentPutRequest** | [**AdvancedPurchasePaymentPutRequest?**](AdvancedPurchasePaymentPutRequest?.md) |  | [optional]  |
+| Name                                  | Type                                                                            | Description                               | Notes      |
+| ------------------------------------- | ------------------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**                  | **string?**                                                                     | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**             | **string?**                                                                     | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **advancedPurchasePaymentPutRequest** | [**AdvancedPurchasePaymentPutRequest?**](AdvancedPurchasePaymentPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -3753,30 +3909,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchasepaymenttaskidget"></a>
+
 # **PurchasePaymentTaskidGet**
+
 > List&lt;PurchasePaymentTaskidGet200ResponseInner&gt; PurchasePaymentTaskidGet (string taskID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3788,8 +3947,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
             var taskID = "taskID_example";  // string | Returns detailed info of a particular Purchase Payments
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -3809,6 +3968,7 @@ namespace Example
 ```
 
 #### Using the PurchasePaymentTaskidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3830,11 +3990,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | Returns detailed info of a particular Purchase Payments |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                             | Notes      |
+| ------------------------- | ----------- | ------------------------------------------------------- | ---------- |
+| **taskID**                | **string**  | Returns detailed info of a particular Purchase Payments |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b               | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033               | [optional] |
 
 ### Return type
 
@@ -3846,30 +4006,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchasepost"></a>
+
 # **PurchasePost**
+
 > PurchasePost200Response PurchasePost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, PurchasePostRequest? purchasePostRequest = null)
 
 POST
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3880,9 +4043,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var purchasePostRequest = new PurchasePostRequest?(); // PurchasePostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var purchasePostRequest = new PurchasePostRequest?(); // PurchasePostRequest? |  (optional)
 
             try
             {
@@ -3902,6 +4065,7 @@ namespace Example
 ```
 
 #### Using the PurchasePostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3923,11 +4087,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **purchasePostRequest** | [**PurchasePostRequest?**](PurchasePostRequest?.md) |  | [optional]  |
+| Name                      | Type                                                | Description                               | Notes      |
+| ------------------------- | --------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?**                                         | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?**                                         | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **purchasePostRequest**   | [**PurchasePostRequest?**](PurchasePostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -3939,30 +4103,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchaseput"></a>
+
 # **PurchasePut**
+
 > PurchasePut200Response PurchasePut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, PurchasePutRequest? purchasePutRequest = null)
 
 PUT
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3973,9 +4140,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var purchasePutRequest = new PurchasePutRequest?(); // PurchasePutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var purchasePutRequest = new PurchasePutRequest?(); // PurchasePutRequest? |  (optional)
 
             try
             {
@@ -3995,6 +4162,7 @@ namespace Example
 ```
 
 #### Using the PurchasePutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -4016,11 +4184,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **purchasePutRequest** | [**PurchasePutRequest?**](PurchasePutRequest?.md) |  | [optional]  |
+| Name                      | Type                                              | Description                               | Notes      |
+| ------------------------- | ------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?**                                       | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?**                                       | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **purchasePutRequest**    | [**PurchasePutRequest?**](PurchasePutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -4032,32 +4200,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchasestockpost"></a>
+
 # **PurchaseStockPost**
+
 > PurchaseStockPost200Response PurchaseStockPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, PurchaseStockPostRequest? purchaseStockPostRequest = null)
 
 POST
 
-+ POST method will return exception if Order status is not - `AUTHORISED`  + POST method will return exception if Stock Received status is not - `DRAFT` or `NOT AVAILABLE`  + POST method will return exception if Purchase `Approach` = `INVOICE` and `InvoiceStatus` is not - `AUTHORISED`  + POST method is used to add only new stock lines.  + To Authorize Stock Received, Request with empty lines in payload can be done.  + If duplicated lines found in one payload, one line with sum quantity will be created.  + If lines with same Product, location, batch and expiry Date already exist, error will be thrown.
+-   POST method will return exception if Order status is not - `AUTHORISED` + POST method will return exception if Stock Received status is not - `DRAFT` or `NOT AVAILABLE` + POST method will return exception if Purchase `Approach` = `INVOICE` and `InvoiceStatus` is not - `AUTHORISED` + POST method is used to add only new stock lines. + To Authorize Stock Received, Request with empty lines in payload can be done. + If duplicated lines found in one payload, one line with sum quantity will be created. + If lines with same Product, location, batch and expiry Date already exist, error will be thrown.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -4068,9 +4239,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var purchaseStockPostRequest = new PurchaseStockPostRequest?(); // PurchaseStockPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var purchaseStockPostRequest = new PurchaseStockPostRequest?(); // PurchaseStockPostRequest? |  (optional)
 
             try
             {
@@ -4090,6 +4261,7 @@ namespace Example
 ```
 
 #### Using the PurchaseStockPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -4111,11 +4283,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **purchaseStockPostRequest** | [**PurchaseStockPostRequest?**](PurchaseStockPostRequest?.md) |  | [optional]  |
+| Name                         | Type                                                          | Description                               | Notes      |
+| ---------------------------- | ------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**         | **string?**                                                   | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**    | **string?**                                                   | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **purchaseStockPostRequest** | [**PurchaseStockPostRequest?**](PurchaseStockPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -4127,30 +4299,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="purchasestocktaskidget"></a>
+
 # **PurchaseStockTaskidGet**
+
 > PurchaseStockPostRequest PurchaseStockTaskidGet (string taskID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -4162,8 +4337,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new PurchaseApi(config);
             var taskID = "taskID_example";  // string | Returns detailed info of a particular Purchase Order
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -4183,6 +4358,7 @@ namespace Example
 ```
 
 #### Using the PurchaseStockTaskidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -4204,11 +4380,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | Returns detailed info of a particular Purchase Order |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                          | Notes      |
+| ------------------------- | ----------- | ---------------------------------------------------- | ---------- |
+| **taskID**                | **string**  | Returns detailed info of a particular Purchase Order |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b            | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033            | [optional] |
 
 ### Return type
 
@@ -4220,14 +4396,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

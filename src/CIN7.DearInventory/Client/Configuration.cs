@@ -527,7 +527,7 @@ namespace CIN7.DearInventory.Client
         /// </summary>
         public static string ToDebugReport()
         {
-            string report = "C# SDK (Org.OpenAPITools) Debug Report:\n";
+            string report = "C# SDK (CIN7.DearInventory) Debug Report:\n";
             report += "    OS: " + Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + Environment.Version + "\n";
             report += "    Version of the API: \n";

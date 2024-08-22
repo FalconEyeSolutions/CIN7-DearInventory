@@ -1,62 +1,61 @@
-# Org.OpenAPITools.Model.CrmOpportunityPut200ResponseOpportunityListInner
+# CIN7.DearInventory.Model.CrmOpportunityPut200ResponseOpportunityListInner
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**AdditionalCharges** | [**List&lt;CrmOpportunityPut200ResponseOpportunityListInnerAdditionalChargesInner&gt;**](CrmOpportunityPut200ResponseOpportunityListInnerAdditionalChargesInner.md) |  | [optional] 
-**BillingAddressLine1** | **string** |  | [optional] 
-**BillingAddressLine2** | **string** |  | [optional] 
-**Contact** | **string** |  | [optional] 
-**Currency** | **string** |  | [optional] 
-**CurrencyConversionRate** | **decimal** |  | [optional] 
-**CustomField1** | **string** |  | [optional] 
-**CustomField10** | **string** |  | [optional] 
-**CustomField2** | **string** |  | [optional] 
-**CustomField3** | **string** |  | [optional] 
-**CustomField4** | **string** |  | [optional] 
-**CustomField5** | **string** |  | [optional] 
-**CustomField6** | **string** |  | [optional] 
-**CustomField7** | **string** |  | [optional] 
-**CustomField8** | **string** |  | [optional] 
-**CustomField9** | **string** |  | [optional] 
-**CustomerCurrency** | **string** |  | [optional] 
-**CustomerID** | **string** |  | [optional] 
-**CustomerName** | **string** |  | [optional] 
-**CustomerReference** | **string** |  | [optional] 
-**DefaultAccount** | **string** |  | [optional] 
-**ID** | **string** |  | [optional] 
-**LeadID** | **Object** |  | [optional] 
-**Lines** | [**List&lt;CrmOpportunityPut200ResponseOpportunityListInnerLinesInner&gt;**](CrmOpportunityPut200ResponseOpportunityListInnerLinesInner.md) |  | [optional] 
-**OpportunityComment** | **string** |  | [optional] 
-**OpportunityDate** | **string** |  | [optional] 
-**OpportunityLocation** | **string** |  | [optional] 
-**OpportunityMemo** | **string** |  | [optional] 
-**OpportunityNumber** | **string** |  | [optional] 
-**OpportunityStatus** | **string** |  | [optional] 
-**Phone** | **string** |  | [optional] 
-**PriceTier** | **string** |  | [optional] 
-**SalesRepresentative** | **string** |  | [optional] 
-**ShipToAddress1** | **string** |  | [optional] 
-**ShipToAddress2** | **string** |  | [optional] 
-**ShipToCity** | **string** |  | [optional] 
-**ShipToCompany** | **string** |  | [optional] 
-**ShipToContact** | **string** |  | [optional] 
-**ShipToCountry** | **string** |  | [optional] 
-**ShipToOther** | **bool** |  | [optional] 
-**ShipToPostCode** | **string** |  | [optional] 
-**ShipToState** | **string** |  | [optional] 
-**ShippingAddressLine1** | **string** |  | [optional] 
-**ShippingAddressLine2** | **string** |  | [optional] 
-**TaxInclusive** | **bool** |  | [optional] 
-**TaxPercent** | **decimal** |  | [optional] 
-**TaxRule** | **string** |  | [optional] 
-**TaxTotal** | **decimal** |  | [optional] 
-**TermDays** | **decimal** |  | [optional] 
-**TermDueNextMonth** | **decimal** |  | [optional] 
-**TermMethod** | **decimal** |  | [optional] 
-**Terms** | **string** |  | [optional] 
-**Total** | **decimal** |  | [optional] 
+| Name                       | Type                                                                                                                                                                | Description | Notes      |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
+| **AdditionalCharges**      | [**List&lt;CrmOpportunityPut200ResponseOpportunityListInnerAdditionalChargesInner&gt;**](CrmOpportunityPut200ResponseOpportunityListInnerAdditionalChargesInner.md) |             | [optional] |
+| **BillingAddressLine1**    | **string**                                                                                                                                                          |             | [optional] |
+| **BillingAddressLine2**    | **string**                                                                                                                                                          |             | [optional] |
+| **Contact**                | **string**                                                                                                                                                          |             | [optional] |
+| **Currency**               | **string**                                                                                                                                                          |             | [optional] |
+| **CurrencyConversionRate** | **decimal**                                                                                                                                                         |             | [optional] |
+| **CustomField1**           | **string**                                                                                                                                                          |             | [optional] |
+| **CustomField10**          | **string**                                                                                                                                                          |             | [optional] |
+| **CustomField2**           | **string**                                                                                                                                                          |             | [optional] |
+| **CustomField3**           | **string**                                                                                                                                                          |             | [optional] |
+| **CustomField4**           | **string**                                                                                                                                                          |             | [optional] |
+| **CustomField5**           | **string**                                                                                                                                                          |             | [optional] |
+| **CustomField6**           | **string**                                                                                                                                                          |             | [optional] |
+| **CustomField7**           | **string**                                                                                                                                                          |             | [optional] |
+| **CustomField8**           | **string**                                                                                                                                                          |             | [optional] |
+| **CustomField9**           | **string**                                                                                                                                                          |             | [optional] |
+| **CustomerCurrency**       | **string**                                                                                                                                                          |             | [optional] |
+| **CustomerID**             | **string**                                                                                                                                                          |             | [optional] |
+| **CustomerName**           | **string**                                                                                                                                                          |             | [optional] |
+| **CustomerReference**      | **string**                                                                                                                                                          |             | [optional] |
+| **DefaultAccount**         | **string**                                                                                                                                                          |             | [optional] |
+| **ID**                     | **string**                                                                                                                                                          |             | [optional] |
+| **LeadID**                 | **Object**                                                                                                                                                          |             | [optional] |
+| **Lines**                  | [**List&lt;CrmOpportunityPut200ResponseOpportunityListInnerLinesInner&gt;**](CrmOpportunityPut200ResponseOpportunityListInnerLinesInner.md)                         |             | [optional] |
+| **OpportunityComment**     | **string**                                                                                                                                                          |             | [optional] |
+| **OpportunityDate**        | **string**                                                                                                                                                          |             | [optional] |
+| **OpportunityLocation**    | **string**                                                                                                                                                          |             | [optional] |
+| **OpportunityMemo**        | **string**                                                                                                                                                          |             | [optional] |
+| **OpportunityNumber**      | **string**                                                                                                                                                          |             | [optional] |
+| **OpportunityStatus**      | **string**                                                                                                                                                          |             | [optional] |
+| **Phone**                  | **string**                                                                                                                                                          |             | [optional] |
+| **PriceTier**              | **string**                                                                                                                                                          |             | [optional] |
+| **SalesRepresentative**    | **string**                                                                                                                                                          |             | [optional] |
+| **ShipToAddress1**         | **string**                                                                                                                                                          |             | [optional] |
+| **ShipToAddress2**         | **string**                                                                                                                                                          |             | [optional] |
+| **ShipToCity**             | **string**                                                                                                                                                          |             | [optional] |
+| **ShipToCompany**          | **string**                                                                                                                                                          |             | [optional] |
+| **ShipToContact**          | **string**                                                                                                                                                          |             | [optional] |
+| **ShipToCountry**          | **string**                                                                                                                                                          |             | [optional] |
+| **ShipToOther**            | **bool**                                                                                                                                                            |             | [optional] |
+| **ShipToPostCode**         | **string**                                                                                                                                                          |             | [optional] |
+| **ShipToState**            | **string**                                                                                                                                                          |             | [optional] |
+| **ShippingAddressLine1**   | **string**                                                                                                                                                          |             | [optional] |
+| **ShippingAddressLine2**   | **string**                                                                                                                                                          |             | [optional] |
+| **TaxInclusive**           | **bool**                                                                                                                                                            |             | [optional] |
+| **TaxPercent**             | **decimal**                                                                                                                                                         |             | [optional] |
+| **TaxRule**                | **string**                                                                                                                                                          |             | [optional] |
+| **TaxTotal**               | **decimal**                                                                                                                                                         |             | [optional] |
+| **TermDays**               | **decimal**                                                                                                                                                         |             | [optional] |
+| **TermDueNextMonth**       | **decimal**                                                                                                                                                         |             | [optional] |
+| **TermMethod**             | **decimal**                                                                                                                                                         |             | [optional] |
+| **Terms**                  | **string**                                                                                                                                                          |             | [optional] |
+| **Total**                  | **decimal**                                                                                                                                                         |             | [optional] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-

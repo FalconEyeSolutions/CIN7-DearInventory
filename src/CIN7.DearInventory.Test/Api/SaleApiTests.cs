@@ -20,7 +20,7 @@ using CIN7.DearInventory.Api;
 using CIN7.DearInventory.Model;
 using System.Threading.Tasks;
 // uncomment below to import models
-//using Org.OpenAPITools.Model;
+//using CIN7.DearInventory.Model;
 
 namespace CIN7.DearInventory.Test.Api
 {

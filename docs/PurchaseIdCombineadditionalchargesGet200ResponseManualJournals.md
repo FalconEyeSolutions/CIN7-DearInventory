@@ -1,11 +1,10 @@
-# Org.OpenAPITools.Model.PurchaseIdCombineadditionalchargesGet200ResponseManualJournals
+# CIN7.DearInventory.Model.PurchaseIdCombineadditionalchargesGet200ResponseManualJournals
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Lines** | [**List&lt;AdvancedPurchaseManualjournalPost200ResponseManualJournalsInnerLinesInner&gt;**](AdvancedPurchaseManualjournalPost200ResponseManualJournalsInnerLinesInner.md) |  | [optional] 
-**Status** | **string** |  | [optional] 
+| Name       | Type                                                                                                                                                                      | Description | Notes      |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
+| **Lines**  | [**List&lt;AdvancedPurchaseManualjournalPost200ResponseManualJournalsInnerLinesInner&gt;**](AdvancedPurchaseManualjournalPost200ResponseManualJournalsInnerLinesInner.md) |             | [optional] |
+| **Status** | **string**                                                                                                                                                                |             | [optional] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-

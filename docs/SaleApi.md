@@ -1,61 +1,64 @@
-# Org.OpenAPITools.Api.SaleApi
+# CIN7.DearInventory.Api.SaleApi
 
 All URIs are relative to *https://inventory.dearsystems.com/ExternalApi/v2*
 
-| Method | HTTP request | Description |
-|--------|--------------|-------------|
-| [**PgLmtSrchCreatedsinceUpdatedsinceEtc**](SaleApi.md#pglmtsrchcreatedsinceupdatedsinceetc) | **GET** /saleCreditNoteList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Search&#x3D;{Search}&amp;CreatedSince&#x3D;{CreatedSince}&amp;UpdatedSince&#x3D;{UpdatedSince}&amp;CreditNoteStatus&#x3D;{CreditNoteStatus}&amp;Status&#x3D;{Status} | GET |
-| [**PgLmtSrchCreatedsinceUpdatedsinceEtc1**](SaleApi.md#pglmtsrchcreatedsinceupdatedsinceetc1) | **GET** /saleList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Search&#x3D;{Search}&amp;CreatedSince&#x3D;{CreatedSince}&amp;UpdatedSince&#x3D;{UpdatedSince}&amp;ShipBy&#x3D;{ShipBy}&amp;QuoteStatus&#x3D;{QuoteStatus}&amp;OrderStatus&#x3D;{OrderStatus}&amp;CombinedPickStatus&#x3D;{CombinedPickStatus}&amp;CombinedPackStatus&#x3D;{CombinedPackStatus}&amp;CombinedShippingStatus&#x3D;{CombinedShippingStatus}&amp;CombinedInvoiceStatus&#x3D;{CombinedInvoiceStatus}&amp;CreditNoteStatus&#x3D;{CreditNoteStatus}&amp;ExternalID&#x3D;{ExternalID}&amp;Status&#x3D;{Status}&amp;ReadyForShipping&#x3D;{ReadyForShipping}&amp;OrderLocationID&#x3D;{OrderLocationID} | GET |
-| [**SaleAttachmentIdDelete**](SaleApi.md#saleattachmentiddelete) | **DELETE** /sale/attachment?ID&#x3D;{ID} | DELETE |
-| [**SaleAttachmentPost**](SaleApi.md#saleattachmentpost) | **POST** /sale/attachment | POST |
-| [**SaleAttachmentSaleidGet**](SaleApi.md#saleattachmentsaleidget) | **GET** /sale/attachment?SaleID&#x3D;{SaleID} | GET |
-| [**SaleCreditnotePost**](SaleApi.md#salecreditnotepost) | **POST** /sale/creditnote | POST |
-| [**SaleCreditnoteSaleidCombineadditionalchargesIncludeproductinfoIncludepaymentinfoGet**](SaleApi.md#salecreditnotesaleidcombineadditionalchargesincludeproductinfoincludepaymentinfoget) | **GET** /sale/creditnote?SaleID&#x3D;{SaleID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges}&amp;IncludeProductInfo&#x3D;{IncludeProductInfo}&amp;IncludePaymentInfo&#x3D;{IncludePaymentInfo} | GET |
-| [**SaleCreditnoteTaskidVoidDelete**](SaleApi.md#salecreditnotetaskidvoiddelete) | **DELETE** /sale/creditnote?TaskID&#x3D;{TaskID}&amp;Void&#x3D;{Void} | DELETE |
-| [**SaleFulfilmentPackPost**](SaleApi.md#salefulfilmentpackpost) | **POST** /sale/fulfilment/pack | POST |
-| [**SaleFulfilmentPackPut**](SaleApi.md#salefulfilmentpackput) | **PUT** /sale/fulfilment/pack | PUT |
-| [**SaleFulfilmentPackTaskidIncludeproductinfoGet**](SaleApi.md#salefulfilmentpacktaskidincludeproductinfoget) | **GET** /sale/fulfilment/pack?TaskID&#x3D;{TaskID}&amp;IncludeProductInfo&#x3D;{IncludeProductInfo} | GET |
-| [**SaleFulfilmentPickPost**](SaleApi.md#salefulfilmentpickpost) | **POST** /sale/fulfilment/pick | POST |
-| [**SaleFulfilmentPickPut**](SaleApi.md#salefulfilmentpickput) | **PUT** /sale/fulfilment/pick | PUT |
-| [**SaleFulfilmentPickTaskidIncludeproductinfoGet**](SaleApi.md#salefulfilmentpicktaskidincludeproductinfoget) | **GET** /sale/fulfilment/pick?TaskID&#x3D;{TaskID}&amp;IncludeProductInfo&#x3D;{IncludeProductInfo} | GET |
-| [**SaleFulfilmentPost**](SaleApi.md#salefulfilmentpost) | **POST** /sale/fulfilment | POST |
-| [**SaleFulfilmentSaleidIncludeproductinfoGet**](SaleApi.md#salefulfilmentsaleidincludeproductinfoget) | **GET** /sale/fulfilment?SaleID&#x3D;{SaleID}&amp;IncludeProductInfo&#x3D;{IncludeProductInfo} | GET |
-| [**SaleFulfilmentShipPost**](SaleApi.md#salefulfilmentshippost) | **POST** /sale/fulfilment/ship | POST |
-| [**SaleFulfilmentShipPut**](SaleApi.md#salefulfilmentshipput) | **PUT** /sale/fulfilment/ship | PUT |
-| [**SaleFulfilmentShipTaskidGet**](SaleApi.md#salefulfilmentshiptaskidget) | **GET** /sale/fulfilment/ship?TaskID&#x3D;{TaskID} | GET |
-| [**SaleFulfilmentTaskidVoidDelete**](SaleApi.md#salefulfilmenttaskidvoiddelete) | **DELETE** /sale/fulfilment?TaskID&#x3D;{TaskID}&amp;Void&#x3D;{Void} | DELETE |
-| [**SaleIdCombineadditionalchargesHideinventorymovementsIncludetransactionsCountryformatGet**](SaleApi.md#saleidcombineadditionalchargeshideinventorymovementsincludetransactionscountryformatget) | **GET** /sale?ID&#x3D;{ID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges}&amp;HideInventoryMovements&#x3D;{HideInventoryMovements}&amp;IncludeTransactions&#x3D;{IncludeTransactions}&amp;CountryFormat&#x3D;{CountryFormat} | GET |
-| [**SaleIdVoidDelete**](SaleApi.md#saleidvoiddelete) | **DELETE** /sale?ID&#x3D;{ID}&amp;Void&#x3D;{Void} | Delete |
-| [**SaleInvoicePost**](SaleApi.md#saleinvoicepost) | **POST** /sale/invoice | POST |
-| [**SaleInvoicePut**](SaleApi.md#saleinvoiceput) | **PUT** /sale/invoice | PUT |
-| [**SaleInvoiceSaleidCombineadditionalchargesIncludeproductinfoGet**](SaleApi.md#saleinvoicesaleidcombineadditionalchargesincludeproductinfoget) | **GET** /sale/invoice?SaleID&#x3D;{SaleID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges}&amp;IncludeProductInfo&#x3D;{IncludeProductInfo} | GET |
-| [**SaleInvoiceTaskidVoidDelete**](SaleApi.md#saleinvoicetaskidvoiddelete) | **DELETE** /sale/invoice?TaskID&#x3D;{TaskID}&amp;Void&#x3D;{Void} | DELETE |
-| [**SaleManualjournalPost**](SaleApi.md#salemanualjournalpost) | **POST** /sale/manualJournal | POST |
-| [**SaleManualjournalSaleidGet**](SaleApi.md#salemanualjournalsaleidget) | **GET** /sale/manualJournal?SaleID&#x3D;{SaleID} | GET |
-| [**SaleOrderPost**](SaleApi.md#saleorderpost) | **POST** /sale/order | POST |
-| [**SaleOrderSaleidCombineadditionalchargesIncludeproductinfoGet**](SaleApi.md#saleordersaleidcombineadditionalchargesincludeproductinfoget) | **GET** /sale/order?SaleID&#x3D;{SaleID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges}&amp;IncludeProductInfo&#x3D;{IncludeProductInfo} | GET |
-| [**SalePaymentIdDelete**](SaleApi.md#salepaymentiddelete) | **DELETE** /sale/payment?ID&#x3D;{ID} | DELETE |
-| [**SalePaymentPost**](SaleApi.md#salepaymentpost) | **POST** /sale/payment | POST |
-| [**SalePaymentPut**](SaleApi.md#salepaymentput) | **PUT** /sale/payment | PUT |
-| [**SalePaymentSaleidGet**](SaleApi.md#salepaymentsaleidget) | **GET** /sale/payment?SaleID&#x3D;{SaleID} | GET |
-| [**SalePost**](SaleApi.md#salepost) | **POST** /sale | POST |
-| [**SalePut**](SaleApi.md#saleput) | **PUT** /sale | PUT |
-| [**SaleQuotePost**](SaleApi.md#salequotepost) | **POST** /sale/quote | POST |
-| [**SaleQuoteSaleidCombineadditionalchargesIncludeproductinfoGet**](SaleApi.md#salequotesaleidcombineadditionalchargesincludeproductinfoget) | **GET** /sale/quote?SaleID&#x3D;{SaleID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges}&amp;IncludeProductInfo&#x3D;{IncludeProductInfo} | GET |
+| Method                                                                                                                                                                                            | HTTP request                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Description |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [**PgLmtSrchCreatedsinceUpdatedsinceEtc**](SaleApi.md#pglmtsrchcreatedsinceupdatedsinceetc)                                                                                                       | **GET** /saleCreditNoteList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Search&#x3D;{Search}&amp;CreatedSince&#x3D;{CreatedSince}&amp;UpdatedSince&#x3D;{UpdatedSince}&amp;CreditNoteStatus&#x3D;{CreditNoteStatus}&amp;Status&#x3D;{Status}                                                                                                                                                                                                                                                                                                                                                                                                                                 | GET         |
+| [**PgLmtSrchCreatedsinceUpdatedsinceEtc1**](SaleApi.md#pglmtsrchcreatedsinceupdatedsinceetc1)                                                                                                     | **GET** /saleList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Search&#x3D;{Search}&amp;CreatedSince&#x3D;{CreatedSince}&amp;UpdatedSince&#x3D;{UpdatedSince}&amp;ShipBy&#x3D;{ShipBy}&amp;QuoteStatus&#x3D;{QuoteStatus}&amp;OrderStatus&#x3D;{OrderStatus}&amp;CombinedPickStatus&#x3D;{CombinedPickStatus}&amp;CombinedPackStatus&#x3D;{CombinedPackStatus}&amp;CombinedShippingStatus&#x3D;{CombinedShippingStatus}&amp;CombinedInvoiceStatus&#x3D;{CombinedInvoiceStatus}&amp;CreditNoteStatus&#x3D;{CreditNoteStatus}&amp;ExternalID&#x3D;{ExternalID}&amp;Status&#x3D;{Status}&amp;ReadyForShipping&#x3D;{ReadyForShipping}&amp;OrderLocationID&#x3D;{OrderLocationID} | GET         |
+| [**SaleAttachmentIdDelete**](SaleApi.md#saleattachmentiddelete)                                                                                                                                   | **DELETE** /sale/attachment?ID&#x3D;{ID}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | DELETE      |
+| [**SaleAttachmentPost**](SaleApi.md#saleattachmentpost)                                                                                                                                           | **POST** /sale/attachment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | POST        |
+| [**SaleAttachmentSaleidGet**](SaleApi.md#saleattachmentsaleidget)                                                                                                                                 | **GET** /sale/attachment?SaleID&#x3D;{SaleID}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | GET         |
+| [**SaleCreditnotePost**](SaleApi.md#salecreditnotepost)                                                                                                                                           | **POST** /sale/creditnote                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | POST        |
+| [**SaleCreditnoteSaleidCombineadditionalchargesIncludeproductinfoIncludepaymentinfoGet**](SaleApi.md#salecreditnotesaleidcombineadditionalchargesincludeproductinfoincludepaymentinfoget)         | **GET** /sale/creditnote?SaleID&#x3D;{SaleID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges}&amp;IncludeProductInfo&#x3D;{IncludeProductInfo}&amp;IncludePaymentInfo&#x3D;{IncludePaymentInfo}                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | GET         |
+| [**SaleCreditnoteTaskidVoidDelete**](SaleApi.md#salecreditnotetaskidvoiddelete)                                                                                                                   | **DELETE** /sale/creditnote?TaskID&#x3D;{TaskID}&amp;Void&#x3D;{Void}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | DELETE      |
+| [**SaleFulfilmentPackPost**](SaleApi.md#salefulfilmentpackpost)                                                                                                                                   | **POST** /sale/fulfilment/pack                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | POST        |
+| [**SaleFulfilmentPackPut**](SaleApi.md#salefulfilmentpackput)                                                                                                                                     | **PUT** /sale/fulfilment/pack                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | PUT         |
+| [**SaleFulfilmentPackTaskidIncludeproductinfoGet**](SaleApi.md#salefulfilmentpacktaskidincludeproductinfoget)                                                                                     | **GET** /sale/fulfilment/pack?TaskID&#x3D;{TaskID}&amp;IncludeProductInfo&#x3D;{IncludeProductInfo}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | GET         |
+| [**SaleFulfilmentPickPost**](SaleApi.md#salefulfilmentpickpost)                                                                                                                                   | **POST** /sale/fulfilment/pick                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | POST        |
+| [**SaleFulfilmentPickPut**](SaleApi.md#salefulfilmentpickput)                                                                                                                                     | **PUT** /sale/fulfilment/pick                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | PUT         |
+| [**SaleFulfilmentPickTaskidIncludeproductinfoGet**](SaleApi.md#salefulfilmentpicktaskidincludeproductinfoget)                                                                                     | **GET** /sale/fulfilment/pick?TaskID&#x3D;{TaskID}&amp;IncludeProductInfo&#x3D;{IncludeProductInfo}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | GET         |
+| [**SaleFulfilmentPost**](SaleApi.md#salefulfilmentpost)                                                                                                                                           | **POST** /sale/fulfilment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | POST        |
+| [**SaleFulfilmentSaleidIncludeproductinfoGet**](SaleApi.md#salefulfilmentsaleidincludeproductinfoget)                                                                                             | **GET** /sale/fulfilment?SaleID&#x3D;{SaleID}&amp;IncludeProductInfo&#x3D;{IncludeProductInfo}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | GET         |
+| [**SaleFulfilmentShipPost**](SaleApi.md#salefulfilmentshippost)                                                                                                                                   | **POST** /sale/fulfilment/ship                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | POST        |
+| [**SaleFulfilmentShipPut**](SaleApi.md#salefulfilmentshipput)                                                                                                                                     | **PUT** /sale/fulfilment/ship                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | PUT         |
+| [**SaleFulfilmentShipTaskidGet**](SaleApi.md#salefulfilmentshiptaskidget)                                                                                                                         | **GET** /sale/fulfilment/ship?TaskID&#x3D;{TaskID}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | GET         |
+| [**SaleFulfilmentTaskidVoidDelete**](SaleApi.md#salefulfilmenttaskidvoiddelete)                                                                                                                   | **DELETE** /sale/fulfilment?TaskID&#x3D;{TaskID}&amp;Void&#x3D;{Void}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | DELETE      |
+| [**SaleIdCombineadditionalchargesHideinventorymovementsIncludetransactionsCountryformatGet**](SaleApi.md#saleidcombineadditionalchargeshideinventorymovementsincludetransactionscountryformatget) | **GET** /sale?ID&#x3D;{ID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges}&amp;HideInventoryMovements&#x3D;{HideInventoryMovements}&amp;IncludeTransactions&#x3D;{IncludeTransactions}&amp;CountryFormat&#x3D;{CountryFormat}                                                                                                                                                                                                                                                                                                                                                                                                                                   | GET         |
+| [**SaleIdVoidDelete**](SaleApi.md#saleidvoiddelete)                                                                                                                                               | **DELETE** /sale?ID&#x3D;{ID}&amp;Void&#x3D;{Void}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Delete      |
+| [**SaleInvoicePost**](SaleApi.md#saleinvoicepost)                                                                                                                                                 | **POST** /sale/invoice                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | POST        |
+| [**SaleInvoicePut**](SaleApi.md#saleinvoiceput)                                                                                                                                                   | **PUT** /sale/invoice                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | PUT         |
+| [**SaleInvoiceSaleidCombineadditionalchargesIncludeproductinfoGet**](SaleApi.md#saleinvoicesaleidcombineadditionalchargesincludeproductinfoget)                                                   | **GET** /sale/invoice?SaleID&#x3D;{SaleID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges}&amp;IncludeProductInfo&#x3D;{IncludeProductInfo}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | GET         |
+| [**SaleInvoiceTaskidVoidDelete**](SaleApi.md#saleinvoicetaskidvoiddelete)                                                                                                                         | **DELETE** /sale/invoice?TaskID&#x3D;{TaskID}&amp;Void&#x3D;{Void}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | DELETE      |
+| [**SaleManualjournalPost**](SaleApi.md#salemanualjournalpost)                                                                                                                                     | **POST** /sale/manualJournal                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | POST        |
+| [**SaleManualjournalSaleidGet**](SaleApi.md#salemanualjournalsaleidget)                                                                                                                           | **GET** /sale/manualJournal?SaleID&#x3D;{SaleID}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | GET         |
+| [**SaleOrderPost**](SaleApi.md#saleorderpost)                                                                                                                                                     | **POST** /sale/order                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | POST        |
+| [**SaleOrderSaleidCombineadditionalchargesIncludeproductinfoGet**](SaleApi.md#saleordersaleidcombineadditionalchargesincludeproductinfoget)                                                       | **GET** /sale/order?SaleID&#x3D;{SaleID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges}&amp;IncludeProductInfo&#x3D;{IncludeProductInfo}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | GET         |
+| [**SalePaymentIdDelete**](SaleApi.md#salepaymentiddelete)                                                                                                                                         | **DELETE** /sale/payment?ID&#x3D;{ID}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | DELETE      |
+| [**SalePaymentPost**](SaleApi.md#salepaymentpost)                                                                                                                                                 | **POST** /sale/payment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | POST        |
+| [**SalePaymentPut**](SaleApi.md#salepaymentput)                                                                                                                                                   | **PUT** /sale/payment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | PUT         |
+| [**SalePaymentSaleidGet**](SaleApi.md#salepaymentsaleidget)                                                                                                                                       | **GET** /sale/payment?SaleID&#x3D;{SaleID}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | GET         |
+| [**SalePost**](SaleApi.md#salepost)                                                                                                                                                               | **POST** /sale                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | POST        |
+| [**SalePut**](SaleApi.md#saleput)                                                                                                                                                                 | **PUT** /sale                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | PUT         |
+| [**SaleQuotePost**](SaleApi.md#salequotepost)                                                                                                                                                     | **POST** /sale/quote                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | POST        |
+| [**SaleQuoteSaleidCombineadditionalchargesIncludeproductinfoGet**](SaleApi.md#salequotesaleidcombineadditionalchargesincludeproductinfoget)                                                       | **GET** /sale/quote?SaleID&#x3D;{SaleID}&amp;CombineAdditionalCharges&#x3D;{CombineAdditionalCharges}&amp;IncludeProductInfo&#x3D;{IncludeProductInfo}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | GET         |
 
 <a id="pglmtsrchcreatedsinceupdatedsinceetc"></a>
+
 # **PgLmtSrchCreatedsinceUpdatedsinceEtc**
+
 > PgLmtSrchCreatedsinceUpdatedsinceEtc200Response PgLmtSrchCreatedsinceUpdatedsinceEtc (decimal page, decimal limit, string search, string createdSince, string updatedSince, string creditNoteStatus, string status, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -73,8 +76,8 @@ namespace Example
             var updatedSince = "updatedSince_example";  // string | Only return sales changed after specified date. Date must follow  ISO 8601 format.
             var creditNoteStatus = "creditNoteStatus_example";  // string | Only return sales with specified credit note status
             var status = "status_example";  // string | Only return sales with specified sale status
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -94,6 +97,7 @@ namespace Example
 ```
 
 #### Using the PgLmtSrchCreatedsinceUpdatedsinceEtcWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -115,17 +119,17 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **page** | **decimal** |  | [default to 1M] |
-| **limit** | **decimal** |  | [default to 100M] |
-| **search** | **string** | Only return sales with search value contained in one of these fields: OrderNumber, Status, Customer, invoiceNumber, CustomerReference, CreditNoteNumber |  |
-| **createdSince** | **string** | Only return sales created after specified date. Date must follow  ISO 8601 format. |  |
-| **updatedSince** | **string** | Only return sales changed after specified date. Date must follow  ISO 8601 format. |  |
-| **creditNoteStatus** | **string** | Only return sales with specified credit note status |  |
-| **status** | **string** | Only return sales with specified sale status |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                                                                                                             | Notes             |
+| ------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| **page**                  | **decimal** |                                                                                                                                                         | [default to 1M]   |
+| **limit**                 | **decimal** |                                                                                                                                                         | [default to 100M] |
+| **search**                | **string**  | Only return sales with search value contained in one of these fields: OrderNumber, Status, Customer, invoiceNumber, CustomerReference, CreditNoteNumber |                   |
+| **createdSince**          | **string**  | Only return sales created after specified date. Date must follow ISO 8601 format.                                                                       |                   |
+| **updatedSince**          | **string**  | Only return sales changed after specified date. Date must follow ISO 8601 format.                                                                       |                   |
+| **creditNoteStatus**      | **string**  | Only return sales with specified credit note status                                                                                                     |                   |
+| **status**                | **string**  | Only return sales with specified sale status                                                                                                            |                   |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                                                                                                               | [optional]        |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                                                                                                               | [optional]        |
 
 ### Return type
 
@@ -137,30 +141,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="pglmtsrchcreatedsinceupdatedsinceetc1"></a>
+
 # **PgLmtSrchCreatedsinceUpdatedsinceEtc1**
+
 > PgLmtSrchCreatedsinceUpdatedsinceEtc1200Response PgLmtSrchCreatedsinceUpdatedsinceEtc1 (decimal page, decimal limit, string search, string createdSince, string updatedSince, string shipBy, string quoteStatus, string orderStatus, string combinedPickStatus, string combinedPackStatus, string combinedShippingStatus, string combinedInvoiceStatus, string creditNoteStatus, string externalID, string status, bool readyForShipping, string orderLocationID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -188,8 +195,8 @@ namespace Example
             var status = "status_example";  // string | Only return sales with specified sale status
             var readyForShipping = true;  // bool | Only return sales with 'Authorised' pack and not 'Authorised' shipping
             var orderLocationID = "orderLocationID_example";  // string | Only return sales with specified Order Location ID
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -209,6 +216,7 @@ namespace Example
 ```
 
 #### Using the PgLmtSrchCreatedsinceUpdatedsinceEtc1WithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -230,27 +238,27 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **page** | **decimal** |  | [default to 1M] |
-| **limit** | **decimal** |  | [default to 100M] |
-| **search** | **string** | Only return sales with search value contained in one of these fields: OrderNumber, Status, Customer, invoiceNumber, CustomerReference, CreditNoteNumber |  |
-| **createdSince** | **string** | Only return sales created after specified date. Date must follow  ISO 8601 format. |  |
-| **updatedSince** | **string** | Only return sales changed after specified date. Date must follow  ISO 8601 format. |  |
-| **shipBy** | **string** | Only return sales with Ship By date on or before specified date, with not authorised Shipment. Date must follow  ISO 8601 format. |  |
-| **quoteStatus** | **string** | Only return sales with specified quote status |  |
-| **orderStatus** | **string** | Only return sales with specified order status |  |
-| **combinedPickStatus** | **string** | Only return sales with specified CombinedPickingStatus |  |
-| **combinedPackStatus** | **string** | Only return sales with specified CombinedPackingStatus |  |
-| **combinedShippingStatus** | **string** | Only return sales with specified CombinedShippingStatus |  |
-| **combinedInvoiceStatus** | **string** | Only return sales with specified CombinedInvoiceStatus |  |
-| **creditNoteStatus** | **string** | Only return sales with specified credit note status |  |
-| **externalID** | **string** | Only return sales with specified External ID |  |
-| **status** | **string** | Only return sales with specified sale status |  |
-| **readyForShipping** | **bool** | Only return sales with &#39;Authorised&#39; pack and not &#39;Authorised&#39; shipping |  |
-| **orderLocationID** | **string** | Only return sales with specified Order Location ID |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                       | Type        | Description                                                                                                                                             | Notes             |
+| -------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| **page**                   | **decimal** |                                                                                                                                                         | [default to 1M]   |
+| **limit**                  | **decimal** |                                                                                                                                                         | [default to 100M] |
+| **search**                 | **string**  | Only return sales with search value contained in one of these fields: OrderNumber, Status, Customer, invoiceNumber, CustomerReference, CreditNoteNumber |                   |
+| **createdSince**           | **string**  | Only return sales created after specified date. Date must follow ISO 8601 format.                                                                       |                   |
+| **updatedSince**           | **string**  | Only return sales changed after specified date. Date must follow ISO 8601 format.                                                                       |                   |
+| **shipBy**                 | **string**  | Only return sales with Ship By date on or before specified date, with not authorised Shipment. Date must follow ISO 8601 format.                        |                   |
+| **quoteStatus**            | **string**  | Only return sales with specified quote status                                                                                                           |                   |
+| **orderStatus**            | **string**  | Only return sales with specified order status                                                                                                           |                   |
+| **combinedPickStatus**     | **string**  | Only return sales with specified CombinedPickingStatus                                                                                                  |                   |
+| **combinedPackStatus**     | **string**  | Only return sales with specified CombinedPackingStatus                                                                                                  |                   |
+| **combinedShippingStatus** | **string**  | Only return sales with specified CombinedShippingStatus                                                                                                 |                   |
+| **combinedInvoiceStatus**  | **string**  | Only return sales with specified CombinedInvoiceStatus                                                                                                  |                   |
+| **creditNoteStatus**       | **string**  | Only return sales with specified credit note status                                                                                                     |                   |
+| **externalID**             | **string**  | Only return sales with specified External ID                                                                                                            |                   |
+| **status**                 | **string**  | Only return sales with specified sale status                                                                                                            |                   |
+| **readyForShipping**       | **bool**    | Only return sales with &#39;Authorised&#39; pack and not &#39;Authorised&#39; shipping                                                                  |                   |
+| **orderLocationID**        | **string**  | Only return sales with specified Order Location ID                                                                                                      |                   |
+| **apiAuthAccountid**       | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                                                                                                               | [optional]        |
+| **apiAuthApplicationkey**  | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                                                                                                               | [optional]        |
 
 ### Return type
 
@@ -262,30 +270,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="saleattachmentiddelete"></a>
+
 # **SaleAttachmentIdDelete**
+
 > SaleAttachmentPost200Response SaleAttachmentIdDelete (string ID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -297,8 +308,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
             var ID = "ID_example";  // string | ID of Sale Attachment to delete
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -318,6 +329,7 @@ namespace Example
 ```
 
 #### Using the SaleAttachmentIdDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -339,11 +351,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ID** | **string** | ID of Sale Attachment to delete |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **ID**                    | **string**  | ID of Sale Attachment to delete           |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -355,30 +367,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="saleattachmentpost"></a>
+
 # **SaleAttachmentPost**
+
 > SaleAttachmentPost200Response SaleAttachmentPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 POST
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -389,8 +404,8 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -410,6 +425,7 @@ namespace Example
 ```
 
 #### Using the SaleAttachmentPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -431,10 +447,10 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -446,30 +462,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="saleattachmentsaleidget"></a>
+
 # **SaleAttachmentSaleidGet**
+
 > SaleAttachmentPost200Response SaleAttachmentSaleidGet (string saleID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -481,8 +500,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
             var saleID = "saleID_example";  // string | Returns Attachments of a particular sale
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -502,6 +521,7 @@ namespace Example
 ```
 
 #### Using the SaleAttachmentSaleidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -523,11 +543,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **saleID** | **string** | Returns Attachments of a particular sale |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **saleID**                | **string**  | Returns Attachments of a particular sale  |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -539,32 +559,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salecreditnotepost"></a>
+
 # **SaleCreditnotePost**
+
 > void SaleCreditnotePost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 POST
 
-+ POST method will return exception if Credit Note status is not - `DRAFT` or `NOT AVAILABLE`  + POST method will return exception if Invoice status is not `AUTHORISED` or `PAID`.  + If set `TaskID` value to Guid empty (`00000000-0000-0000-0000-000000000000`), then new Credit Note Task will be created.
+-   POST method will return exception if Credit Note status is not - `DRAFT` or `NOT AVAILABLE` + POST method will return exception if Invoice status is not `AUTHORISED` or `PAID`. + If set `TaskID` value to Guid empty (`00000000-0000-0000-0000-000000000000`), then new Credit Note Task will be created.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -575,8 +598,8 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -595,6 +618,7 @@ namespace Example
 ```
 
 #### Using the SaleCreditnotePostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -613,10 +637,10 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -628,30 +652,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
+-   **Content-Type**: Not defined
+-   **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salecreditnotesaleidcombineadditionalchargesincludeproductinfoincludepaymentinfoget"></a>
+
 # **SaleCreditnoteSaleidCombineadditionalchargesIncludeproductinfoIncludepaymentinfoGet**
+
 > void SaleCreditnoteSaleidCombineadditionalchargesIncludeproductinfoIncludepaymentinfoGet (string saleID, bool combineAdditionalCharges, bool includeProductInfo, bool includePaymentInfo, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -666,8 +693,8 @@ namespace Example
             var combineAdditionalCharges = true;  // bool | Show additional charges in 'Lines' array (Default = false)
             var includeProductInfo = true;  // bool | Show all used products in additional array (Default = false)
             var includePaymentInfo = true;  // bool | Show all Credit Note payments in additional array and calculate the Credit Note balance (Default = false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -686,6 +713,7 @@ namespace Example
 ```
 
 #### Using the SaleCreditnoteSaleidCombineadditionalchargesIncludeproductinfoIncludepaymentinfoGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -704,14 +732,14 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **saleID** | **string** | Returns Credit Notes info of a particular sale |  |
-| **combineAdditionalCharges** | **bool** | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |  |
-| **includeProductInfo** | **bool** | Show all used products in additional array (Default &#x3D; false) |  |
-| **includePaymentInfo** | **bool** | Show all Credit Note payments in additional array and calculate the Credit Note balance (Default &#x3D; false) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                         | Type        | Description                                                                                                    | Notes      |
+| ---------------------------- | ----------- | -------------------------------------------------------------------------------------------------------------- | ---------- |
+| **saleID**                   | **string**  | Returns Credit Notes info of a particular sale                                                                 |            |
+| **combineAdditionalCharges** | **bool**    | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false)                                        |            |
+| **includeProductInfo**       | **bool**    | Show all used products in additional array (Default &#x3D; false)                                              |            |
+| **includePaymentInfo**       | **bool**    | Show all Credit Note payments in additional array and calculate the Credit Note balance (Default &#x3D; false) |            |
+| **apiAuthAccountid**         | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                                                                      | [optional] |
+| **apiAuthApplicationkey**    | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                                                                      | [optional] |
 
 ### Return type
 
@@ -723,32 +751,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
+-   **Content-Type**: Not defined
+-   **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salecreditnotetaskidvoiddelete"></a>
+
 # **SaleCreditnoteTaskidVoidDelete**
+
 > SaleCreditnoteTaskidVoidDelete200Response SaleCreditnoteTaskidVoidDelete (string taskID, bool varVoid, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
-+ This method works only for:     + Sales with `Type` = `Advanced Sale` and Credit Note with  `TaskID` = `SaleID`      + Sales with `Type` = `Advanced Sale` and Credit Note with  `TaskID` = `SaleID`
+-   This method works only for: + Sales with `Type` = `Advanced Sale` and Credit Note with `TaskID` = `SaleID` + Sales with `Type` = `Advanced Sale` and Credit Note with `TaskID` = `SaleID`
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -761,8 +792,8 @@ namespace Example
             var apiInstance = new SaleApi(config);
             var taskID = "taskID_example";  // string | ID of Sale task to Void or Undo
             var varVoid = false;  // bool |  (default to false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -782,6 +813,7 @@ namespace Example
 ```
 
 #### Using the SaleCreditnoteTaskidVoidDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -803,12 +835,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | ID of Sale task to Void or Undo |  |
-| **varVoid** | **bool** |  | [default to false] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes              |
+| ------------------------- | ----------- | ----------------------------------------- | ------------------ |
+| **taskID**                | **string**  | ID of Sale task to Void or Undo           |                    |
+| **varVoid**               | **bool**    |                                           | [default to false] |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]         |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]         |
 
 ### Return type
 
@@ -820,32 +852,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salefulfilmentpackpost"></a>
+
 # **SaleFulfilmentPackPost**
+
 > SaleFulfilmentPackPut200Response SaleFulfilmentPackPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, SaleFulfilmentPackPutRequest? saleFulfilmentPackPutRequest = null)
 
 POST
 
-+ POST method will return exception if Pick status is - `DRAFT` or `NOT AVAILABLE`  + POST method will return exception if Pack status is not - `DRAFT` or `NOT AVAILABLE`
+-   POST method will return exception if Pick status is - `DRAFT` or `NOT AVAILABLE` + POST method will return exception if Pack status is not - `DRAFT` or `NOT AVAILABLE`
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -856,9 +891,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var saleFulfilmentPackPutRequest = new SaleFulfilmentPackPutRequest?(); // SaleFulfilmentPackPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var saleFulfilmentPackPutRequest = new SaleFulfilmentPackPutRequest?(); // SaleFulfilmentPackPutRequest? |  (optional)
 
             try
             {
@@ -878,6 +913,7 @@ namespace Example
 ```
 
 #### Using the SaleFulfilmentPackPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -899,11 +935,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **saleFulfilmentPackPutRequest** | [**SaleFulfilmentPackPutRequest?**](SaleFulfilmentPackPutRequest?.md) |  | [optional]  |
+| Name                             | Type                                                                  | Description                               | Notes      |
+| -------------------------------- | --------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**             | **string?**                                                           | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**        | **string?**                                                           | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **saleFulfilmentPackPutRequest** | [**SaleFulfilmentPackPutRequest?**](SaleFulfilmentPackPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -915,32 +951,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salefulfilmentpackput"></a>
+
 # **SaleFulfilmentPackPut**
+
 > SaleFulfilmentPackPut200Response SaleFulfilmentPackPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, SaleFulfilmentPackPutRequest? saleFulfilmentPackPutRequest = null)
 
 PUT
 
-+ PUT method will return exception if Pick status is - `DRAFT` or `NOT AVAILABLE`  + PUT method will return exception if Pack status is not - `DRAFT` or `NOT AVAILABLE`
+-   PUT method will return exception if Pick status is - `DRAFT` or `NOT AVAILABLE` + PUT method will return exception if Pack status is not - `DRAFT` or `NOT AVAILABLE`
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -951,9 +990,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var saleFulfilmentPackPutRequest = new SaleFulfilmentPackPutRequest?(); // SaleFulfilmentPackPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var saleFulfilmentPackPutRequest = new SaleFulfilmentPackPutRequest?(); // SaleFulfilmentPackPutRequest? |  (optional)
 
             try
             {
@@ -973,6 +1012,7 @@ namespace Example
 ```
 
 #### Using the SaleFulfilmentPackPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -994,11 +1034,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **saleFulfilmentPackPutRequest** | [**SaleFulfilmentPackPutRequest?**](SaleFulfilmentPackPutRequest?.md) |  | [optional]  |
+| Name                             | Type                                                                  | Description                               | Notes      |
+| -------------------------------- | --------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**             | **string?**                                                           | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**        | **string?**                                                           | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **saleFulfilmentPackPutRequest** | [**SaleFulfilmentPackPutRequest?**](SaleFulfilmentPackPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1010,30 +1050,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salefulfilmentpacktaskidincludeproductinfoget"></a>
+
 # **SaleFulfilmentPackTaskidIncludeproductinfoGet**
+
 > SaleFulfilmentPackTaskidIncludeproductinfoGet200Response SaleFulfilmentPackTaskidIncludeproductinfoGet (string taskID, bool includeProductInfo, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1046,8 +1089,8 @@ namespace Example
             var apiInstance = new SaleApi(config);
             var taskID = "taskID_example";  // string | TaskID of Fulfilment
             var includeProductInfo = true;  // bool | Show all used products in additional array (Default = false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1067,6 +1110,7 @@ namespace Example
 ```
 
 #### Using the SaleFulfilmentPackTaskidIncludeproductinfoGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1088,12 +1132,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | TaskID of Fulfilment |  |
-| **includeProductInfo** | **bool** | Show all used products in additional array (Default &#x3D; false) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                       | Notes      |
+| ------------------------- | ----------- | ----------------------------------------------------------------- | ---------- |
+| **taskID**                | **string**  | TaskID of Fulfilment                                              |            |
+| **includeProductInfo**    | **bool**    | Show all used products in additional array (Default &#x3D; false) |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                         | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                         | [optional] |
 
 ### Return type
 
@@ -1105,32 +1149,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salefulfilmentpickpost"></a>
+
 # **SaleFulfilmentPickPost**
+
 > SaleFulfilmentPickPut200Response SaleFulfilmentPickPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, SaleFulfilmentPickPutRequest? saleFulfilmentPickPutRequest = null)
 
 POST
 
-+ POST method will return exception if Pick status is not - `DRAFT` or `NOT AVAILABLE`  + POST method will return exception if Order status is not `AUTHORISED`.  + To make autopick call the method with attributes `TaskID` and `AutoPickMode` = `AUTOPICK`. Pick Status will be changed to \"AUTHORISED\" automatically.
+-   POST method will return exception if Pick status is not - `DRAFT` or `NOT AVAILABLE` + POST method will return exception if Order status is not `AUTHORISED`. + To make autopick call the method with attributes `TaskID` and `AutoPickMode` = `AUTOPICK`. Pick Status will be changed to \"AUTHORISED\" automatically.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1141,9 +1188,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var saleFulfilmentPickPutRequest = new SaleFulfilmentPickPutRequest?(); // SaleFulfilmentPickPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var saleFulfilmentPickPutRequest = new SaleFulfilmentPickPutRequest?(); // SaleFulfilmentPickPutRequest? |  (optional)
 
             try
             {
@@ -1163,6 +1210,7 @@ namespace Example
 ```
 
 #### Using the SaleFulfilmentPickPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1184,11 +1232,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **saleFulfilmentPickPutRequest** | [**SaleFulfilmentPickPutRequest?**](SaleFulfilmentPickPutRequest?.md) |  | [optional]  |
+| Name                             | Type                                                                  | Description                               | Notes      |
+| -------------------------------- | --------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**             | **string?**                                                           | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**        | **string?**                                                           | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **saleFulfilmentPickPutRequest** | [**SaleFulfilmentPickPutRequest?**](SaleFulfilmentPickPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1200,32 +1248,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salefulfilmentpickput"></a>
+
 # **SaleFulfilmentPickPut**
+
 > SaleFulfilmentPickPut200Response SaleFulfilmentPickPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, SaleFulfilmentPickPutRequest? saleFulfilmentPickPutRequest = null)
 
 PUT
 
-+ PUT method will return exception if Pick status is not - `DRAFT` or `NOT AVAILABLE`  + PUT method will return exception if Order status is not `AUTHORISED`.  + To make autopick call the method with attributes `TaskID` and `AutoPickMode` = `AUTOPICK`. Pick Status will be changed to \"AUTHORISED\" automatically.
+-   PUT method will return exception if Pick status is not - `DRAFT` or `NOT AVAILABLE` + PUT method will return exception if Order status is not `AUTHORISED`. + To make autopick call the method with attributes `TaskID` and `AutoPickMode` = `AUTOPICK`. Pick Status will be changed to \"AUTHORISED\" automatically.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1236,9 +1287,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var saleFulfilmentPickPutRequest = new SaleFulfilmentPickPutRequest?(); // SaleFulfilmentPickPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var saleFulfilmentPickPutRequest = new SaleFulfilmentPickPutRequest?(); // SaleFulfilmentPickPutRequest? |  (optional)
 
             try
             {
@@ -1258,6 +1309,7 @@ namespace Example
 ```
 
 #### Using the SaleFulfilmentPickPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1279,11 +1331,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **saleFulfilmentPickPutRequest** | [**SaleFulfilmentPickPutRequest?**](SaleFulfilmentPickPutRequest?.md) |  | [optional]  |
+| Name                             | Type                                                                  | Description                               | Notes      |
+| -------------------------------- | --------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**             | **string?**                                                           | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**        | **string?**                                                           | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **saleFulfilmentPickPutRequest** | [**SaleFulfilmentPickPutRequest?**](SaleFulfilmentPickPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1295,30 +1347,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salefulfilmentpicktaskidincludeproductinfoget"></a>
+
 # **SaleFulfilmentPickTaskidIncludeproductinfoGet**
+
 > SaleFulfilmentPickPut200Response SaleFulfilmentPickTaskidIncludeproductinfoGet (string taskID, bool includeProductInfo, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1331,8 +1386,8 @@ namespace Example
             var apiInstance = new SaleApi(config);
             var taskID = "taskID_example";  // string | TaskID of Fulfilment
             var includeProductInfo = true;  // bool | Show all used products in additional array (Default = false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1352,6 +1407,7 @@ namespace Example
 ```
 
 #### Using the SaleFulfilmentPickTaskidIncludeproductinfoGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1373,12 +1429,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | TaskID of Fulfilment |  |
-| **includeProductInfo** | **bool** | Show all used products in additional array (Default &#x3D; false) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                       | Notes      |
+| ------------------------- | ----------- | ----------------------------------------------------------------- | ---------- |
+| **taskID**                | **string**  | TaskID of Fulfilment                                              |            |
+| **includeProductInfo**    | **bool**    | Show all used products in additional array (Default &#x3D; false) |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                         | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                         | [optional] |
 
 ### Return type
 
@@ -1390,32 +1446,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salefulfilmentpost"></a>
+
 # **SaleFulfilmentPost**
+
 > SaleFulfilmentPost200Response SaleFulfilmentPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, SaleFulfilmentPostRequest? saleFulfilmentPostRequest = null)
 
 POST
 
-+ POST method will create new Fulfilment Task.  + POST method will return exception if Order status is not `AUTHORISED`.  + New Fulfilment Task can be created if there is no fulfilment tasks with non `AUTHORISED` Pick status.  + Adding new Fulfilment Task to sale with `Type` = `Simple Sale` will change sale `Type` to `Advanced Sale`
+-   POST method will create new Fulfilment Task. + POST method will return exception if Order status is not `AUTHORISED`. + New Fulfilment Task can be created if there is no fulfilment tasks with non `AUTHORISED` Pick status. + Adding new Fulfilment Task to sale with `Type` = `Simple Sale` will change sale `Type` to `Advanced Sale`
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1426,9 +1485,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var saleFulfilmentPostRequest = new SaleFulfilmentPostRequest?(); // SaleFulfilmentPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var saleFulfilmentPostRequest = new SaleFulfilmentPostRequest?(); // SaleFulfilmentPostRequest? |  (optional)
 
             try
             {
@@ -1448,6 +1507,7 @@ namespace Example
 ```
 
 #### Using the SaleFulfilmentPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1469,11 +1529,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **saleFulfilmentPostRequest** | [**SaleFulfilmentPostRequest?**](SaleFulfilmentPostRequest?.md) |  | [optional]  |
+| Name                          | Type                                                            | Description                               | Notes      |
+| ----------------------------- | --------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**          | **string?**                                                     | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**     | **string?**                                                     | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **saleFulfilmentPostRequest** | [**SaleFulfilmentPostRequest?**](SaleFulfilmentPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1485,30 +1545,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salefulfilmentsaleidincludeproductinfoget"></a>
+
 # **SaleFulfilmentSaleidIncludeproductinfoGet**
+
 > SaleFulfilmentSaleidIncludeproductinfoGet200Response SaleFulfilmentSaleidIncludeproductinfoGet (string saleID, bool includeProductInfo, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1521,8 +1584,8 @@ namespace Example
             var apiInstance = new SaleApi(config);
             var saleID = "saleID_example";  // string | Returns Fulfilment info of a particular sale
             var includeProductInfo = true;  // bool | Show all used products in additional array (Default = false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1542,6 +1605,7 @@ namespace Example
 ```
 
 #### Using the SaleFulfilmentSaleidIncludeproductinfoGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1563,12 +1627,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **saleID** | **string** | Returns Fulfilment info of a particular sale |  |
-| **includeProductInfo** | **bool** | Show all used products in additional array (Default &#x3D; false) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                       | Notes      |
+| ------------------------- | ----------- | ----------------------------------------------------------------- | ---------- |
+| **saleID**                | **string**  | Returns Fulfilment info of a particular sale                      |            |
+| **includeProductInfo**    | **bool**    | Show all used products in additional array (Default &#x3D; false) |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                         | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                         | [optional] |
 
 ### Return type
 
@@ -1580,32 +1644,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salefulfilmentshippost"></a>
+
 # **SaleFulfilmentShipPost**
+
 > SaleFulfilmentShipPut200Response SaleFulfilmentShipPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, SaleFulfilmentShipPutRequest? saleFulfilmentShipPutRequest = null)
 
 POST
 
-+ POST method will return exception if PackStatus status is not - `AUTHORISED`  + POST method will return exception if ShipmentStatus status is - `AUTHORISED` or `PARTIALLY AUTHORISED`
+-   POST method will return exception if PackStatus status is not - `AUTHORISED` + POST method will return exception if ShipmentStatus status is - `AUTHORISED` or `PARTIALLY AUTHORISED`
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1616,9 +1683,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var saleFulfilmentShipPutRequest = new SaleFulfilmentShipPutRequest?(); // SaleFulfilmentShipPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var saleFulfilmentShipPutRequest = new SaleFulfilmentShipPutRequest?(); // SaleFulfilmentShipPutRequest? |  (optional)
 
             try
             {
@@ -1638,6 +1705,7 @@ namespace Example
 ```
 
 #### Using the SaleFulfilmentShipPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1659,11 +1727,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **saleFulfilmentShipPutRequest** | [**SaleFulfilmentShipPutRequest?**](SaleFulfilmentShipPutRequest?.md) |  | [optional]  |
+| Name                             | Type                                                                  | Description                               | Notes      |
+| -------------------------------- | --------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**             | **string?**                                                           | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**        | **string?**                                                           | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **saleFulfilmentShipPutRequest** | [**SaleFulfilmentShipPutRequest?**](SaleFulfilmentShipPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1675,32 +1743,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salefulfilmentshipput"></a>
+
 # **SaleFulfilmentShipPut**
+
 > SaleFulfilmentShipPut200Response SaleFulfilmentShipPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, SaleFulfilmentShipPutRequest? saleFulfilmentShipPutRequest = null)
 
 PUT
 
-+ PUT method will return exception if PackStatus status is not - `AUTHORISED`  + PUT method will return exception if ShipmentStatus status is - `AUTHORISED` or `PARTIALLY AUTHORISED`  + Add filed `AddTrackingNumbers` = `true` to payload to be able to update tracking numbers or carrier for authorised shipment
+-   PUT method will return exception if PackStatus status is not - `AUTHORISED` + PUT method will return exception if ShipmentStatus status is - `AUTHORISED` or `PARTIALLY AUTHORISED` + Add filed `AddTrackingNumbers` = `true` to payload to be able to update tracking numbers or carrier for authorised shipment
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1711,9 +1782,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var saleFulfilmentShipPutRequest = new SaleFulfilmentShipPutRequest?(); // SaleFulfilmentShipPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var saleFulfilmentShipPutRequest = new SaleFulfilmentShipPutRequest?(); // SaleFulfilmentShipPutRequest? |  (optional)
 
             try
             {
@@ -1733,6 +1804,7 @@ namespace Example
 ```
 
 #### Using the SaleFulfilmentShipPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1754,11 +1826,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **saleFulfilmentShipPutRequest** | [**SaleFulfilmentShipPutRequest?**](SaleFulfilmentShipPutRequest?.md) |  | [optional]  |
+| Name                             | Type                                                                  | Description                               | Notes      |
+| -------------------------------- | --------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**             | **string?**                                                           | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**        | **string?**                                                           | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **saleFulfilmentShipPutRequest** | [**SaleFulfilmentShipPutRequest?**](SaleFulfilmentShipPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -1770,30 +1842,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salefulfilmentshiptaskidget"></a>
+
 # **SaleFulfilmentShipTaskidGet**
+
 > SaleFulfilmentShipTaskidGet200Response SaleFulfilmentShipTaskidGet (string taskID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1805,8 +1880,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
             var taskID = "taskID_example";  // string | TaskID of Fulfilment
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1826,6 +1901,7 @@ namespace Example
 ```
 
 #### Using the SaleFulfilmentShipTaskidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1847,11 +1923,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | TaskID of Fulfilment |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **taskID**                | **string**  | TaskID of Fulfilment                      |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -1863,32 +1939,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salefulfilmenttaskidvoiddelete"></a>
+
 # **SaleFulfilmentTaskidVoidDelete**
+
 > SaleFulfilmentTaskidVoidDelete200Response SaleFulfilmentTaskidVoidDelete (string taskID, bool varVoid, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
-+ This method works only for:     + Sales with `Type` = `Advanced Sale`
+-   This method works only for: + Sales with `Type` = `Advanced Sale`
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1901,8 +1980,8 @@ namespace Example
             var apiInstance = new SaleApi(config);
             var taskID = "taskID_example";  // string | ID of Sale task to Void or Undo
             var varVoid = false;  // bool |  (default to false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -1922,6 +2001,7 @@ namespace Example
 ```
 
 #### Using the SaleFulfilmentTaskidVoidDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -1943,12 +2023,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | ID of Sale task to Void or Undo |  |
-| **varVoid** | **bool** |  | [default to false] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes              |
+| ------------------------- | ----------- | ----------------------------------------- | ------------------ |
+| **taskID**                | **string**  | ID of Sale task to Void or Undo           |                    |
+| **varVoid**               | **bool**    |                                           | [default to false] |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]         |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]         |
 
 ### Return type
 
@@ -1960,30 +2040,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="saleidcombineadditionalchargeshideinventorymovementsincludetransactionscountryformatget"></a>
+
 # **SaleIdCombineadditionalchargesHideinventorymovementsIncludetransactionsCountryformatGet**
+
 > SaleIdCombineadditionalchargesHideinventorymovementsIncludetransactionsCountryformatGet200Response SaleIdCombineadditionalchargesHideinventorymovementsIncludetransactionsCountryformatGet (string ID, bool combineAdditionalCharges, bool hideInventoryMovements, bool includeTransactions, string countryFormat, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -1999,8 +2082,8 @@ namespace Example
             var hideInventoryMovements = true;  // bool | Hide inventory movements (Default = false)
             var includeTransactions = true;  // bool | Show related transactions (Default = false)
             var countryFormat = "countryFormat_example";  // string | Return Country Names or Country Codes. Can be Regular, Code2 or Code (Default = Regular)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2020,6 +2103,7 @@ namespace Example
 ```
 
 #### Using the SaleIdCombineadditionalchargesHideinventorymovementsIncludetransactionsCountryformatGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2041,15 +2125,15 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ID** | **string** | Returns detailed info of a particular sale |  |
-| **combineAdditionalCharges** | **bool** | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |  |
-| **hideInventoryMovements** | **bool** | Hide inventory movements (Default &#x3D; false) |  |
-| **includeTransactions** | **bool** | Show related transactions (Default &#x3D; false) |  |
-| **countryFormat** | **string** | Return Country Names or Country Codes. Can be Regular, Code2 or Code (Default &#x3D; Regular) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                         | Type        | Description                                                                                   | Notes      |
+| ---------------------------- | ----------- | --------------------------------------------------------------------------------------------- | ---------- |
+| **ID**                       | **string**  | Returns detailed info of a particular sale                                                    |            |
+| **combineAdditionalCharges** | **bool**    | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false)                       |            |
+| **hideInventoryMovements**   | **bool**    | Hide inventory movements (Default &#x3D; false)                                               |            |
+| **includeTransactions**      | **bool**    | Show related transactions (Default &#x3D; false)                                              |            |
+| **countryFormat**            | **string**  | Return Country Names or Country Codes. Can be Regular, Code2 or Code (Default &#x3D; Regular) |            |
+| **apiAuthAccountid**         | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                                                     | [optional] |
+| **apiAuthApplicationkey**    | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                                                     | [optional] |
 
 ### Return type
 
@@ -2061,30 +2145,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="saleidvoiddelete"></a>
+
 # **SaleIdVoidDelete**
+
 > SaleIdVoidDelete200Response SaleIdVoidDelete (string ID, bool varVoid, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 Delete
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2097,8 +2184,8 @@ namespace Example
             var apiInstance = new SaleApi(config);
             var ID = "ID_example";  // string | ID of Sale to Void or Undo
             var varVoid = false;  // bool |  (default to false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2118,6 +2205,7 @@ namespace Example
 ```
 
 #### Using the SaleIdVoidDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2139,12 +2227,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ID** | **string** | ID of Sale to Void or Undo |  |
-| **varVoid** | **bool** |  | [default to false] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes              |
+| ------------------------- | ----------- | ----------------------------------------- | ------------------ |
+| **ID**                    | **string**  | ID of Sale to Void or Undo                |                    |
+| **varVoid**               | **bool**    |                                           | [default to false] |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]         |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]         |
 
 ### Return type
 
@@ -2156,32 +2244,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="saleinvoicepost"></a>
+
 # **SaleInvoicePost**
+
 > SaleInvoicePost200Response SaleInvoicePost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, SaleInvoicePostRequest? saleInvoicePostRequest = null)
 
 POST
 
-+ POST method will return exception if Invoice status is not - `DRAFT` or `NOT AVAILABLE`  + POST method will return exception if Order status is not `AUTHORISED`.  + If set `TaskID` value to Guid empty (`00000000-0000-0000-0000-000000000000`), then new Invoice Task will be created.
+-   POST method will return exception if Invoice status is not - `DRAFT` or `NOT AVAILABLE` + POST method will return exception if Order status is not `AUTHORISED`. + If set `TaskID` value to Guid empty (`00000000-0000-0000-0000-000000000000`), then new Invoice Task will be created.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2192,9 +2283,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var saleInvoicePostRequest = new SaleInvoicePostRequest?(); // SaleInvoicePostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var saleInvoicePostRequest = new SaleInvoicePostRequest?(); // SaleInvoicePostRequest? |  (optional)
 
             try
             {
@@ -2214,6 +2305,7 @@ namespace Example
 ```
 
 #### Using the SaleInvoicePostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2235,11 +2327,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **saleInvoicePostRequest** | [**SaleInvoicePostRequest?**](SaleInvoicePostRequest?.md) |  | [optional]  |
+| Name                       | Type                                                      | Description                               | Notes      |
+| -------------------------- | --------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**       | **string?**                                               | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**  | **string?**                                               | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **saleInvoicePostRequest** | [**SaleInvoicePostRequest?**](SaleInvoicePostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -2251,32 +2343,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="saleinvoiceput"></a>
+
 # **SaleInvoicePut**
+
 > SaleInvoicePut200Response SaleInvoicePut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 PUT
 
-+ PUT method will return exception if Invoice does not exist or Invoice status is not - `DRAFT` or `NOT AVAILABLE`  + PUT method will return exception if Order status is not `AUTHORISED`.  + It is allowed to not provide some attributes including Lines and AdditionalCharges. Note that provided empty collection means deleting existing records if there were any.
+-   PUT method will return exception if Invoice does not exist or Invoice status is not - `DRAFT` or `NOT AVAILABLE` + PUT method will return exception if Order status is not `AUTHORISED`. + It is allowed to not provide some attributes including Lines and AdditionalCharges. Note that provided empty collection means deleting existing records if there were any.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2287,8 +2382,8 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2308,6 +2403,7 @@ namespace Example
 ```
 
 #### Using the SaleInvoicePutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2329,10 +2425,10 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -2344,30 +2440,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="saleinvoicesaleidcombineadditionalchargesincludeproductinfoget"></a>
+
 # **SaleInvoiceSaleidCombineadditionalchargesIncludeproductinfoGet**
+
 > SaleInvoicePost200Response SaleInvoiceSaleidCombineadditionalchargesIncludeproductinfoGet (string saleID, bool combineAdditionalCharges, bool includeProductInfo, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2381,8 +2480,8 @@ namespace Example
             var saleID = "saleID_example";  // string | Returns Invoice info of a particular sale
             var combineAdditionalCharges = true;  // bool | Show additional charges in 'Lines' array (Default = false)
             var includeProductInfo = true;  // bool | Show all used products in additional array (Default = false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2402,6 +2501,7 @@ namespace Example
 ```
 
 #### Using the SaleInvoiceSaleidCombineadditionalchargesIncludeproductinfoGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2423,13 +2523,13 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **saleID** | **string** | Returns Invoice info of a particular sale |  |
-| **combineAdditionalCharges** | **bool** | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |  |
-| **includeProductInfo** | **bool** | Show all used products in additional array (Default &#x3D; false) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                         | Type        | Description                                                             | Notes      |
+| ---------------------------- | ----------- | ----------------------------------------------------------------------- | ---------- |
+| **saleID**                   | **string**  | Returns Invoice info of a particular sale                               |            |
+| **combineAdditionalCharges** | **bool**    | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |            |
+| **includeProductInfo**       | **bool**    | Show all used products in additional array (Default &#x3D; false)       |            |
+| **apiAuthAccountid**         | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                               | [optional] |
+| **apiAuthApplicationkey**    | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                               | [optional] |
 
 ### Return type
 
@@ -2441,32 +2541,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="saleinvoicetaskidvoiddelete"></a>
+
 # **SaleInvoiceTaskidVoidDelete**
+
 > SaleInvoiceTaskidVoidDelete200Response SaleInvoiceTaskidVoidDelete (string taskID, bool varVoid, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
-+ This method works only for:     + Sales with `Type` = `Advanced Sale` and Invoice with  `TaskID` = `SaleID`      + Sales with `Type` = `Advanced Sale` and Invoice with  `TaskID` = `SaleID`
+-   This method works only for: + Sales with `Type` = `Advanced Sale` and Invoice with `TaskID` = `SaleID` + Sales with `Type` = `Advanced Sale` and Invoice with `TaskID` = `SaleID`
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2479,8 +2582,8 @@ namespace Example
             var apiInstance = new SaleApi(config);
             var taskID = "taskID_example";  // string | ID of Sale task to Void or Undo
             var varVoid = false;  // bool |  (default to false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2500,6 +2603,7 @@ namespace Example
 ```
 
 #### Using the SaleInvoiceTaskidVoidDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2521,12 +2625,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | ID of Sale task to Void or Undo |  |
-| **varVoid** | **bool** |  | [default to false] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes              |
+| ------------------------- | ----------- | ----------------------------------------- | ------------------ |
+| **taskID**                | **string**  | ID of Sale task to Void or Undo           |                    |
+| **varVoid**               | **bool**    |                                           | [default to false] |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]         |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]         |
 
 ### Return type
 
@@ -2538,30 +2642,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salemanualjournalpost"></a>
+
 # **SaleManualjournalPost**
+
 > SaleManualjournalPostRequest SaleManualjournalPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, SaleManualjournalPostRequest? saleManualjournalPostRequest = null)
 
 POST
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2572,9 +2679,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var saleManualjournalPostRequest = new SaleManualjournalPostRequest?(); // SaleManualjournalPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var saleManualjournalPostRequest = new SaleManualjournalPostRequest?(); // SaleManualjournalPostRequest? |  (optional)
 
             try
             {
@@ -2594,6 +2701,7 @@ namespace Example
 ```
 
 #### Using the SaleManualjournalPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2615,11 +2723,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **saleManualjournalPostRequest** | [**SaleManualjournalPostRequest?**](SaleManualjournalPostRequest?.md) |  | [optional]  |
+| Name                             | Type                                                                  | Description                               | Notes      |
+| -------------------------------- | --------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**             | **string?**                                                           | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**        | **string?**                                                           | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **saleManualjournalPostRequest** | [**SaleManualjournalPostRequest?**](SaleManualjournalPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -2631,30 +2739,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salemanualjournalsaleidget"></a>
+
 # **SaleManualjournalSaleidGet**
+
 > SaleManualjournalSaleidGet200Response SaleManualjournalSaleidGet (string saleID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2666,8 +2777,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
             var saleID = "saleID_example";  // string | Returns Payment info of a particular sale
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2687,6 +2798,7 @@ namespace Example
 ```
 
 #### Using the SaleManualjournalSaleidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2708,11 +2820,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **saleID** | **string** | Returns Payment info of a particular sale |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **saleID**                | **string**  | Returns Payment info of a particular sale |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -2724,32 +2836,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="saleorderpost"></a>
+
 # **SaleOrderPost**
+
 > SaleOrderPost200Response SaleOrderPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, SaleOrderPostRequest? saleOrderPostRequest = null)
 
 POST
 
-+ POST method will return exception if Order status is not - `DRAFT` or `NOT AVAILABLE`  + POST method will return exception if Quote status is not `AUTHORISED`.  + POST method can accept \"AutoPickPackShipMode\" property in body.     + Default: `NOPICK`     + This property affects only Sales with Type = `Simple Sale` and with no backorder  when changing order status to `AUTHORISED`  + Available valus for AutoPickPackShipMode     + `NOPICK` - Order will be created without picking     + `AUTOPICK` - Order sill be created with Pick phase authorised      + `AUTOPICKPACK` - Order sill be created with Pick and Pack phases authorised     + `AUTOPICKPACKSHIP` - Order sill be created with Pick and Pack and Ship phases authorised  + If you add to Order product with quantity more than you have. Cin7 Core silently create backorder record for this product when changing order status to `AUTHORISED`.
+-   POST method will return exception if Order status is not - `DRAFT` or `NOT AVAILABLE` + POST method will return exception if Quote status is not `AUTHORISED`. + POST method can accept \"AutoPickPackShipMode\" property in body. + Default: `NOPICK` + This property affects only Sales with Type = `Simple Sale` and with no backorder when changing order status to `AUTHORISED` + Available valus for AutoPickPackShipMode + `NOPICK` - Order will be created without picking + `AUTOPICK` - Order sill be created with Pick phase authorised + `AUTOPICKPACK` - Order sill be created with Pick and Pack phases authorised + `AUTOPICKPACKSHIP` - Order sill be created with Pick and Pack and Ship phases authorised + If you add to Order product with quantity more than you have. Cin7 Core silently create backorder record for this product when changing order status to `AUTHORISED`.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2760,9 +2875,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var saleOrderPostRequest = new SaleOrderPostRequest?(); // SaleOrderPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var saleOrderPostRequest = new SaleOrderPostRequest?(); // SaleOrderPostRequest? |  (optional)
 
             try
             {
@@ -2782,6 +2897,7 @@ namespace Example
 ```
 
 #### Using the SaleOrderPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2803,11 +2919,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **saleOrderPostRequest** | [**SaleOrderPostRequest?**](SaleOrderPostRequest?.md) |  | [optional]  |
+| Name                      | Type                                                  | Description                               | Notes      |
+| ------------------------- | ----------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?**                                           | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?**                                           | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **saleOrderPostRequest**  | [**SaleOrderPostRequest?**](SaleOrderPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -2819,30 +2935,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="saleordersaleidcombineadditionalchargesincludeproductinfoget"></a>
+
 # **SaleOrderSaleidCombineadditionalchargesIncludeproductinfoGet**
+
 > SaleOrderPost200Response SaleOrderSaleidCombineadditionalchargesIncludeproductinfoGet (string saleID, bool combineAdditionalCharges, bool includeProductInfo, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2856,8 +2975,8 @@ namespace Example
             var saleID = "saleID_example";  // string | SaleID of Orders
             var combineAdditionalCharges = true;  // bool | Show additional charges in 'Lines' array (Default = false)
             var includeProductInfo = true;  // bool | Show all used products in additional array (Default = false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2877,6 +2996,7 @@ namespace Example
 ```
 
 #### Using the SaleOrderSaleidCombineadditionalchargesIncludeproductinfoGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2898,13 +3018,13 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **saleID** | **string** | SaleID of Orders |  |
-| **combineAdditionalCharges** | **bool** | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |  |
-| **includeProductInfo** | **bool** | Show all used products in additional array (Default &#x3D; false) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                         | Type        | Description                                                             | Notes      |
+| ---------------------------- | ----------- | ----------------------------------------------------------------------- | ---------- |
+| **saleID**                   | **string**  | SaleID of Orders                                                        |            |
+| **combineAdditionalCharges** | **bool**    | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |            |
+| **includeProductInfo**       | **bool**    | Show all used products in additional array (Default &#x3D; false)       |            |
+| **apiAuthAccountid**         | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                               | [optional] |
+| **apiAuthApplicationkey**    | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                               | [optional] |
 
 ### Return type
 
@@ -2916,30 +3036,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salepaymentiddelete"></a>
+
 # **SalePaymentIdDelete**
+
 > MeAddressesIdDelete200Response SalePaymentIdDelete (string ID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 DELETE
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -2951,8 +3074,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
             var ID = "ID_example";  // string | ID of Payment to Delete
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -2972,6 +3095,7 @@ namespace Example
 ```
 
 #### Using the SalePaymentIdDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -2993,11 +3117,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ID** | **string** | ID of Payment to Delete |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **ID**                    | **string**  | ID of Payment to Delete                   |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -3009,30 +3133,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salepaymentpost"></a>
+
 # **SalePaymentPost**
+
 > SalePaymentPost200Response SalePaymentPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, SalePaymentPostRequest? salePaymentPostRequest = null)
 
 POST
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3043,9 +3170,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var salePaymentPostRequest = new SalePaymentPostRequest?(); // SalePaymentPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var salePaymentPostRequest = new SalePaymentPostRequest?(); // SalePaymentPostRequest? |  (optional)
 
             try
             {
@@ -3065,6 +3192,7 @@ namespace Example
 ```
 
 #### Using the SalePaymentPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3086,11 +3214,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **salePaymentPostRequest** | [**SalePaymentPostRequest?**](SalePaymentPostRequest?.md) |  | [optional]  |
+| Name                       | Type                                                      | Description                               | Notes      |
+| -------------------------- | --------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**       | **string?**                                               | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**  | **string?**                                               | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **salePaymentPostRequest** | [**SalePaymentPostRequest?**](SalePaymentPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -3102,32 +3230,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salepaymentput"></a>
+
 # **SalePaymentPut**
+
 > SalePaymentPut200Response SalePaymentPut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, SalePaymentPutRequest? salePaymentPutRequest = null)
 
 PUT
 
-+ Please note, that Payment with type Prepayment cannot be modified.
+-   Please note, that Payment with type Prepayment cannot be modified.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3138,9 +3269,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var salePaymentPutRequest = new SalePaymentPutRequest?(); // SalePaymentPutRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var salePaymentPutRequest = new SalePaymentPutRequest?(); // SalePaymentPutRequest? |  (optional)
 
             try
             {
@@ -3160,6 +3291,7 @@ namespace Example
 ```
 
 #### Using the SalePaymentPutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3181,11 +3313,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **salePaymentPutRequest** | [**SalePaymentPutRequest?**](SalePaymentPutRequest?.md) |  | [optional]  |
+| Name                      | Type                                                    | Description                               | Notes      |
+| ------------------------- | ------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?**                                             | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?**                                             | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **salePaymentPutRequest** | [**SalePaymentPutRequest?**](SalePaymentPutRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -3197,30 +3329,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salepaymentsaleidget"></a>
+
 # **SalePaymentSaleidGet**
+
 > List&lt;SalePaymentSaleidGet200ResponseInner&gt; SalePaymentSaleidGet (string saleID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3232,8 +3367,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
             var saleID = "saleID_example";  // string | Returns Payment info of a particular sale
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -3253,6 +3388,7 @@ namespace Example
 ```
 
 #### Using the SalePaymentSaleidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3274,11 +3410,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **saleID** | **string** | Returns Payment info of a particular sale |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **saleID**                | **string**  | Returns Payment info of a particular sale |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -3290,30 +3426,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salepost"></a>
+
 # **SalePost**
+
 > SalePost200Response SalePost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 POST
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3324,8 +3463,8 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -3345,6 +3484,7 @@ namespace Example
 ```
 
 #### Using the SalePostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3366,10 +3506,10 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -3381,30 +3521,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="saleput"></a>
+
 # **SalePut**
+
 > SalePut200Response SalePut (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 PUT
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3415,8 +3558,8 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -3436,6 +3579,7 @@ namespace Example
 ```
 
 #### Using the SalePutWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3457,10 +3601,10 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes      |
+| ------------------------- | ----------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
 
 ### Return type
 
@@ -3472,32 +3616,35 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salequotepost"></a>
+
 # **SaleQuotePost**
+
 > SaleQuotePost200Response SaleQuotePost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, SaleQuotePostRequest? saleQuotePostRequest = null)
 
 POST
 
-+ POST method will return exception if Quote status is not - `DRAFT` or `NOT AVAILABLE`  + POST method will return exception if Sale's SkipQuote parameter is `true`.  + POST method does not support stand alone Credit Notes.
+-   POST method will return exception if Quote status is not - `DRAFT` or `NOT AVAILABLE` + POST method will return exception if Sale's SkipQuote parameter is `true`. + POST method does not support stand alone Credit Notes.
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3508,9 +3655,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new SaleApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var saleQuotePostRequest = new SaleQuotePostRequest?(); // SaleQuotePostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var saleQuotePostRequest = new SaleQuotePostRequest?(); // SaleQuotePostRequest? |  (optional)
 
             try
             {
@@ -3530,6 +3677,7 @@ namespace Example
 ```
 
 #### Using the SaleQuotePostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3551,11 +3699,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **saleQuotePostRequest** | [**SaleQuotePostRequest?**](SaleQuotePostRequest?.md) |  | [optional]  |
+| Name                      | Type                                                  | Description                               | Notes      |
+| ------------------------- | ----------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**      | **string?**                                           | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey** | **string?**                                           | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **saleQuotePostRequest**  | [**SaleQuotePostRequest?**](SaleQuotePostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -3567,30 +3715,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="salequotesaleidcombineadditionalchargesincludeproductinfoget"></a>
+
 # **SaleQuoteSaleidCombineadditionalchargesIncludeproductinfoGet**
+
 > SaleQuotePost200Response SaleQuoteSaleidCombineadditionalchargesIncludeproductinfoGet (string saleID, bool combineAdditionalCharges, bool includeProductInfo, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -3604,8 +3755,8 @@ namespace Example
             var saleID = "saleID_example";  // string | SaleID of Quotes
             var combineAdditionalCharges = true;  // bool | Show additional charges in 'Lines' array (Default = false)
             var includeProductInfo = true;  // bool | Show all used products in additional array (Default = false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -3625,6 +3776,7 @@ namespace Example
 ```
 
 #### Using the SaleQuoteSaleidCombineadditionalchargesIncludeproductinfoGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -3646,13 +3798,13 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **saleID** | **string** | SaleID of Quotes |  |
-| **combineAdditionalCharges** | **bool** | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |  |
-| **includeProductInfo** | **bool** | Show all used products in additional array (Default &#x3D; false) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                         | Type        | Description                                                             | Notes      |
+| ---------------------------- | ----------- | ----------------------------------------------------------------------- | ---------- |
+| **saleID**                   | **string**  | SaleID of Quotes                                                        |            |
+| **combineAdditionalCharges** | **bool**    | Show additional charges in &#39;Lines&#39; array (Default &#x3D; false) |            |
+| **includeProductInfo**       | **bool**    | Show all used products in additional array (Default &#x3D; false)       |            |
+| **apiAuthAccountid**         | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                               | [optional] |
+| **apiAuthApplicationkey**    | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                               | [optional] |
 
 ### Return type
 
@@ -3664,14 +3816,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

@@ -1,29 +1,32 @@
-# Org.OpenAPITools.Api.DisassemblyApi
+# CIN7.DearInventory.Api.DisassemblyApi
 
 All URIs are relative to *https://inventory.dearsystems.com/ExternalApi/v2*
 
-| Method | HTTP request | Description |
-|--------|--------------|-------------|
-| [**DisassemblyIdVoidDelete**](DisassemblyApi.md#disassemblyidvoiddelete) | **DELETE** /disassembly?ID&#x3D;{ID}&amp;Void&#x3D;{Void} | Delete |
-| [**DisassemblyOrderPost**](DisassemblyApi.md#disassemblyorderpost) | **POST** /disassembly/order | POST |
-| [**DisassemblyOrderTaskidGet**](DisassemblyApi.md#disassemblyordertaskidget) | **GET** /disassembly/order?TaskID&#x3D;{TaskID} | GET |
-| [**DisassemblyPost**](DisassemblyApi.md#disassemblypost) | **POST** /disassembly | POST |
-| [**DisassemblyTaskidGet**](DisassemblyApi.md#disassemblytaskidget) | **GET** /disassembly?TaskID&#x3D;{TaskID} | GET |
-| [**DisassemblylistPgLmtStsSrchGet**](DisassemblyApi.md#disassemblylistpglmtstssrchget) | **GET** /disassemblyList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Status&#x3D;{Status}&amp;Search&#x3D;{Search} | GET |
+| Method                                                                                 | HTTP request                                                                                                       | Description |
+| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ----------- |
+| [**DisassemblyIdVoidDelete**](DisassemblyApi.md#disassemblyidvoiddelete)               | **DELETE** /disassembly?ID&#x3D;{ID}&amp;Void&#x3D;{Void}                                                          | Delete      |
+| [**DisassemblyOrderPost**](DisassemblyApi.md#disassemblyorderpost)                     | **POST** /disassembly/order                                                                                        | POST        |
+| [**DisassemblyOrderTaskidGet**](DisassemblyApi.md#disassemblyordertaskidget)           | **GET** /disassembly/order?TaskID&#x3D;{TaskID}                                                                    | GET         |
+| [**DisassemblyPost**](DisassemblyApi.md#disassemblypost)                               | **POST** /disassembly                                                                                              | POST        |
+| [**DisassemblyTaskidGet**](DisassemblyApi.md#disassemblytaskidget)                     | **GET** /disassembly?TaskID&#x3D;{TaskID}                                                                          | GET         |
+| [**DisassemblylistPgLmtStsSrchGet**](DisassemblyApi.md#disassemblylistpglmtstssrchget) | **GET** /disassemblyList?Page&#x3D;{Page}&amp;Limit&#x3D;{Limit}&amp;Status&#x3D;{Status}&amp;Search&#x3D;{Search} | GET         |
 
 <a id="disassemblyidvoiddelete"></a>
+
 # **DisassemblyIdVoidDelete**
+
 > DisassemblyIdVoidDelete200Response DisassemblyIdVoidDelete (string ID, bool varVoid, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 Delete
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -36,8 +39,8 @@ namespace Example
             var apiInstance = new DisassemblyApi(config);
             var ID = "ID_example";  // string | ID of Disassembly to Void or Undo
             var varVoid = false;  // bool |  (default to false)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -57,6 +60,7 @@ namespace Example
 ```
 
 #### Using the DisassemblyIdVoidDeleteWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -78,12 +82,12 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **ID** | **string** | ID of Disassembly to Void or Undo |  |
-| **varVoid** | **bool** |  | [default to false] |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                               | Notes              |
+| ------------------------- | ----------- | ----------------------------------------- | ------------------ |
+| **ID**                    | **string**  | ID of Disassembly to Void or Undo         |                    |
+| **varVoid**               | **bool**    |                                           | [default to false] |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]         |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]         |
 
 ### Return type
 
@@ -95,30 +99,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="disassemblyorderpost"></a>
+
 # **DisassemblyOrderPost**
+
 > DisassemblyOrderPostRequest DisassemblyOrderPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, DisassemblyOrderPostRequest? disassemblyOrderPostRequest = null)
 
 POST
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -129,9 +136,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new DisassemblyApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var disassemblyOrderPostRequest = new DisassemblyOrderPostRequest?(); // DisassemblyOrderPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var disassemblyOrderPostRequest = new DisassemblyOrderPostRequest?(); // DisassemblyOrderPostRequest? |  (optional)
 
             try
             {
@@ -151,6 +158,7 @@ namespace Example
 ```
 
 #### Using the DisassemblyOrderPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -172,11 +180,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **disassemblyOrderPostRequest** | [**DisassemblyOrderPostRequest?**](DisassemblyOrderPostRequest?.md) |  | [optional]  |
+| Name                            | Type                                                                | Description                               | Notes      |
+| ------------------------------- | ------------------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**            | **string?**                                                         | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**       | **string?**                                                         | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **disassemblyOrderPostRequest** | [**DisassemblyOrderPostRequest?**](DisassemblyOrderPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -188,30 +196,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="disassemblyordertaskidget"></a>
+
 # **DisassemblyOrderTaskidGet**
+
 > DisassemblyOrderTaskidGet200Response DisassemblyOrderTaskidGet (string taskID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -223,8 +234,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new DisassemblyApi(config);
             var taskID = "taskID_example";  // string | Returns Order info of a particular Disassembly
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -244,6 +255,7 @@ namespace Example
 ```
 
 #### Using the DisassemblyOrderTaskidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -265,11 +277,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | Returns Order info of a particular Disassembly |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                    | Notes      |
+| ------------------------- | ----------- | ---------------------------------------------- | ---------- |
+| **taskID**                | **string**  | Returns Order info of a particular Disassembly |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b      | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033      | [optional] |
 
 ### Return type
 
@@ -281,30 +293,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="disassemblypost"></a>
+
 # **DisassemblyPost**
+
 > DisassemblyPost200Response DisassemblyPost (string? apiAuthAccountid = null, string? apiAuthApplicationkey = null, DisassemblyPostRequest? disassemblyPostRequest = null)
 
 POST
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -315,9 +330,9 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new DisassemblyApi(config);
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
-            var disassemblyPostRequest = new DisassemblyPostRequest?(); // DisassemblyPostRequest? |  (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
+            var disassemblyPostRequest = new DisassemblyPostRequest?(); // DisassemblyPostRequest? |  (optional)
 
             try
             {
@@ -337,6 +352,7 @@ namespace Example
 ```
 
 #### Using the DisassemblyPostWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -358,11 +374,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
-| **disassemblyPostRequest** | [**DisassemblyPostRequest?**](DisassemblyPostRequest?.md) |  | [optional]  |
+| Name                       | Type                                                      | Description                               | Notes      |
+| -------------------------- | --------------------------------------------------------- | ----------------------------------------- | ---------- |
+| **apiAuthAccountid**       | **string?**                                               | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional] |
+| **apiAuthApplicationkey**  | **string?**                                               | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional] |
+| **disassemblyPostRequest** | [**DisassemblyPostRequest?**](DisassemblyPostRequest?.md) |                                           | [optional] |
 
 ### Return type
 
@@ -374,30 +390,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+-   **Content-Type**: application/json
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="disassemblytaskidget"></a>
+
 # **DisassemblyTaskidGet**
+
 > DisassemblyTaskidGet200Response DisassemblyTaskidGet (string taskID, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -409,8 +428,8 @@ namespace Example
             config.BasePath = "https://inventory.dearsystems.com/ExternalApi/v2";
             var apiInstance = new DisassemblyApi(config);
             var taskID = "taskID_example";  // string | Returns detailed info of a particular Disassembly
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -430,6 +449,7 @@ namespace Example
 ```
 
 #### Using the DisassemblyTaskidGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -451,11 +471,11 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **taskID** | **string** | Returns detailed info of a particular Disassembly |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                       | Notes      |
+| ------------------------- | ----------- | ------------------------------------------------- | ---------- |
+| **taskID**                | **string**  | Returns detailed info of a particular Disassembly |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b         | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033         | [optional] |
 
 ### Return type
 
@@ -467,30 +487,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="disassemblylistpglmtstssrchget"></a>
+
 # **DisassemblylistPgLmtStsSrchGet**
+
 > DisassemblylistPgLmtStsSrchGet200Response DisassemblylistPgLmtStsSrchGet (decimal page, decimal limit, string status, string search, string? apiAuthAccountid = null, string? apiAuthApplicationkey = null)
 
 GET
 
 ### Example
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using CIN7.DearInventory.Api;
+using CIN7.DearInventory.Client;
+using CIN7.DearInventory.Model;
 
 namespace Example
 {
@@ -505,8 +528,8 @@ namespace Example
             var limit = 8.14D;  // decimal | Specifies the page size for pagination. Default page size is 100. (Default: 100)
             var status = "status_example";  // string | Only return Disassembly with specified status (Default: null)
             var search = "search_example";  // string | Only return Disassembly with search value contained in one of these fields: DisassemblyNumber, Location, Status, Name, ProductCode (Default: null)
-            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional) 
-            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional) 
+            var apiAuthAccountid = 704ef231-cd93-49c9-a201-26b4b5d0d35b;  // string? | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b (optional)
+            var apiAuthApplicationkey = 0342a546-e0c2-0dff-f0be-6a5e17154033;  // string? | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 (optional)
 
             try
             {
@@ -526,6 +549,7 @@ namespace Example
 ```
 
 #### Using the DisassemblylistPgLmtStsSrchGetWithHttpInfo variant
+
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
@@ -547,14 +571,14 @@ catch (ApiException e)
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **page** | **decimal** | Page (Default: 1) |  |
-| **limit** | **decimal** | Specifies the page size for pagination. Default page size is 100. (Default: 100) |  |
-| **status** | **string** | Only return Disassembly with specified status (Default: null) |  |
-| **search** | **string** | Only return Disassembly with search value contained in one of these fields: DisassemblyNumber, Location, Status, Name, ProductCode (Default: null) |  |
-| **apiAuthAccountid** | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b | [optional]  |
-| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033 | [optional]  |
+| Name                      | Type        | Description                                                                                                                                        | Notes      |
+| ------------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| **page**                  | **decimal** | Page (Default: 1)                                                                                                                                  |            |
+| **limit**                 | **decimal** | Specifies the page size for pagination. Default page size is 100. (Default: 100)                                                                   |            |
+| **status**                | **string**  | Only return Disassembly with specified status (Default: null)                                                                                      |            |
+| **search**                | **string**  | Only return Disassembly with search value contained in one of these fields: DisassemblyNumber, Location, Status, Name, ProductCode (Default: null) |            |
+| **apiAuthAccountid**      | **string?** | e.g. 704ef231-cd93-49c9-a201-26b4b5d0d35b                                                                                                          | [optional] |
+| **apiAuthApplicationkey** | **string?** | e.g. 0342a546-e0c2-0dff-f0be-6a5e17154033                                                                                                          | [optional] |
 
 ### Return type
 
@@ -566,14 +590,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
+-   **Content-Type**: Not defined
+-   **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
+| ----------- | ----------- | ---------------- |
+| **200**     | OK          | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

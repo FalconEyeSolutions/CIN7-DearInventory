@@ -18,7 +18,7 @@ using Xunit;
 using CIN7.DearInventory.Client;
 using CIN7.DearInventory.Api;
 // uncomment below to import models
-//using Org.OpenAPITools.Model;
+//using CIN7.DearInventory.Model;
 
 namespace CIN7.DearInventory.Test.Api
 {

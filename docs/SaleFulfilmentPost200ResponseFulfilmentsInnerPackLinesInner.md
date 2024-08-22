@@ -1,18 +1,17 @@
-# Org.OpenAPITools.Model.SaleFulfilmentPost200ResponseFulfilmentsInnerPackLinesInner
+# CIN7.DearInventory.Model.SaleFulfilmentPost200ResponseFulfilmentsInnerPackLinesInner
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**BatchSN** | **string** |  | [optional] 
-**Box** | **string** |  | [optional] 
-**ExpiryDate** | **string** |  | [optional] 
-**Location** | **string** |  | [optional] 
-**LocationID** | **string** |  | [optional] 
-**Name** | **string** |  | [optional] 
-**ProductID** | **string** |  | [optional] 
-**Quantity** | **decimal** |  | [optional] 
-**SKU** | **string** |  | [optional] 
+| Name           | Type        | Description | Notes      |
+| -------------- | ----------- | ----------- | ---------- |
+| **BatchSN**    | **string**  |             | [optional] |
+| **Box**        | **string**  |             | [optional] |
+| **ExpiryDate** | **string**  |             | [optional] |
+| **Location**   | **string**  |             | [optional] |
+| **LocationID** | **string**  |             | [optional] |
+| **Name**       | **string**  |             | [optional] |
+| **ProductID**  | **string**  |             | [optional] |
+| **Quantity**   | **decimal** |             | [optional] |
+| **SKU**        | **string**  |             | [optional] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
