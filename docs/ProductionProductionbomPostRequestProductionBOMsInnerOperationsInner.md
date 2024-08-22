@@ -1,0 +1,26 @@
+# Org.OpenAPITools.Model.ProductionProductionbomPostRequestProductionBOMsInnerOperationsInner
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Attachments** | **List&lt;string&gt;** |  | [optional] 
+**Components** | [**List&lt;ProductionProductionbomPostRequestProductionBOMsInnerOperationsInnerComponentsInner&gt;**](ProductionProductionbomPostRequestProductionBOMsInnerOperationsInnerComponentsInner.md) |  | [optional] 
+**CycleTime** | **decimal** |  | [optional] 
+**CycleTimeString** | **string** |  | [optional] 
+**FinishedProducts** | [**List&lt;ProductionProductionbomPostRequestProductionBOMsInnerOperationsInnerFinishedProductsInner&gt;**](ProductionProductionbomPostRequestProductionBOMsInnerOperationsInnerFinishedProductsInner.md) |  | [optional] 
+**InputProducts** | **List&lt;string&gt;** |  | [optional] 
+**IsDropShip** | **bool** |  | [optional] 
+**Name** | **string** |  | [optional] 
+**Notes** | **List&lt;string&gt;** |  | [optional] 
+**OperationLinks** | [**List&lt;ProductionProductionbomPostRequestProductionBOMsInnerOperationsInnerOperationLinksInner&gt;**](ProductionProductionbomPostRequestProductionBOMsInnerOperationsInnerOperationLinksInner.md) |  | [optional] 
+**OperationType** | **decimal** |  | [optional] 
+**Order** | **decimal** |  | [optional] 
+**OutputProducts** | **List&lt;string&gt;** |  | [optional] 
+**Resources** | [**List&lt;ProductionProductionbomPostRequestProductionBOMsInnerOperationsInnerResourcesInner&gt;**](ProductionProductionbomPostRequestProductionBOMsInnerOperationsInnerResourcesInner.md) |  | [optional] 
+**UnitsPerCycle** | **decimal** |  | [optional] 
+**VariationComponents** | [**List&lt;ProductionProductionbomPostRequestProductionBOMsInnerOperationsInnerVariationComponentsInner&gt;**](ProductionProductionbomPostRequestProductionBOMsInnerOperationsInnerVariationComponentsInner.md) |  | [optional] 
+**WorkCenterID** | **string** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
