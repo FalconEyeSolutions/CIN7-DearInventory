@@ -4,22 +4,45 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo><!-- setting GenerateAssemblyInfo to false causes this bug https://github.com/dotnet/project-system/issues/3934 -->
     <TargetFramework>net8.0</TargetFramework>
     <AssemblyName>CIN7.DearInventory</AssemblyName>
-    <PackageId>CIN7.DearInventory</PackageId>
+    <PackageId>CIN7-DearInventory</PackageId>
     <OutputType>Library</OutputType>
-    <Authors>OpenAPI</Authors>
-    <Company>OpenAPI</Company>
+    <Authors>Falcon Eye Solutions, Abdul-Kadir Coskun</Authors>
+    <Company>Falcon Eye Solutions</Company>
     <AssemblyTitle>OpenAPI Library</AssemblyTitle>
-    <Description>A library generated from a OpenAPI doc</Description>
-    <Copyright>No Copyright</Copyright>
+    <Description>CIN7.DearInventory - the C# library for the Cin7 Core Developer Portal</Description>
     <RootNamespace>CIN7.DearInventory</RootNamespace>
     <Version>1.0.0</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\CIN7.DearInventory.xml</DocumentationFile>
     <RepositoryUrl>https://github.com/GIT_USER_ID/GIT_REPO_ID.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>Minor update</PackageReleaseNotes>
+    <PackageReleaseNotes>First Release</PackageReleaseNotes>
     <Nullable>annotations</Nullable>
     <ManagePackageVersionsCentrally>false</ManagePackageVersionsCentrally>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>CIN7-DearInventory</Title>
+    <PackageProjectUrl>https://github.com/FalconEyeSolutions/CIN7-DearInventory</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>library; cin7; falcon; fes; api</PackageTags>
+    <Copyright>Copyright © Abdul-Kadir Coskun 2024</Copyright>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\Icons\logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="JsonSubTypes" Version="2.0.1" />
@@ -27,9 +50,10 @@
     <PackageReference Include="RestSharp" Version="110.2.0" />
     <PackageReference Include="Polly" Version="8.1.0" />
   </ItemGroup>
-
   <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
+    <None Update="Icons\logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 </Project>
